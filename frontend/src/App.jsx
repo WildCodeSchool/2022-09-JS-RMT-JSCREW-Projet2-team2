@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <Home pokemons={pokemons} />
-      <p>coucou</p>
     </div>
   );
 }
