@@ -4,10 +4,8 @@ import "./navbar.css";
 function Navbar() {
   return (
     <div>
-      <div className="navbar-test">
-        <h1>Test contenu</h1>
-      </div>
-      <div className="navbar-bg">
+      {/* NAVBAR - MOBILE */}
+      <div className="navbar-mobile">
         <nav className="p-3">
           <ul className="list-unstyled d-flex justify-content-around m-0">
             <li>
@@ -38,6 +36,49 @@ function Navbar() {
                 alt="basket-icon"
               />
             </li>
+          </ul>
+        </nav>
+      </div>
+      {/* NAVBAR - DESKTOP */}
+      <div className="navbar-test">
+        <h1>Test contenu</h1>
+      </div>
+      <div className="navbar-desktop">
+        <nav className="p-3">
+          <ul className="list-unstyled d-flex justify-content-between m-0">
+            <li>
+              <img
+                className="navbar-icon"
+                src="./src/assets/logo.png"
+                alt="logo-icon"
+              />
+            </li>
+            <div className="navbar-desktop-store-icon d-flex">
+              <p className="m-0 me-2">Store</p>
+              <li>
+                <img
+                  className="navbar-icon"
+                  src="./src/assets/store-orange.png"
+                  alt="store-icon"
+                />
+              </li>
+            </div>
+            <div className="navbar-desktop-right-icon d-flex">
+              <li>
+                <img
+                  className="navbar-icon"
+                  src="./src/assets/search-orange.png"
+                  alt="search-icon"
+                />
+              </li>
+              <li>
+                <img
+                  className="navbar-icon"
+                  src="./src/assets/basket-orange.png"
+                  alt="basket-icon"
+                />
+              </li>
+            </div>
           </ul>
         </nav>
       </div>

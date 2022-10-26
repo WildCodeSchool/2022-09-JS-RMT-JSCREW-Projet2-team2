@@ -1,7 +1,32 @@
-.navbar-bg{
+.navbar-mobile{
     background-color: #FFBA35;
-    position: sticky;
+    position: fixed;
     bottom: 0px;
+    width: 100%;
+}
+.navbar-desktop{
+    display: none;
+}
+
+@media only screen and (min-width:768px) {
+    .navbar-mobile{
+        display: none;
+    }
+    .navbar-desktop{
+        display: block;
+        background-color: #191919;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+    }
+    .navbar-desktop-right-icon{
+        width: 10%;
+        justify-content: space-between;
+    }
+    .navbar-desktop-store-icon{
+        align-items: center;
+        color: #FFBA35;
+    }
 }
 
 .navbar-icon{
@@ -11,4 +36,5 @@
 .navbar-test{
     height: 100vh;
     background-color: antiquewhite;
+    margin-top: 62px;
 }
