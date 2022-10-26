@@ -8,34 +8,34 @@ function Navbar() {
       <div className="navbar-mobile">
         <nav className="p-3">
           <ul className="list-unstyled d-flex justify-content-around m-0">
-            <li>
+            <button className="border border-0 bg-transparent" type="button">
               <img
                 className="navbar-icon"
                 src="./src/assets/logo-black.png"
                 alt="logo-icon"
               />
-            </li>
-            <li>
+            </button>
+            <button className="border border-0 bg-transparent" type="button">
               <img
                 className="navbar-icon"
                 src="./src/assets/store-black.png"
                 alt="store-icon"
               />
-            </li>
-            <li>
+            </button>
+            <button className="border border-0 bg-transparent" type="button">
               <img
                 className="navbar-icon"
                 src="./src/assets/search-black.png"
                 alt="search-icon"
               />
-            </li>
-            <li>
+            </button>
+            <button className="border border-0 bg-transparent" type="button">
               <img
                 className="navbar-icon"
                 src="./src/assets/basket-black.png"
                 alt="basket-icon"
               />
-            </li>
+            </button>
           </ul>
         </nav>
       </div>
@@ -46,38 +46,38 @@ function Navbar() {
       <div className="navbar-desktop">
         <nav className="p-3">
           <ul className="list-unstyled d-flex justify-content-between m-0">
-            <li>
+            <button className="border border-0 bg-transparent" type="button">
               <img
                 className="navbar-icon"
                 src="./src/assets/logo.png"
                 alt="logo-icon"
               />
-            </li>
-            <div className="navbar-desktop-store-icon d-flex">
-              <p className="m-0 me-2">Store</p>
-              <li>
+            </button>
+            <button className="border border-0 bg-transparent " type="button">
+              <div className="navbar-desktop-store-icon d-flex">
+                <p className="m-0 me-2 fs-6">Store</p>
                 <img
                   className="navbar-icon"
                   src="./src/assets/store-orange.png"
                   alt="store-icon"
                 />
-              </li>
-            </div>
+              </div>
+            </button>
             <div className="navbar-desktop-right-icon d-flex">
-              <li>
+              <button className="border border-0 bg-transparent" type="button">
                 <img
                   className="navbar-icon"
                   src="./src/assets/search-orange.png"
                   alt="search-icon"
                 />
-              </li>
-              <li>
+              </button>
+              <button className="border border-0 bg-transparent" type="button">
                 <img
                   className="navbar-icon"
                   src="./src/assets/basket-orange.png"
                   alt="basket-icon"
                 />
-              </li>
+              </button>
             </div>
           </ul>
         </nav>
