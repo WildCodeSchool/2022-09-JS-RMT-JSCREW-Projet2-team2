@@ -5,36 +5,71 @@ import "./Home.css";
 export default function Home() {
   return (
     <div className="accueilBackground">
-      <div className="text-success">Home</div>
       <div className="prez">
-        <button className="catch" type="button">
+        <button className="buttonCatch" type="button">
           Attrapez-les tous !
         </button>
       </div>
       <div className="specialOffer">
-        <h2>Offre Spéciale</h2>
-        <input type="radio" name="slider" id="item-1" checked />
-        <input type="radio" name="slider" id="item-2" />
-        <input type="radio" name="slider" id="item-3" />
-        <div className="cards">
-          <label className="card" htmlFor="item-1" id="song-1">
-            <img src="" href="" alt="" />
-            <form action="">
-              <input id="achat" type="submit" value="acheter" />
-            </form>
-          </label>
-          <label className="card" htmlFor="item-2" id="song-2">
-            <img src="" href="" alt="" />
-            <form action="">
-              <input id="achat" type="submit" value="acheter" />
-            </form>
-          </label>
-          <label className="card" htmlFor="item-3" id="song-3">
-            <img src="" href="" alt="" />
-            <form action="">
-              <input id="achat" type="submit" value="acheter" />
-            </form>
-          </label>
+        <div className="carrouselOffer">
+          <h2>Offre Spéciale</h2>
+          <br />
+          <input type="radio" name="slider" id="item-1" checked />
+          <input type="radio" name="slider" id="item-2" checked />
+          <input type="radio" name="slider" id="item-3" checked />
+          <div className="cards">
+            <label className="card" htmlFor="item-1" id="offre-1">
+              <img src="./src/assets/oui.jpg" href="" alt="" />
+              <br />
+              <form action="">
+                <div className="priceOffer">
+                  <div>
+                    <h3 className="oldPrice">72</h3>
+                  </div>
+                  <div>
+                    <h3>45</h3>
+                  </div>
+                  <div>
+                    <input id="achat" type="submit" value="acheter" />
+                  </div>
+                </div>
+              </form>
+            </label>
+            <label className="card" htmlFor="item-2" id="offre-2">
+              <img src="./src/assets/vraiment.jpg" href="" alt="" />
+              <br />
+              <form action="">
+                <div className="priceOffer">
+                  <div>
+                    <h3 className="oldPrice">72</h3>
+                  </div>
+                  <div>
+                    <h3>45</h3>
+                  </div>
+                  <div>
+                    <input id="achat" type="submit" value="acheter" />
+                  </div>
+                </div>
+              </form>
+            </label>
+            <label className="card" htmlFor="item-3" id="offre-3">
+              <img src="./src/assets/wow.jpg" href="" alt="" />
+              <br />
+              <form action="">
+                <div className="priceOffer">
+                  <div>
+                    <h3 className="oldPrice">72</h3>
+                  </div>
+                  <div>
+                    <h3>45</h3>
+                  </div>
+                  <div>
+                    <input id="achat" type="submit" value="acheter" />
+                  </div>
+                </div>
+              </form>
+            </label>
+          </div>
         </div>
       </div>
       <div className="whyUs">

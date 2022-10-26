@@ -18,12 +18,12 @@
   background-position: center;
 }
 
-.catch {
+.buttonCatch {
   color: black;
   font-size: 16px;
   line-height: 16px;
   padding: 6px;
-  margin-top: 50%;
+  margin-top: 60%;
   border-radius: 10px;
   font-family: Georgia, serif;
   font-weight: normal;
@@ -37,6 +37,11 @@
   display: inline-block;
 }
 
+.buttonCatch:hover {
+  color: #ffba35;
+  background-color: black;
+}
+
 /*CARROUSEL OFFRE SPECIALE*/
 
 .specialOffer {
@@ -46,5 +51,100 @@
   padding: 30px 10px;
   font-family: "DM Sans", sans-serif;
   transition: background 0.4s ease-in;
-  background-color: #ededed;
+  color: white;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.carrouselOffer {
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: top;
+}
+
+#item-1:checked ~ .cards #offre-3,
+#item-2:checked ~ .cards #offre-1,
+#item-3:checked ~ .cards #offre-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #offre-2,
+#item-2:checked ~ .cards #offre-3,
+#item-3:checked ~ .cards #offre-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #offre-1,
+#item-2:checked ~ .cards #offre-2,
+#item-3:checked ~ .cards #offre-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+#achat {
+  color: black;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 6px;
+  border-radius: 10px;
+
+  background-color: #ffba35;
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid #ffba35;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#achat:hover {
+  color: #ffba35;
+  background-color: black;
+}
+
+.priceOffer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.oldPrice {
+  text-decoration: line-through;
 }
