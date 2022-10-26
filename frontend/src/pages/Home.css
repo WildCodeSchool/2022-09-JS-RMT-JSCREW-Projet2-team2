@@ -24,7 +24,7 @@
   font-size: 16px;
   line-height: 16px;
   padding: 6px;
-  margin-top: 60%;
+  margin-top: 200px;
   border-radius: 10px;
   font-family: Georgia, serif;
   font-weight: normal;
@@ -53,6 +53,7 @@
   font-family: "DM Sans", sans-serif;
   transition: background 0.4s ease-in;
   color: white;
+  padding-top: 50px;
 }
 
 input[type="radio"] {
@@ -149,7 +150,7 @@ input[type="radio"] {
   text-decoration: line-through;
 }
 
-/*CHARTE CONFIDENTIALITE*/
+/*CHARTE REASSURANCE*/
 
 .whyUs {
   width: 90%;
@@ -157,6 +158,10 @@ input[type="radio"] {
   margin-right: auto;
   display: flex;
   justify-content: space-between;
+}
+
+.whyUsEx {
+  padding-top: 50px;
 }
 
 .whyUsEx h2 {
@@ -174,6 +179,7 @@ input[type="radio"] {
   color: white;
   background-color: #414447;
   border-radius: 5px;
+  padding-top: 10px;
 }
 
 /*SOCIAL MEDIA*/
@@ -184,6 +190,11 @@ input[type="radio"] {
   margin-right: auto;
   display: flex;
   justify-content: space-between;
+}
+
+.socialMediaEx {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .socialMediaEx h2 {
