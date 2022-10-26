@@ -18,25 +18,9 @@ export default function Home() {
           <input type="radio" name="slider" id="item-2" checked />
           <input type="radio" name="slider" id="item-3" checked />
           <div className="cards">
-            <label className="card" htmlFor="item-1" id="offre-1">
+            <label className="cardOffer" htmlFor="item-1" id="offre-1">
               <img src="./src/assets/oui.jpg" href="" alt="" />
               <br />
-              <form action="">
-                <div className="priceOffer">
-                  <div>
-                    <h3 className="oldPrice">72</h3>
-                  </div>
-                  <div>
-                    <h3>45</h3>
-                  </div>
-                  <div>
-                    <input id="achat" type="submit" value="acheter" />
-                  </div>
-                </div>
-              </form>
-            </label>
-            <label className="card" htmlFor="item-2" id="offre-2">
-              <img src="./src/assets/vraiment.jpg" href="" alt="" />
               <br />
               <form action="">
                 <div className="priceOffer">
@@ -52,8 +36,27 @@ export default function Home() {
                 </div>
               </form>
             </label>
-            <label className="card" htmlFor="item-3" id="offre-3">
+            <label className="cardOffer" htmlFor="item-2" id="offre-2">
+              <img src="./src/assets/vraiment.jpg" href="" alt="" />
+              <br />
+              <br />
+              <form action="">
+                <div className="priceOffer">
+                  <div>
+                    <h3 className="oldPrice">72</h3>
+                  </div>
+                  <div>
+                    <h3>45</h3>
+                  </div>
+                  <div>
+                    <input id="achat" type="submit" value="acheter" />
+                  </div>
+                </div>
+              </form>
+            </label>
+            <label className="cardOffer" htmlFor="item-3" id="offre-3">
               <img src="./src/assets/wow.jpg" href="" alt="" />
+              <br />
               <br />
               <form action="">
                 <div className="priceOffer">
@@ -72,31 +75,77 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="whyUs">
-        <div>
-          <h2>Fidélité</h2>
-        </div>
-        <div>
-          <h2>Sécurité</h2>
-        </div>
-        <div>
-          <h2>Toutes devises</h2>
+      <br />
+      <div className="whyUsEx">
+        <h2>Why choose PokeBiz :</h2>
+        <br />
+        <div className="whyUs">
+          <div className="categoryWhyUs">
+            <img
+              className="logoWhyUs"
+              src="./src/assets/badge.png"
+              alt="logo badge"
+            />
+            <p>Des cartes officielles</p>
+          </div>
+          <div className="categoryWhyUs">
+            <img
+              className="logoWhyUs"
+              src="./src/assets/cadenas.png"
+              alt="logo cadenas"
+            />
+            <p>Des transactions sécurisées</p>
+          </div>
+          <div className="categoryWhyUs">
+            <img
+              className="logoWhyUs"
+              src="./src/assets/bitcoin.png"
+              alt="logo bitcoin"
+            />
+            <p>Achat en plusieurs devises</p>
+          </div>
         </div>
       </div>
-      <div className="socialMedia">
-        <div>
-          <h3 href="twitter.com">Twitter</h3>
-        </div>
-        <div>
-          <h3 href="facebook.com">Facebook</h3>
-        </div>
-        <div>
-          <h3 href="instagram.com">Instagram</h3>
-        </div>
-        <div>
-          <h3 href="youtube.com">Youtube</h3>
+      <br />
+      <div className="socialMediaEx">
+        <h2>Our social media</h2>
+        <br />
+        <div className="socialMedia">
+          <div>
+            <img
+              className="logoSocialMedia"
+              src="./src/assets/twitter.png"
+              href="twitter.com"
+              alt="logo Twitter"
+            />
+          </div>
+          <div>
+            <img
+              className="logoSocialMedia"
+              src="./src/assets/youtube.png"
+              href="youtube.com"
+              alt="logo YouTube"
+            />
+          </div>
+          <div>
+            <img
+              className="logoSocialMedia"
+              src="./src/assets/facebook.png"
+              href="facebook.com"
+              alt="logo Facebook"
+            />
+          </div>
+          <div>
+            <img
+              className="logoSocialMedia"
+              src="./src/assets/instagram.png"
+              href="instagram.com"
+              alt="logo Instagram"
+            />
+          </div>
         </div>
       </div>
+      <br />
     </div>
   );
 }
