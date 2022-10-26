@@ -1,0 +1,50 @@
+/*GENERAL*/
+
+.accueilBackground {
+  background-color: #414447;
+}
+
+/*IMAGE ACCUEIL*/
+
+.prez {
+  background-image: url("./src/assets/648568.jpg");
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+
+.catch {
+  color: black;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 6px;
+  margin-top: 50%;
+  border-radius: 10px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-color: #ffba35;
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid orange;
+  display: inline-block;
+}
+
+/*CARROUSEL OFFRE SPECIALE*/
+
+.specialOffer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  font-family: "DM Sans", sans-serif;
+  transition: background 0.4s ease-in;
+  background-color: #ededed;
+}
