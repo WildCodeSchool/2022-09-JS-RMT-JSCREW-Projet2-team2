@@ -1,0 +1,14 @@
+.navbar-bg{
+    background-color: #FFBA35;
+    position: sticky;
+    bottom: 0px;
+}
+
+.navbar-icon{
+    height: 30px;
+}
+
+.navbar-test{
+    height: 100vh;
+    background-color: antiquewhite;
+}

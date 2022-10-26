@@ -12,11 +12,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <Home pokemons={pokemons} />
       <AllProduct />
       <OneProduct />
       <Footer />
+      <Navbar />
     </div>
   );
 }
