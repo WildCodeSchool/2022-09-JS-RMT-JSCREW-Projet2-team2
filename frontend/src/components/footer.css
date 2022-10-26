@@ -1,0 +1,31 @@
+.contact {
+  height: 500px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  background-color: #15172b;
+  height: 500px;
+  width: 100%;
+  padding: 20px;
+}
+
+.container-fluid {
+  height: 400px;
+  background-color: red;
+
+  width: 100%;
+}
+
+.container-input {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.input-name {
+  margin-top: 40px;
+}
