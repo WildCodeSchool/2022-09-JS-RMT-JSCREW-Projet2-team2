@@ -1,41 +1,22 @@
-.navbar-mobile{
-    /* background-color: #FFBA35; */
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-}
-.navbar-desktop{
-    display: none;
+.navbar-mobile {
+    background-color: #FFBA35;
 }
 
 @media only screen and (min-width:768px) {
-    .navbar-mobile{
-        display: none;
-    }
-    .navbar-desktop{
-        display: block;
+
+    .navbar-desktop {
         background-color: #191919;
-        position: fixed;
-        top: 0px;
-        width: 100%;
     }
-    .navbar-desktop-right-icon{
+
+    .navbar-desktop-right-icon {
         width: 10%;
-        justify-content: space-between;
     }
-    .navbar-desktop-store-icon{
-        align-items: center;
+
+    .navbar-desktop-store-icon {
         color: #FFBA35;
     }
 }
 
-.navbar-icon{
-    height: 30px;
-}
-
-.navbar-test{
-    height: 100vh;
-    background-color: antiquewhite;
-    margin-top: 62px;
-    margin-bottom: 62px;
+.navbar-icon {
+    height: 50px;
 }

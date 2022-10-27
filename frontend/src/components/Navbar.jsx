@@ -5,7 +5,7 @@ function Navbar({ setPage }) {
   return (
     <div>
       {/* NAVBAR - MOBILE */}
-      <div className="navbar-mobile">
+      <div className="navbar-mobile fixed-bottom container-md d-md-none">
         <nav className="p-3">
           <ul className="list-unstyled d-flex justify-content-around m-0">
             <button
@@ -48,10 +48,7 @@ function Navbar({ setPage }) {
         </nav>
       </div>
       {/* NAVBAR - DESKTOP */}
-      <div className="navbar-test">
-        <h1>Test contenu</h1>
-      </div>
-      <div className="navbar-desktop">
+      <div className="navbar-desktop fixed-top d-none d-md-block container-fluid">
         <nav className="p-3">
           <ul className="list-unstyled d-flex justify-content-between m-0">
             <button
@@ -70,16 +67,16 @@ function Navbar({ setPage }) {
               className="border border-0 bg-transparent"
               type="button"
             >
-              <div className="navbar-desktop-store-icon d-flex">
-                <p className="m-0 me-2 fs-6">Store</p>
+              <div className="navbar-desktop-store-icon d-flex align-items-center">
                 <img
                   className="navbar-icon"
                   src="./src/assets/store-orange.png"
                   alt="store-icon"
                 />
+                <p className="m-0 ms-2 fs-6">Store</p>
               </div>
             </button>
-            <div className="navbar-desktop-right-icon d-flex">
+            <div className="navbar-desktop-right-icon d-flex justify-content-around">
               <button className="border border-0 bg-transparent" type="button">
                 <img
                   className="navbar-icon"
