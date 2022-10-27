@@ -1,21 +1,29 @@
 import React from "react";
 import "./navbar.css";
 
-function Navbar() {
+function Navbar({ setPage }) {
   return (
     <div>
       {/* NAVBAR - MOBILE */}
       <div className="navbar-mobile">
         <nav className="p-3">
           <ul className="list-unstyled d-flex justify-content-around m-0">
-            <button className="border border-0 bg-transparent" type="button">
+            <button
+              onClick={() => setPage("Home")}
+              className="border border-0 bg-transparent"
+              type="button"
+            >
               <img
                 className="navbar-icon"
                 src="./src/assets/logo-black.png"
                 alt="logo-icon"
               />
             </button>
-            <button className="border border-0 bg-transparent" type="button">
+            <button
+              onClick={() => setPage("AllProduct")}
+              className="border border-0 bg-transparent"
+              type="button"
+            >
               <img
                 className="navbar-icon"
                 src="./src/assets/store-black.png"
@@ -46,14 +54,22 @@ function Navbar() {
       <div className="navbar-desktop">
         <nav className="p-3">
           <ul className="list-unstyled d-flex justify-content-between m-0">
-            <button className="border border-0 bg-transparent" type="button">
+            <button
+              onClick={() => setPage("Home")}
+              className="border border-0 bg-transparent"
+              type="button"
+            >
               <img
                 className="navbar-icon"
                 src="./src/assets/logo.png"
                 alt="logo-icon"
               />
             </button>
-            <button className="border border-0 bg-transparent " type="button">
+            <button
+              onClick={() => setPage("AllProduct")}
+              className="border border-0 bg-transparent"
+              type="button"
+            >
               <div className="navbar-desktop-store-icon d-flex">
                 <p className="m-0 me-2 fs-6">Store</p>
                 <img
