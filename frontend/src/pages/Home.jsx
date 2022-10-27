@@ -77,7 +77,7 @@ export default function Home() {
       </div>
       <br />
       <div className="whyUsEx">
-        <h2>Why choose PokeBiz :</h2>
+        <h2>Pourquoi nous choisir ?</h2>
         <br />
         <div className="whyUs">
           <div className="categoryWhyUs">
@@ -108,7 +108,7 @@ export default function Home() {
       </div>
       <br />
       <div className="socialMediaEx">
-        <h2>Our social media</h2>
+        <h2>Nos réseaux</h2>
         <br />
         <div className="socialMedia">
           <div>
