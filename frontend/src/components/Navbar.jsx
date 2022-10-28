@@ -15,7 +15,7 @@ function Navbar({ setPage }) {
             >
               <img
                 className="navbar-icon"
-                src="./src/assets/logo-black.png"
+                src="./src/assets/navbar-icons/logo-black.png"
                 alt="logo-icon"
               />
             </button>
@@ -26,21 +26,21 @@ function Navbar({ setPage }) {
             >
               <img
                 className="navbar-icon"
-                src="./src/assets/store-black.png"
+                src="./src/assets/navbar-icons/store-black.png"
                 alt="store-icon"
               />
             </button>
             <button className="border border-0 bg-transparent" type="button">
               <img
                 className="navbar-icon"
-                src="./src/assets/search-black.png"
+                src="./src/assets/navbar-icons/search-black.png"
                 alt="search-icon"
               />
             </button>
             <button className="border border-0 bg-transparent" type="button">
               <img
                 className="navbar-icon"
-                src="./src/assets/basket-black.png"
+                src="./src/assets/navbar-icons/basket-black.png"
                 alt="basket-icon"
               />
             </button>
@@ -58,7 +58,7 @@ function Navbar({ setPage }) {
             >
               <img
                 className="navbar-icon"
-                src="./src/assets/logo.png"
+                src="./src/assets/navbar-icons/logo.png"
                 alt="logo-icon"
               />
             </button>
@@ -70,7 +70,7 @@ function Navbar({ setPage }) {
               <div className="navbar-desktop-store-icon d-flex align-items-center">
                 <img
                   className="navbar-icon"
-                  src="./src/assets/store-orange.png"
+                  src="./src/assets/navbar-icons/store-orange.png"
                   alt="store-icon"
                 />
                 <p className="m-0 ms-2 fs-6">Store</p>
@@ -80,14 +80,14 @@ function Navbar({ setPage }) {
               <button className="border border-0 bg-transparent" type="button">
                 <img
                   className="navbar-icon"
-                  src="./src/assets/search-orange.png"
+                  src="./src/assets/navbar-icons/search-orange.png"
                   alt="search-icon"
                 />
               </button>
               <button className="border border-0 bg-transparent" type="button">
                 <img
                   className="navbar-icon"
-                  src="./src/assets/basket-orange.png"
+                  src="./src/assets/navbar-icons/basket-orange.png"
                   alt="basket-icon"
                 />
               </button>
