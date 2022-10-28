@@ -18,7 +18,7 @@
   background-position: center;
 }
 
-.buttonCatch {
+/*.buttonCatch {
   color: black;
   font-size: 16px;
   line-height: 16px;
@@ -27,17 +27,22 @@
   border-radius: 10px;
   font-family: Georgia, serif;
   font-weight: normal;
-  text-decoration: none;
+  
   font-style: normal;
   font-variant: normal;
-  text-transform: none;
+  
   background-color: #ffba35;
   box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
   border: 2px solid orange;
   display: inline-block;
+}*/
+
+.btn-warning {
+  border-radius: 10px;
+  background-color: #ffba35;
 }
 
-.buttonCatch:hover {
+.btn-warning:hover {
   color: #ffba35;
   background-color: black;
 }
@@ -119,7 +124,7 @@ input[type="radio"] {
   z-index: 1;
 }
 
-#achat {
+/*#achat {
   color: black;
   font-size: 16px;
   line-height: 16px;
@@ -138,7 +143,7 @@ input[type="radio"] {
 #achat:hover {
   color: #ffba35;
   background-color: black;
-}
+}*/
 
 .priceOffer {
   display: flex;
@@ -147,20 +152,21 @@ input[type="radio"] {
 
 .oldPrice {
   text-decoration: line-through;
+  color: #414447;
 }
 
 /*CHARTE REASSURANCE*/
 
-.whyUs {
+/*.whyUs {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: space-between;
-}
+}*/
 
-.whyUsEx {
-  padding-top: 50px;
+.whyUs {
+  width: 90%;
 }
 
 .whyUsEx h2 {
@@ -174,26 +180,14 @@ input[type="radio"] {
 }
 
 .categoryWhyUs {
-  width: 110px;
-  color: white;
   background-color: #414447;
   border-radius: 5px;
-  padding-top: 10px;
 }
 
 /*SOCIAL MEDIA*/
 
 .socialMedia {
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.socialMediaEx {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .socialMediaEx h2 {

@@ -5,10 +5,14 @@ import "./Home.css";
 export default function Home() {
   return (
     <div className="accueilBackground">
-      <div className="prez">
-        <button className="buttonCatch" type="button">
-          Attrapez-les tous !
-        </button>
+      <div className="prez position-relative d-flex flex-column justify-content-end">
+        <div className="position-absolute">
+          <h2 className="text-white">Bienvenue sur PokeBiz</h2>
+          <h1 className="text-white">Boutique de cartes Pokémon</h1>
+          <button className="btn btn btn-warning  mb-5" type="button">
+            Attrapez-les tous !
+          </button>
+        </div>
       </div>
       <div className="specialOffer">
         <div className="carrouselOffer">
@@ -25,13 +29,18 @@ export default function Home() {
               <form action="">
                 <div className="priceOffer">
                   <div>
-                    <h3 className="oldPrice">72</h3>
+                    <h3 className="oldPrice">80</h3>
                   </div>
                   <div>
-                    <h3>45</h3>
+                    <h3>50</h3>
                   </div>
                   <div>
-                    <input id="achat" type="submit" value="acheter" />
+                    <button
+                      className="btn btn  btn-sm btn-warning"
+                      type="button"
+                    >
+                      Acheter
+                    </button>
                   </div>
                 </div>
               </form>
@@ -43,13 +52,18 @@ export default function Home() {
               <form action="">
                 <div className="priceOffer">
                   <div>
-                    <h3 className="oldPrice">72</h3>
+                    <h3 className="oldPrice">100</h3>
                   </div>
                   <div>
-                    <h3>45</h3>
+                    <h3>60</h3>
                   </div>
                   <div>
-                    <input id="achat" type="submit" value="acheter" />
+                    <button
+                      className="btn btn  btn-sm btn-warning"
+                      type="button"
+                    >
+                      Acheter
+                    </button>
                   </div>
                 </div>
               </form>
@@ -67,7 +81,12 @@ export default function Home() {
                     <h3>45</h3>
                   </div>
                   <div>
-                    <input id="achat" type="submit" value="acheter" />
+                    <button
+                      className="btn btn  btn-sm btn-warning"
+                      type="button"
+                    >
+                      Acheter
+                    </button>
                   </div>
                 </div>
               </form>
@@ -76,11 +95,11 @@ export default function Home() {
         </div>
       </div>
       <br />
-      <div className="whyUsEx">
+      <div className="whyUsEx pt-5">
         <h2>Pourquoi nous choisir ?</h2>
         <br />
-        <div className="whyUs">
-          <div className="categoryWhyUs">
+        <div className="whyUs d-flex flex-column mx-auto justify-content-between">
+          <div className="categoryWhyUs text-white mt-3">
             <img
               className="logoWhyUs"
               src="./src/assets/badge.png"
@@ -88,7 +107,7 @@ export default function Home() {
             />
             <p>Des cartes officielles</p>
           </div>
-          <div className="categoryWhyUs">
+          <div className="categoryWhyUs text-white mt-3">
             <img
               className="logoWhyUs"
               src="./src/assets/cadenas.png"
@@ -96,7 +115,7 @@ export default function Home() {
             />
             <p>Des transactions sécurisées</p>
           </div>
-          <div className="categoryWhyUs">
+          <div className="categoryWhyUs text-white mt-3">
             <img
               className="logoWhyUs"
               src="./src/assets/bitcoin.png"
@@ -107,10 +126,10 @@ export default function Home() {
         </div>
       </div>
       <br />
-      <div className="socialMediaEx">
+      <div className="socialMediaEx pt-5 pb-5">
         <h2>Nos réseaux</h2>
         <br />
-        <div className="socialMedia">
+        <div className="socialMedia d-flex mx-auto justify-content-between">
           <div>
             <img
               className="logoSocialMedia"
