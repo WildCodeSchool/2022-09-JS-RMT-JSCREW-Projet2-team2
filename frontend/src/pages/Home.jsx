@@ -32,7 +32,7 @@ export default function Home() {
           <input type="radio" name="slider" id="item-3" checked />
           <div className="cards">
             <label className="cardOffer" htmlFor="item-1" id="offre-1">
-              <img src="./src/assets/oui.jpg" href="" alt="" />
+              <img src="./src/assets/imagesHome/oui.jpg" href="" alt="" />
               <br />
               <br />
               <form action="">
@@ -55,7 +55,7 @@ export default function Home() {
               </form>
             </label>
             <label className="cardOffer" htmlFor="item-2" id="offre-2">
-              <img src="./src/assets/vraiment.jpg" href="" alt="" />
+              <img src="./src/assets/imagesHome/vraiment.jpg" href="" alt="" />
               <br />
               <br />
               <form action="">
@@ -78,7 +78,7 @@ export default function Home() {
               </form>
             </label>
             <label className="cardOffer" htmlFor="item-3" id="offre-3">
-              <img src="./src/assets/wow.jpg" href="" alt="" />
+              <img src="./src/assets/imagesHome/wow.jpg" href="" alt="" />
               <br />
               <br />
               <form action="">
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="categoryWhyUs text-white mt-3 pt-3">
             <img
               className="logoWhyUs"
-              src="./src/assets/badge.png"
+              src="./src/assets/iconsHome/badge.png"
               alt="logo badge"
             />
             <p>Des cartes officielles</p>
@@ -119,7 +119,7 @@ export default function Home() {
           <div className="categoryWhyUs text-white mt-3 pt-3">
             <img
               className="logoWhyUs"
-              src="./src/assets/cadenas.png"
+              src="./src/assets/iconsHome/cadenas.png"
               alt="logo cadenas"
             />
             <p>Des transactions sécurisées</p>
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="categoryWhyUs text-white mt-3 pt-3">
             <img
               className="logoWhyUs"
-              src="./src/assets/bitcoin.png"
+              src="./src/assets/iconsHome/bitcoin.png"
               alt="logo bitcoin"
             />
             <p>Achat en plusieurs devises</p>
@@ -142,7 +142,7 @@ export default function Home() {
           <div>
             <img
               className="logoSocialMedia"
-              src="./src/assets/twitter.png"
+              src="./src/assets/iconsHome/twitter.png"
               href="twitter.com"
               alt="logo Twitter"
             />
@@ -150,7 +150,7 @@ export default function Home() {
           <div>
             <img
               className="logoSocialMedia"
-              src="./src/assets/youtube.png"
+              src="./src/assets/iconsHome/youtube.png"
               href="youtube.com"
               alt="logo YouTube"
             />
@@ -158,7 +158,7 @@ export default function Home() {
           <div>
             <img
               className="logoSocialMedia"
-              src="./src/assets/facebook.png"
+              src="./src/assets/iconsHome/facebook.png"
               href="facebook.com"
               alt="logo Facebook"
             />
@@ -166,7 +166,7 @@ export default function Home() {
           <div>
             <img
               className="logoSocialMedia"
-              src="./src/assets/instagram.png"
+              src="./src/assets/iconsHome/instagram.png"
               href="instagram.com"
               alt="logo Instagram"
             />
