@@ -1,0 +1,22 @@
+.navbar-mobile {
+    background-color: #FFBA35;
+}
+
+@media only screen and (min-width:768px) {
+
+    .navbar-desktop {
+        background-color: #191919;
+    }
+
+    .navbar-desktop-right-icon {
+        width: 10%;
+    }
+
+    .navbar-desktop-store-icon {
+        color: #FFBA35;
+    }
+}
+
+.navbar-icon {
+    height: 40px;
+}
