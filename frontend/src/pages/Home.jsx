@@ -14,6 +14,15 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <div className="prezIntro pt-5 mx-auto">
+        <h2>Achetez des cartes Pokémon officielles</h2>
+        <p className="text-white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut animi
+          iste odit quasi id esse, dicta expedita perspiciatis blanditiis
+          tenetur a eaque, veritatis labore iure ratione. Rerum ipsum inventore
+          doloremque.
+        </p>
+      </div>
       <div className="specialOffer">
         <div className="carrouselOffer">
           <h2>Offre Spéciale</h2>
@@ -98,8 +107,8 @@ export default function Home() {
       <div className="whyUsEx pt-5">
         <h2>Pourquoi nous choisir ?</h2>
         <br />
-        <div className="whyUs d-flex flex-column mx-auto justify-content-between">
-          <div className="categoryWhyUs text-white mt-3">
+        <div className="whyUs d-md-flex d-sm-flex-column mx-auto justify-content-between">
+          <div className="categoryWhyUs text-white mt-3 pt-3">
             <img
               className="logoWhyUs"
               src="./src/assets/badge.png"
@@ -107,7 +116,7 @@ export default function Home() {
             />
             <p>Des cartes officielles</p>
           </div>
-          <div className="categoryWhyUs text-white mt-3">
+          <div className="categoryWhyUs text-white mt-3 pt-3">
             <img
               className="logoWhyUs"
               src="./src/assets/cadenas.png"
@@ -115,7 +124,7 @@ export default function Home() {
             />
             <p>Des transactions sécurisées</p>
           </div>
-          <div className="categoryWhyUs text-white mt-3">
+          <div className="categoryWhyUs text-white mt-3 pt-3">
             <img
               className="logoWhyUs"
               src="./src/assets/bitcoin.png"
