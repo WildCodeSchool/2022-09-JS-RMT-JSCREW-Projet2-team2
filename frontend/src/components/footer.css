@@ -1,31 +1,55 @@
-.contact {
-  height: 500px;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form {
-  background-color: #15172b;
-  height: 500px;
-  width: 100%;
-  padding: 20px;
+.footer-contact {
+  margin-top: 1006px;
+  margin-bottom: 65px;
+  background-color: #1b1918;
 }
 
 .container-fluid {
-  height: 400px;
-  background-color: red;
-
+  height: 300px;
+  background-color: #1b1918;
   width: 100%;
 }
 
-.container-input {
+/* css desktop */
+
+@media screen and (min-width: 768px) {
+  .container-button,
+  .container-textarea,
+  .container-input {
+    display: flex;
+
+    /* justify-content: center; */
+  }
+  .footer-contact {
+    margin-bottom: 0;
+  }
+}
+
+.input-email,
+.input-name,
+.textarea {
   height: 50px;
-  width: 100%;
-  position: relative;
+  border-radius: 10px;
+  background-color: #3e3e3e;
 }
 
-.input-name {
-  margin-top: 40px;
+.button {
+  background-color: #3e3e3e;
+  color: #ffffff;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.input-email,
+.input-name,
+::placeholder {
+  color: #ffffff;
+}
+
+.footer-list-button {
+  color: #ffba35;
+}
+
+#footer-map {
+  width: 200px;
 }
