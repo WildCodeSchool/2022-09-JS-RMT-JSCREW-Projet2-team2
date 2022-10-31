@@ -1,7 +1,7 @@
 import React from "react";
-import "./TemplateCard.css";
+import "./AllTemplateCard.css";
 
-function TemplateCard({ pokemon }) {
+function AllTemplateCard({ pokemon }) {
   return (
     <div className="card">
       <img className="card-img-top" src={`${pokemon.url}`} alt="Card  cap" />
@@ -56,4 +56,4 @@ function TemplateCard({ pokemon }) {
     </div>
   );
 }
-export default TemplateCard;
+export default AllTemplateCard;

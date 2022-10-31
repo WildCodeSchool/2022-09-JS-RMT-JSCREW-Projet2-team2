@@ -1,5 +1,5 @@
 import React from "react";
-import TemplateCard from "@components/TemplateCard";
+import AllTemplateCard from "@components/AllTemplateCard";
 import pokemons from "@services/data";
 
 function AllProduct() {
@@ -9,7 +9,7 @@ function AllProduct() {
   return (
     <div className="container-fluid bg-container">
       {pokemons.map((pokemon) => {
-        return <TemplateCard key={pokemon.id} pokemon={pokemon} />;
+        return <AllTemplateCard key={pokemon.id} pokemon={pokemon} />;
       })}
     </div>
   );
