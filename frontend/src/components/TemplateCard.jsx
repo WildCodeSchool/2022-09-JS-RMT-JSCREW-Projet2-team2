@@ -58,11 +58,6 @@ function TemplateCard() {
             </ul>
           </div>
         </div>
-        <div className="card-back">
-          <div className="card-top">
-            <div className="card-image" />
-          </div>
-        </div>
       </div>
       <button className="buttonColor mt-4 mb-2 btn btn-warning" type="button">
         Add to basket
