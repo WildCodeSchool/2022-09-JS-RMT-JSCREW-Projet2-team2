@@ -12,19 +12,6 @@
 
 /* css desktop */
 
-@media screen and (min-width: 768px) {
-  .container-button,
-  .container-textarea,
-  .container-input {
-    display: flex;
-
-    /* justify-content: center; */
-  }
-  .footer-contact {
-    margin-bottom: 0;
-  }
-}
-
 .input-email,
 .input-name,
 .textarea {
@@ -34,7 +21,7 @@
 }
 
 .button {
-  background-color: #3e3e3e;
+  background-color: #ffba35;
   color: #ffffff;
   height: 40px;
   border-radius: 10px;
@@ -51,5 +38,8 @@
 }
 
 #footer-map {
-  width: 200px;
+  width: 180px;
+}
+
+.footer-list-button {
 }
