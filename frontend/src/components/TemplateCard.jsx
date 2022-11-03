@@ -8,7 +8,7 @@ function TemplateCard() {
         <div className="card-front align-items-center bg-success w-100 h-100 p-3 rounded-3">
           <div className="container-card d-grid w-100">
             <div className="top-of-card d-flex justify-content-between align-items-center fw-bold">
-              <p>Bulbasaur</p>
+              <p className="text-uppercase">bulbasaur</p>
               <p>45Hp</p>
             </div>
             <div className="picture-card-oneProduct bg-light" />
@@ -17,43 +17,45 @@ function TemplateCard() {
                 <p className="move-attack justify-content-center mb-0 fw-bold">
                   1st move
                 </p>
-                <p className="move-attack justify-content-center mb-0 fw-bold">
-                  Razord Wind
+                <p className="move-attack justify-content-center mb-0 fw-bold text-uppercase">
+                  razord wind
                 </p>
               </div>
               <div className="attack-card d-flex justify-content-between align-items-center p-2 mt-2 rounded">
                 <p className="move-attack justify-content-center mb-0 fw-bold">
                   2nd move
                 </p>
-                <p className="move-attack justify-content-center mb-0 fw-bold">
-                  Swords Dance
+                <p className="move-attack justify-content-center mb-0 fw-bold text-uppercase">
+                  swords dance
                 </p>
               </div>
               <div className="attack-card d-flex justify-content-between align-items-center p-2 mt-2 rounded">
                 <p className="move-attack justify-content-center mb-0 fw-bold">
                   3rd move
                 </p>
-                <p className="move-attack justify-content-center mb-0 fw-bold">
-                  Cut
+                <p className="move-attack justify-content-center mb-0 fw-bold text-uppercase">
+                  cut
                 </p>
               </div>
               <div className="attack-card d-flex justify-content-between align-items-center p-2 mt-2 rounded">
                 <p className="move-attack justify-content-center mb-0 fw-bold">
                   4th move
                 </p>
-                <p className="move-attack justify-content-center mb-0 fw-bold">
-                  Blind
+                <p className="move-attack justify-content-center mb-0 fw-bold text-uppercase">
+                  blind
                 </p>
               </div>
             </div>
           </div>
-          <div className="bottom-of-card d-flex align-items-center container-fluid mt-3 bg-light">
-            <p className="p-bottom m-auto">Def:49</p>
-            <p className="p-bottom m-auto">S.Def:65</p>
-            <p className="p-bottom m-auto">Att:49</p>
-            <p className="p-bottom m-auto">S.Att:65</p>
-            <p className="p-bottom m-auto">Speed:45</p>
-            <p className="p-bottom m-auto">Exp:64</p>
+          <div className="bottom-of-card align-items-center container-fluid mt-3 bg-light">
+            <ul className="d-flex list-unstyled mb-0">
+              <li className="m-auto">Def:49</li>
+              <li className="m-auto">S.Def:65</li>
+              <li className="m-auto">Att:49</li>
+              <li className="m-auto">S.Att:65</li>
+              <li className="m-auto">Speed:45</li>
+              <li className="m-auto">Exp:64</li>
+            </ul>
           </div>
         </div>
         <div className="card-back">
