@@ -9,7 +9,7 @@ function AllProduct() {
   return (
     <section>
       <div>AllProduct</div>
-      <div className="container-fluid bg-container">
+      <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
         {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
           return <AllTemplateCard key={pokemon.id} pokemon={pokemon} />;
         })}

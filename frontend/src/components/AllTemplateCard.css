@@ -1,7 +1,4 @@
 .bg-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   background: rgb(16, 20, 20);
   background: linear-gradient(
     36deg,
@@ -19,13 +16,6 @@
   margin: 10px;
 }
 
-.progress {
-  margin: 5px;
-}
-
 .list-group {
   flex-direction: row;
-}
-
-@media only screen and (min-width: 768px) {
 }

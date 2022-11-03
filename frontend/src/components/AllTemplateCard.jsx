@@ -9,7 +9,7 @@ function AllTemplateCard({ pokemon }) {
         <h5 className="card-title text-capitalize">{pokemon.name}</h5>
         <p className="card-text">Pokebiz</p>
         <a href="/#" className="btn btn-warning btn-sm text-capitalize">
-          acheter
+          Add to card
         </a>
       </div>
       <ul className="list-group list-group-flush ">

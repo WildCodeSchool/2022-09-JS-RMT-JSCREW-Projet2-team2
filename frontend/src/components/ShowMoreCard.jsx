@@ -6,9 +6,9 @@ function ShowMoreCard({ numberOfCard, setNumberOfCard, pokemons }) {
       <button
         type="button"
         onClick={() => setNumberOfCard(numberOfCard + 6)}
-        className="btn btn-warning mb-3 mt-3"
+        className="btn btn-warning mb-3 mt-3 text-capitalize"
       >
-        {numberOfCard >= pokemons.length ? "plus de carte " : "+ de cartes"}
+        {numberOfCard >= pokemons.length ? "No more cards " : "show more cards"}
       </button>
     </div>
   );
