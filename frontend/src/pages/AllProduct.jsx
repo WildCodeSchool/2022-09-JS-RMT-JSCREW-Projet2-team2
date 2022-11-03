@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import AllTemplateCard from "@components/AllTemplateCard";
+import ShowMoreCard from "@components/ShowMoreCard";
 import pokemons from "@services/data";
 
 function AllProduct() {
-  <div>
-    <h1 className="contain-title">All Product</h1>
-  </div>;
+  const [numberOfCard, setNumberOfCard] = useState(0);
+
   return (
-    <div className="container-fluid bg-container">
-      {pokemons.map((pokemon) => {
-        return <AllTemplateCard key={pokemon.id} pokemon={pokemon} />;
-      })}
-    </div>
+    <section>
+      <div>AllProduct</div>
+      <div className="container-fluid bg-container">
+        {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
+          return <AllTemplateCard key={pokemon.id} pokemon={pokemon} />;
+        })}
+      </div>
+      <ShowMoreCard
+        numberOfCard={numberOfCard}
+        setNumberOfCard={setNumberOfCard}
+        pokemons={pokemons}
+      />
+    </section>
   );
 }
 
