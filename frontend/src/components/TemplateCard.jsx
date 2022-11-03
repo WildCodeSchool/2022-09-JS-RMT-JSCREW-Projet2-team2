@@ -63,10 +63,10 @@ function TemplateCard() {
         </div>
       </div>
       <button
-        className="buttonColor mt-4 mb-2 btn btn-warning mt-2"
-        type="button"
+        className="buttonColor mt-4 mb-2 btn btn-warning"
+        type="button" //hover
       >
-        Add Card
+        Add to basket
       </button>
     </div>
   );
