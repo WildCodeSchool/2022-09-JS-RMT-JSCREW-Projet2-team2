@@ -11,7 +11,7 @@ function TemplateCard() {
               <p>Bulbasaur</p>
               <p>45Hp</p>
             </div>
-            <div className="picture-card-oneProduct bg-light"></div>
+            <div className="picture-card-oneProduct bg-light" />
             <div className="container-attack-card d-flex flex-column justify-content-around">
               <div className="attack-card d-flex justify-content-between align-items-center p-2 mt-2 rounded ">
                 <p className="move-attack justify-content-center mb-0 fw-bold">
@@ -63,9 +63,8 @@ function TemplateCard() {
         </div>
       </div>
       <button
-        className="buttonColor mt-4 mb-2"
+        className="buttonColor mt-4 mb-2 btn btn-warning mt-2"
         type="button"
-        class="btn btn-warning mt-2"
       >
         Add Card
       </button>
