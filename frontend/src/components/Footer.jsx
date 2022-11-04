@@ -11,11 +11,11 @@ function Footer() {
             <li className="mb-3">Home</li>
             <li>Our Cards</li>
           </ul>
-          <div className="col-md-6">
-            <MyForm />
-          </div>
-          <div className="d-none d-md-block col-md-3 my-auto">
+          <div className="col-12 d-md-block col-md-3 my-auto order-md-last">
             <img id="footer-map" src="../src/assets/footerImgMap.jpg" alt="" />
+          </div>
+          <div className="col-md-6 col-12">
+            <MyForm />
           </div>
         </div>
       </div>
