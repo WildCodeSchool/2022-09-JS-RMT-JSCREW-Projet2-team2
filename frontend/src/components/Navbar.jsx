@@ -26,7 +26,7 @@ function Navbar({ setPage }) {
             >
               <img
                 className="navbar-icon"
-                src="./src/assets/navbar-icons/store-black.png"
+                src="./src/assets/navbar-icons/cards.png"
                 alt="store-icon"
               />
             </button>
@@ -53,14 +53,17 @@ function Navbar({ setPage }) {
           <ul className="list-unstyled d-flex justify-content-between m-0">
             <button
               onClick={() => setPage("Home")}
-              className="border border-0 bg-transparent"
+              className="navbar-button border border-0 bg-transparent"
               type="button"
             >
-              <img
-                className="navbar-icon"
-                src="./src/assets/navbar-icons/logo.png"
-                alt="logo-icon"
-              />
+              <div className="d-flex">
+                <img
+                  className="navbar-icon"
+                  src="./src/assets/navbar-icons/logo.png"
+                  alt="logo-icon"
+                />
+                <h2 className="ms-2">Pokebiz</h2>
+              </div>
             </button>
             <button
               onClick={() => setPage("AllProduct")}
@@ -70,16 +73,16 @@ function Navbar({ setPage }) {
               <div className="navbar-desktop-store-icon d-flex align-items-center">
                 <img
                   className="navbar-icon"
-                  src="./src/assets/navbar-icons/store-orange.png"
+                  src="./src/assets/navbar-icons/cards-orange.png"
                   alt="store-icon"
                 />
-                <p className="m-0 ms-2 fs-6">Store</p>
+                <p className="m-0 ms-2 fs-6">Our cards</p>
               </div>
             </button>
             <div className="navbar-desktop-right-icon d-flex justify-content-around">
               <button className="border border-0 bg-transparent" type="button">
                 <img
-                  className="navbar-icon"
+                  className="navbar-icon me-4"
                   src="./src/assets/navbar-icons/search-orange.png"
                   alt="search-icon"
                 />
