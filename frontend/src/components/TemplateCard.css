@@ -6,28 +6,43 @@
   );
 }
 
+.bg-container {
+  background: rgb(16, 20, 20);
+  background: linear-gradient(
+    36deg,
+    rgba(16, 20, 20, 0.9584034297312675) 0%,
+    rgba(16, 20, 20, 1) 100%
+  );
+}
+
 .card-info {
   background: #3e3e3e;
 }
 
+.card-front {
+  background-color: #ffba35;
+}
+
 .container-card {
-  grid-template-rows: 30px 166px 200px;
-  grid-template-columns: 253px
+  grid-template-columns: 300px;
 }
 
 .picture-card-oneProduct {
-  background-image: url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center
+  background-position: center;
+}
+
+.card-img-top {
+  height: 270px;
 }
 
 .attack-card {
-  background-color: #277127ab
+  background-color: #a17723a7;
 }
 
 .bottom-of-card {
-  font-size: x-small
+  font-size: x-small;
 }
 
 .buttonColor {

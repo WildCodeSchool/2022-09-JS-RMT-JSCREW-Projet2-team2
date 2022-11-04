@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AllTemplateCard from "@components/AllTemplateCard";
+import TemplateCard from "@components/TemplateCard";
 import ShowMoreCard from "@components/ShowMoreCard";
 import pokemons from "@services/data";
 
@@ -11,7 +11,7 @@ function AllProduct() {
       <div>AllProduct</div>
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
         {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
-          return <AllTemplateCard key={pokemon.id} pokemon={pokemon} />;
+          return <TemplateCard key={pokemon.id} pokemon={pokemon} />;
         })}
       </div>
       <ShowMoreCard
