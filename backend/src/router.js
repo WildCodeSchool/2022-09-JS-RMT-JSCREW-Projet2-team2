@@ -2,7 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/pokemon", (req, res) => {
-  res.send("Hello team 2 !");
+const pokemons = require("./data/pokemons");
+
+router.get("/pokebiz", (req, res) => {
+  res.json(pokemons);
 });
+
 module.exports = router;
