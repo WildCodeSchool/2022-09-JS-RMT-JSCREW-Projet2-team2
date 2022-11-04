@@ -29,7 +29,7 @@ export default function Home() {
       </div>
       <div className="specialOffer d-flex align-items-center justify-content-center pt-5 text-white">
         <div className="carrouselOffer d-flex justify-content-center flex-column align-items-center mb-3">
-          <h2>Special Offer</h2>
+          <h2>Special Offers</h2>
           <br />
           <input
             className="d-none"
@@ -63,7 +63,7 @@ export default function Home() {
       </div>
       <br />
       <div className="socialMediaEx pt-5 pb-5">
-        <h2 className="text-center">Our social media</h2>
+        <h2 className="text-center">Our social networks</h2>
         <br />
         <SocialMedia />
       </div>
