@@ -21,7 +21,7 @@ function App() {
       {/* Si la valeur de page = AllProduct alors on est sur la page de vente */}
       {page === "AllProduct" && <AllProduct setPage={setPage} />}
       {/* On filtre les pokemons, et quand la valeur de page = ID d'un pokemon on se trouve sur la page correspondante */}
-      {page === "OneProduct" && <OneProduct />}
+      {page === "OneProduct" && <OneProduct pokemon={pokemons[0]} />}
       <Footer />
     </div>
   );

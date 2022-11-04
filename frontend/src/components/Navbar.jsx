@@ -7,6 +7,9 @@ function Navbar({ setPage }) {
       {/* NAVBAR - MOBILE */}
       <div className="navbar-mobile fixed-bottom container-md d-md-none">
         <nav className="p-3">
+          <button type="button" onClick={() => setPage("OneProduct")}>
+            OneProduct
+          </button>
           <ul className="list-unstyled d-flex justify-content-around m-0">
             <button
               onClick={() => setPage("Home")}
