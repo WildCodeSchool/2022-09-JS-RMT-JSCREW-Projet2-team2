@@ -2,7 +2,6 @@
 
 .accueilBackground {
   background-color: black;
-  margin-top: 62px; /*marge pour navbar*/
 }
 
 /*IMAGE ACCUEIL*/
@@ -141,6 +140,10 @@
 
   .socialMedia {
     width: 50%;
+  }
+
+  .accueilBackground {
+    margin-top: 62px; /*marge pour navbar*/
   }
 }
 
