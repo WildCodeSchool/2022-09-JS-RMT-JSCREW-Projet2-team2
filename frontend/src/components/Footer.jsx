@@ -7,14 +7,14 @@ function Footer() {
     <footer>
       <div className="footer-contact container align-items-center justify-content-around mb-md-0">
         <div className="row ">
-          <ul className=" footer-list-button d-none d-md-block list-unstyled col-md-3">
+          <ul className="footer-list-button d-none d-md-block list-unstyled col-md-3 my-auto">
             <li className="mb-3">Home</li>
             <li>Our Cards</li>
           </ul>
           <div className="col-md-6">
             <MyForm />
           </div>
-          <div className="d-none d-md-block col-md-3">
+          <div className="d-none d-md-block col-md-3 my-auto">
             <img id="footer-map" src="../src/assets/footerImgMap.jpg" alt="" />
           </div>
         </div>
