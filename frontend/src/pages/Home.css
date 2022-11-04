@@ -1,0 +1,209 @@
+/*GENERAL*/
+
+.accueilBackground {
+  background-color: black;
+  margin-top: 62px; /*marge pour navbar*/
+}
+
+/*IMAGE ACCUEIL*/
+
+.prez {
+  background-image: url("./src/assets/imagesHome/648568.jpg");
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+
+.btn-warning {
+  border-radius: 10px;
+  background-color: #ffba35;
+}
+
+.btn-warning:hover {
+  color: #ffba35;
+  background-color: black;
+}
+
+/*PREZ INTRO*/
+
+.prezIntro {
+  display: none;
+}
+
+/*CARROUSEL OFFRE SPECIALE*/
+
+.specialOffer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  font-family: "DM Sans", sans-serif;
+  transition: background 0.4s ease-in;
+  color: white;
+  padding-top: 50px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.cardOffer {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.carrouselOffer {
+  width: 300px;
+  height: 350px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.cardOffer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: fill;
+}
+
+#item-1:checked ~ .cards #offre-3,
+#item-2:checked ~ .cards #offre-1,
+#item-3:checked ~ .cards #offre-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #offre-2,
+#item-2:checked ~ .cards #offre-3,
+#item-3:checked ~ .cards #offre-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #offre-1,
+#item-2:checked ~ .cards #offre-2,
+#item-3:checked ~ .cards #offre-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+/*#achat {
+  color: black;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 6px;
+  border-radius: 10px;
+
+  background-color: #ffba35;
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid #ffba35;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#achat:hover {
+  color: #ffba35;
+  background-color: black;
+}*/
+
+.priceOffer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #414447;
+}
+
+/*CHARTE REASSURANCE*/
+
+.whyUs {
+  width: 90%;
+}
+
+.whyUsEx h2 {
+  text-align: center;
+  color: #ffba35;
+}
+
+.logoWhyUs {
+  height: 60px;
+  width: 60px;
+}
+
+.categoryWhyUs {
+  background-color: #414447;
+  border-radius: 5px;
+}
+
+/*SOCIAL MEDIA*/
+
+.socialMedia {
+  width: 90%;
+}
+
+.socialMediaEx h2 {
+  text-align: center;
+  color: #ffba35;
+}
+
+.logoSocialMedia {
+  height: 60px;
+  width: 60px;
+}
+
+@media screen and (min-width: 760px) {
+  .whyUs {
+    width: 80%;
+  }
+
+  .categoryWhyUs {
+    width: 200px;
+  }
+
+  .socialMedia {
+    width: 50%;
+  }
+
+  /*PREZ INTRO*/
+
+  .prezIntro {
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: #ffba35;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .categoryWhyUs {
+    width: 300px;
+  }
+}

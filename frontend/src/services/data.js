@@ -2,7 +2,7 @@ const pokemons = [
   {
     pokedex_index: 1,
     name: "bulbasaur",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
     experience: 64,
     heigth: 7,
     hp: 45,
@@ -31,7 +31,7 @@ const pokemons = [
   {
     pokedex_index: 2,
     name: "ivysaur",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
     experience: 142,
     heigth: 10,
     hp: 60,
@@ -60,7 +60,7 @@ const pokemons = [
   {
     pokedex_index: 3,
     name: "venusaur",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
     experience: 263,
     heigth: 20,
     hp: 80,
@@ -89,7 +89,7 @@ const pokemons = [
   {
     pokedex_index: 4,
     name: "charmander",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
     experience: 62,
     heigth: 6,
     hp: 39,
@@ -118,7 +118,7 @@ const pokemons = [
   {
     pokedex_index: 5,
     name: "charmeleon",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
     experience: 142,
     heigth: 11,
     hp: 58,
@@ -147,7 +147,7 @@ const pokemons = [
   {
     pokedex_index: 6,
     name: "charizard",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg",
     experience: 267,
     heigth: 17,
     hp: 78,
@@ -176,7 +176,7 @@ const pokemons = [
   {
     pokedex_index: 7,
     name: "squirtle",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg",
     experience: 63,
     heigth: 5,
     hp: 44,
@@ -205,7 +205,7 @@ const pokemons = [
   {
     pokedex_index: 8,
     name: "wartortle",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg",
     experience: 142,
     heigth: 10,
     hp: 59,
@@ -234,7 +234,7 @@ const pokemons = [
   {
     pokedex_index: 9,
     name: "blastoise",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg",
     experience: 265,
     heigth: 16,
     hp: 79,
@@ -263,7 +263,7 @@ const pokemons = [
   {
     pokedex_index: 10,
     name: "caterpie",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.svg",
     experience: 39,
     heigth: 3,
     hp: 45,
@@ -292,7 +292,7 @@ const pokemons = [
   {
     pokedex_index: 11,
     name: "metapod",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg",
     experience: 72,
     heigth: 7,
     hp: 50,
@@ -321,7 +321,7 @@ const pokemons = [
   {
     pokedex_index: 12,
     name: "butterfree",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg",
     experience: 198,
     heigth: 11,
     hp: 60,
@@ -350,7 +350,7 @@ const pokemons = [
   {
     pokedex_index: 13,
     name: "weedle",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg",
     experience: 39,
     heigth: 3,
     hp: 40,
@@ -379,7 +379,7 @@ const pokemons = [
   {
     pokedex_index: 14,
     name: "kakuna",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.svg",
     experience: 72,
     heigth: 6,
     hp: 45,
@@ -408,7 +408,7 @@ const pokemons = [
   {
     pokedex_index: 15,
     name: "beedrill",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/15.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/15.svg",
     experience: 178,
     heigth: 10,
     hp: 65,
@@ -437,7 +437,7 @@ const pokemons = [
   {
     pokedex_index: 16,
     name: "pidgey",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/16.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/16.svg",
     experience: 50,
     heigth: 3,
     hp: 40,
@@ -466,7 +466,7 @@ const pokemons = [
   {
     pokedex_index: 17,
     name: "pidgeotto",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/17.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/17.svg",
     experience: 122,
     heigth: 11,
     hp: 63,
@@ -495,7 +495,7 @@ const pokemons = [
   {
     pokedex_index: 18,
     name: "pidgeot",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/18.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/18.svg",
     experience: 216,
     heigth: 15,
     hp: 83,
@@ -524,7 +524,7 @@ const pokemons = [
   {
     pokedex_index: 19,
     name: "rattata",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/19.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/19.svg",
     experience: 51,
     heigth: 3,
     hp: 30,
@@ -553,7 +553,7 @@ const pokemons = [
   {
     pokedex_index: 20,
     name: "raticate",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/20.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/20.svg",
     experience: 145,
     heigth: 7,
     hp: 55,
@@ -582,7 +582,7 @@ const pokemons = [
   {
     pokedex_index: 21,
     name: "spearow",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/21.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/21.svg",
     experience: 52,
     heigth: 3,
     hp: 40,
@@ -611,7 +611,7 @@ const pokemons = [
   {
     pokedex_index: 22,
     name: "fearow",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.svg",
     experience: 155,
     heigth: 12,
     hp: 65,
@@ -640,7 +640,7 @@ const pokemons = [
   {
     pokedex_index: 23,
     name: "ekans",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/23.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/23.svg",
     experience: 58,
     heigth: 20,
     hp: 35,
@@ -669,7 +669,7 @@ const pokemons = [
   {
     pokedex_index: 24,
     name: "arbok",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/24.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/24.svg",
     experience: 157,
     heigth: 35,
     hp: 60,
@@ -698,7 +698,7 @@ const pokemons = [
   {
     pokedex_index: 25,
     name: "pikachu",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg",
     experience: 112,
     heigth: 4,
     hp: 35,
@@ -727,7 +727,7 @@ const pokemons = [
   {
     pokedex_index: 26,
     name: "raichu",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/26.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/26.svg",
     experience: 243,
     heigth: 8,
     hp: 60,
@@ -756,7 +756,7 @@ const pokemons = [
   {
     pokedex_index: 27,
     name: "sandshrew",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/27.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/27.svg",
     experience: 60,
     heigth: 6,
     hp: 50,
@@ -785,7 +785,7 @@ const pokemons = [
   {
     pokedex_index: 28,
     name: "sandslash",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/28.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/28.svg",
     experience: 158,
     heigth: 10,
     hp: 75,
@@ -814,7 +814,7 @@ const pokemons = [
   {
     pokedex_index: 29,
     name: "nidorino",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/29.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/29.svg",
     experience: 55,
     heigth: 4,
     hp: 55,
@@ -843,7 +843,7 @@ const pokemons = [
   {
     pokedex_index: 30,
     name: "nidorina",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg",
     experience: 128,
     heigth: 8,
     hp: 70,
@@ -872,7 +872,7 @@ const pokemons = [
   {
     pokedex_index: 31,
     name: "nidoqueen",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/31.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/31.svg",
     experience: 253,
     heigth: 13,
     hp: 90,
@@ -901,7 +901,7 @@ const pokemons = [
   {
     pokedex_index: 32,
     name: "nidoking",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/34.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/34.svg",
     experience: 253,
     heigth: 14,
     hp: 81,
@@ -930,7 +930,7 @@ const pokemons = [
   {
     pokedex_index: 33,
     name: "clefairy",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/35.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/35.svg",
     experience: 113,
     heigth: 6,
     hp: 70,
@@ -959,7 +959,7 @@ const pokemons = [
   {
     pokedex_index: 34,
     name: "clefable",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/36.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/36.svg",
     experience: 242,
     heigth: 13,
     hp: 95,
@@ -988,7 +988,7 @@ const pokemons = [
   {
     pokedex_index: 35,
     name: "vulpix",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/37.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/37.svg",
     experience: 60,
     heigth: 6,
     hp: 38,
@@ -1017,7 +1017,7 @@ const pokemons = [
   {
     pokedex_index: 36,
     name: "ninetales",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/38.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/38.svg",
     experience: 177,
     heigth: 11,
     hp: 73,
@@ -1046,7 +1046,7 @@ const pokemons = [
   {
     pokedex_index: 37,
     name: "jigglypuff",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/39.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/39.svg",
     experience: 95,
     heigth: 5,
     hp: 115,
@@ -1075,7 +1075,7 @@ const pokemons = [
   {
     pokedex_index: 38,
     name: "wigglytuff",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/40.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/40.svg",
     experience: 218,
     heigth: 10,
     hp: 140,
@@ -1104,7 +1104,7 @@ const pokemons = [
   {
     pokedex_index: 39,
     name: "zubat",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/41.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/41.svg",
     experience: 49,
     heigth: 8,
     hp: 40,
@@ -1133,7 +1133,7 @@ const pokemons = [
   {
     pokedex_index: 40,
     name: "golbat",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/42.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/42.svg",
     experience: 159,
     heigth: 16,
     hp: 75,
@@ -1162,7 +1162,7 @@ const pokemons = [
   {
     pokedex_index: 43,
     name: "oddish",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/43.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/43.svg",
     experience: 64,
     heigth: 5,
     hp: 45,
@@ -1191,7 +1191,7 @@ const pokemons = [
   {
     pokedex_index: 42,
     name: "gloom",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/44.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/44.svg",
     experience: 138,
     heigth: 8,
     hp: 60,
@@ -1220,7 +1220,7 @@ const pokemons = [
   {
     pokedex_index: 43,
     name: "vileplume",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/45.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/45.svg",
     experience: 245,
     heigth: 12,
     hp: 75,
@@ -1249,7 +1249,7 @@ const pokemons = [
   {
     pokedex_index: 44,
     name: "paras",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/46.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/46.svg",
     experience: 57,
     heigth: 3,
     hp: 35,
@@ -1278,7 +1278,7 @@ const pokemons = [
   {
     pokedex_index: 45,
     name: "parasect",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/47.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/47.svg",
     experience: 142,
     heigth: 10,
     hp: 60,
@@ -1307,7 +1307,7 @@ const pokemons = [
   {
     pokedex_index: 46,
     name: "venonat",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/48.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/48.svg",
     experience: 61,
     heigth: 10,
     hp: 60,
@@ -1336,7 +1336,7 @@ const pokemons = [
   {
     pokedex_index: 47,
     name: "venomoth",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/49.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/49.svg",
     experience: 158,
     heigth: 15,
     hp: 70,
@@ -1365,7 +1365,7 @@ const pokemons = [
   {
     pokedex_index: 48,
     name: "diglett",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/50.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/50.svg",
     experience: 53,
     heigth: 2,
     hp: 10,
@@ -1394,7 +1394,7 @@ const pokemons = [
   {
     pokedex_index: 49,
     name: "dugtrio",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/51.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/51.svg",
     experience: 149,
     heigth: 7,
     hp: 35,
@@ -1423,7 +1423,7 @@ const pokemons = [
   {
     pokedex_index: 50,
     name: "meowth",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/52.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/52.svg",
     experience: 58,
     heigth: 4,
     hp: 40,
@@ -1452,7 +1452,7 @@ const pokemons = [
   {
     pokedex_index: 51,
     name: "persian",
-    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/53.png",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/53.svg",
     experience: 154,
     heigth: 10,
     hp: 65,
