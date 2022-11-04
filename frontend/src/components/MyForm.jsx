@@ -4,14 +4,9 @@ function MyForm() {
   const [username, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    alert(`Submitted ${username} ${email}`);
-  };
-
   return (
-    <form className="footer-form  w-100">
-      <div className="container-input w-100 mb-2 mt-1 p-2">
+    <form className="footer-form">
+      <div className="mb-2 mt-1 p-2">
         <input
           value={username}
           onChange={(e) => setName(e.target.value)}
@@ -22,7 +17,7 @@ function MyForm() {
         />
       </div>
 
-      <div className="container-input w-100 mb-2 p-2">
+      <div className="mb-2 p-2">
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -33,12 +28,12 @@ function MyForm() {
         />
       </div>
 
-      <div className="container-textarea w-100 mb-2 p-2">
+      <div className="mb-2 p-2">
         <textarea className="textarea w-100" placeholder="Enter your message" />
       </div>
 
-      <div className="container-button w-100 mb-2">
-        <button className="button w-50 fs-5" type="submit" onClick={onSubmit}>
+      <div className="mb-2">
+        <button className="button w-50 fs-5" type="submit">
           submit
         </button>
       </div>
