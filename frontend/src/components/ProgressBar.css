@@ -1,3 +1,14 @@
+.progressBarOneProduct{
+  width: 332px;
+}
+
+.progress-bar{
+  background-color: #FFBA35;
+}
 .progress {
   background-color: #3e3e3e;
+}
+
+h4{
+  /* color: #FFBA35; */
 }
