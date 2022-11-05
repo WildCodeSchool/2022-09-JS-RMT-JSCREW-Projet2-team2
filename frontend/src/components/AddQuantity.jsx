@@ -17,7 +17,7 @@ function AddQuantity() {
     }
   };
   return (
-    <div className="addQuantityButton d-flex justify-content-around rounded-3 w-25 px-2 py-1">
+    <div className="addQuantityButton d-flex justify-content-around rounded-3 w-100 px-2 py-1">
       <button
         onClick={() => handleQuantityOnClick("minus")}
         className="bg-transparent text-white"
