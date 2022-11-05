@@ -1,3 +1,4 @@
+import React from "react";
 import "./addQuantity.css";
 
 function AddQuantity({ quantity, setQuantity }) {
