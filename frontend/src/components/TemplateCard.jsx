@@ -61,9 +61,6 @@ function TemplateCard({ pokemon }) {
           </div>
         </div>
       </div>
-      <button className="buttonColor mt-4 mb-2 btn btn-warning" type="button">
-        Add to cart
-      </button>
     </div>
   );
 }

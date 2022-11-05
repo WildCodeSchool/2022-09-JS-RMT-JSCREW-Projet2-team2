@@ -1,9 +1,6 @@
-import React, { useState } from "react";
 import "./addQuantity.css";
 
-function AddQuantity() {
-  // Création du state pour enregistrer la quantité souaihtée.
-  const [quantity, setQuantity] = useState(1);
+function AddQuantity({ quantity, setQuantity }) {
   // Création d'un fonction pour gérer la quantité souhaitée au clic sur "plus" ou "moins".
   // La fonction a besoin d'un "opérateur" en argument au moment de l'appel, pour identifier le bouton cliqué.
   const handleQuantityOnClick = (operator) => {
