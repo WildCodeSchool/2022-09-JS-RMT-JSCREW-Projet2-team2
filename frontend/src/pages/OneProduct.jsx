@@ -1,5 +1,5 @@
-import AddQuantity from "@components/AddQuantity";
 import React, { useState } from "react";
+import AddQuantity from "@components/AddQuantity";
 import TemplateCard from "../components/TemplateCard";
 import "./oneProduct.css";
 
