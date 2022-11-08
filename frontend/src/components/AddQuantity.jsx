@@ -7,11 +7,8 @@ function AddQuantity({ quantity, setQuantity }) {
   const handleQuantityOnClick = (operator) => {
     if (operator === "plus") {
       setQuantity(quantity + 1);
-    }
-    if (operator === "minus") {
-      if (quantity > 1) {
-        setQuantity(quantity - 1);
-      }
+    } else if (operator === "minus" && quantity > 1) {
+      setQuantity(quantity - 1);
     }
   };
   return (
