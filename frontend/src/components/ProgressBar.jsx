@@ -1,44 +1,21 @@
 import React from "react";
+import TemplateProgressBar from "./TemplateProgressBar";
 import "./ProgressBar.css";
 
-function ProgressBar() {
+function ProgressBar({ pokemon }) {
   return (
     <div className="progressBarOneProduct">
-      <h3 className="text-white m-0 mt-2 mb-1 fs-6">Attack</h3>
-      <div className="progress" style={{ width: 100 * 2 }}>
-        <div
-          className="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-          style={{ width: 49 * 2 }}
-        />
-      </div>
-      <h3 className="text-white m-0 mt-2 mb-1 fs-6">Defense</h3>
-      <div className="progress" style={{ width: 100 * 2 }}>
-        <div
-          className="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-          style={{ width: 49 * 2 }}
-        />
-      </div>
-      <h3 className="text-white m-0 mt-2  mb-1 fs-6">Special Attack</h3>
-      <div className="progress" style={{ width: 100 * 2 }}>
-        <div
-          className="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-          style={{ width: 65 * 2 }}
-        />
-      </div>
-      <h3 className="text-white m-0 mt-2  mb-1 fs-6">Special Defense</h3>
-      <div className="progress" style={{ width: 100 * 2 }}>
-        <div
-          className="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-          style={{ width: 65 * 2 }}
-        />
-      </div>
-      <h3 className="text-white m-0 mt-2  mb-1 fs-6">Speed</h3>
-      <div className="progress" style={{ width: 100 * 2 }}>
-        <div
-          className="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-          style={{ width: 45 * 2 }}
-        />
-      </div>
+      <TemplateProgressBar stats={pokemon.stats.attack} statName="attack" />
+      <TemplateProgressBar stats={pokemon.stats.defense} statName="defense" />
+      <TemplateProgressBar
+        stats={pokemon.stats.special_attack}
+        statName="special attack"
+      />
+      <TemplateProgressBar
+        stats={pokemon.stats.special_defence}
+        statName="special defense"
+      />
+      <TemplateProgressBar stats={pokemon.stats.speed} statName="speed" />
     </div>
   );
 }
