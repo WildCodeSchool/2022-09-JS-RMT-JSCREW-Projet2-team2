@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+
 import AddQuantity from "@components/AddQuantity";
-import "./oneProduct.css";
 import AddToCartButton from "@components/AddToCartButton";
 import ProgressBar from "@components/ProgressBar";
 import AddFavorite from "@components/AddFavorite";
-import TemplateCard from "../components/TemplateCard";
+import TemplateCard from "@components/TemplateCard";
+
+import "./oneProduct.css";
 
 function OneProduct({ pokemon }) {
   // Création du state pour enregistrer la quantité souaihtée.
