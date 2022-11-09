@@ -1,6 +1,5 @@
 import React from "react";
 import "./TemplateCard.css";
-import AddQuantity from "./AddQuantity";
 
 function TemplateCard({ pokemon }) {
   return (
@@ -62,10 +61,6 @@ function TemplateCard({ pokemon }) {
           </div>
         </div>
       </div>
-      <AddQuantity />
-      <button className="buttonColor mt-4 mb-2 btn btn-warning" type="button">
-        Add to cart
-      </button>
     </div>
   );
 }
