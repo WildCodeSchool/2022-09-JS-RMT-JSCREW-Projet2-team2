@@ -32,7 +32,7 @@ function MyForm() {
         <input
           value={username}
           onChange={(e) => setName(e.target.value)}
-          className="input-name w-100"
+          className="input-name w-100 p-2"
           type="text"
           name="name"
           placeholder="Name"
@@ -43,7 +43,7 @@ function MyForm() {
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="input-email w-100"
+          className="input-email w-100 p-2"
           type="email"
           name="email"
           placeholder="Adress email"
@@ -51,7 +51,7 @@ function MyForm() {
       </div>
 
       <div className="mb-2 p-2">
-        <textarea className="textarea w-100" placeholder="Enter your message" />
+        <textarea className="textarea w-100 p-2" placeholder="Enter your message" />
       </div>
 
       <div className="mb-2">
