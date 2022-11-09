@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import MyForm from "./MyForm";
+import MyForm from "./ContactForm";
 
 function Footer() {
   return (

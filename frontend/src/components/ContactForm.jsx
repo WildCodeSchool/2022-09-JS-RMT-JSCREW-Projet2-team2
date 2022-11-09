@@ -1,8 +1,30 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const toastifyConfig = {
+  position: "top-right",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+};
 
 function MyForm() {
   const [username, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  const submitContactForm = (e) => {
+    e.preventDefault();
+    if (email.includes("@")) {
+      toast.success("Message received", toastifyConfig);
+    } else {
+      toast.error("invalid email", toastifyConfig);
+    }
+  };
 
   return (
     <form className="footer-form">
@@ -33,10 +55,26 @@ function MyForm() {
       </div>
 
       <div className="mb-2">
-        <button className="button w-50 fs-5" type="submit">
+        <button
+          className="button w-50 fs-5"
+          type="submit"
+          onClick={(e) => submitContactForm(e)}
+        >
           submit
         </button>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </form>
   );
 }
