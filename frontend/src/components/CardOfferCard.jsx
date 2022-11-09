@@ -13,18 +13,22 @@ export default function CardOfferCard({ carrouselprops, pokemon }) {
         <div className="card-front-bis align-items-center p-3 rounded-3">
           <div className="container-card-bis">
             <div className="top-of-card d-flex justify-content-between align-items-center fw-bold">
-              <p className="text-uppercase">{pokemon[n].name}</p>
+              <p className="text-uppercase sm-initialism">{pokemon[n].name}</p>
               <p>{pokemon[n].hp} Hp</p>
             </div>
             <div className="picture-card-oneProduct bg-light">
-              <img className="card-img-top-bis" src={pokemon[n].url} alt="" />
+              <img
+                className="card-img-top-bis"
+                src={pokemon[n].url}
+                alt={pokemon[n].name}
+              />
             </div>
             <div className="container-attack-card d-flex flex-column justify-content-around">
               <div className="attack-card d-flex justify-content-between align-items-center p-2 mt-2 rounded ">
                 <p className="move-attack justify-content-center mb-0 fw-bold">
                   1st move
                 </p>
-                <p className="move-attack justify-content-center mb-0 fw-bold text-capitalize">
+                <p className="move-attack justify-content-center mb-0 fw-bold md-text-capitalize">
                   {pokemon[n].first_move}
                 </p>
               </div>
@@ -32,7 +36,7 @@ export default function CardOfferCard({ carrouselprops, pokemon }) {
                 <p className="move-attack justify-content-center mb-0 fw-bold">
                   2nd move
                 </p>
-                <p className="move-attack justify-content-center mb-0 fw-bold text-capitalize">
+                <p className="move-attack justify-content-center mb-0 fw-bold md-text-capitalize">
                   {pokemon[n].seconde_move}
                 </p>
               </div>
@@ -40,7 +44,7 @@ export default function CardOfferCard({ carrouselprops, pokemon }) {
                 <p className="move-attack justify-content-center mb-0 fw-bold">
                   3rd move
                 </p>
-                <p className="move-attack justify-content-center mb-0 fw-bold text-capitalize">
+                <p className="move-attack justify-content-center mb-0 fw-bold md-text-capitalize">
                   {pokemon[n].third_move}
                 </p>
               </div>
@@ -48,7 +52,7 @@ export default function CardOfferCard({ carrouselprops, pokemon }) {
                 <p className="move-attack justify-content-center mb-0 fw-bold">
                   4th move
                 </p>
-                <p className="move-attack justify-content-center mb-0 fw-bold text-capitalize">
+                <p className="move-attack justify-content-center mb-0 fw-bold md-text-capitalize">
                   {pokemon[n].fourth_move}
                 </p>
               </div>
@@ -76,11 +80,11 @@ export default function CardOfferCard({ carrouselprops, pokemon }) {
         <div className="priceOffer d-flex justify-content-around">
           <div>
             <h3 className="oldPrice text-decoration-line-through">
-              {carrouselprops.oldPrice}
+              {pokemon[n].price}£
             </h3>
           </div>
           <div>
-            <h3>{carrouselprops.price}</h3>
+            <h3>{pokemon[n].price / 2}£</h3>
           </div>
           <div>
             <button className="btn btn-sm btn-warning" type="button">
