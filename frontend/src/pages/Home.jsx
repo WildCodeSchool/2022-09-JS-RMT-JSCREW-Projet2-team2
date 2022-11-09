@@ -6,14 +6,18 @@ import SocialMedia from "@components/SocialMedia";
 import LogoWhyUs from "@components/LogoWhyUS";
 import CardOffer from "@components/CardOffer";
 
-export default function Home() {
+export default function Home({ setPage }) {
   return (
     <div className="accueilBackground bg-gradient">
       <div className="prez position-relative d-flex flex-column justify-content-end">
         <div className="position-absolute">
           <h1 className="text-white fs-2">Welcome to PokeBiz</h1>
           <h2 className="text-white fs-1">Pokemon shop</h2>
-          <button className="btn btn btn-warning mb-5" type="button">
+          <button
+            onClick={() => setPage({ path: "AllProduct", id: null })}
+            className="btn btn btn-warning mb-5"
+            type="button"
+          >
             Catch them !
           </button>
         </div>
