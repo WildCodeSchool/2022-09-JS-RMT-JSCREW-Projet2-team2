@@ -7,15 +7,9 @@ function Navbar({ setPage }) {
       {/* NAVBAR - MOBILE */}
       <div className="navbar-mobile fixed-bottom container-md d-md-none">
         <nav className="p-3">
-          <button
-            type="button"
-            onClick={() => setPage({ path: "OneProduct", index: null })}
-          >
-            OneProduct
-          </button>
           <ul className="list-unstyled d-flex justify-content-around m-0">
             <button
-              onClick={() => setPage({ path: "", index: null })}
+              onClick={() => setPage({ path: "", id: null })}
               className="border border-0 bg-transparent"
               type="button"
             >
@@ -26,7 +20,7 @@ function Navbar({ setPage }) {
               />
             </button>
             <button
-              onClick={() => setPage({ path: "AllProduct", index: null })}
+              onClick={() => setPage({ path: "AllProduct", id: null })}
               className="border border-0 bg-transparent"
               type="button"
             >
@@ -58,7 +52,7 @@ function Navbar({ setPage }) {
         <nav className="p-3">
           <ul className="list-unstyled d-flex justify-content-between m-0">
             <button
-              onClick={() => setPage({ path: "", index: null })}
+              onClick={() => setPage({ path: "", id: null })}
               className="navbar-button border border-0 bg-transparent"
               type="button"
             >
@@ -72,7 +66,7 @@ function Navbar({ setPage }) {
               </div>
             </button>
             <button
-              onClick={() => setPage({ path: "AllProduct", index: null })}
+              onClick={() => setPage({ path: "AllProduct", id: null })}
               className="border border-0 bg-transparent"
               type="button"
             >
