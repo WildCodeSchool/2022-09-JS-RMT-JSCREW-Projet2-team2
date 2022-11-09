@@ -12,7 +12,7 @@ function AddQuantity({ quantity, setQuantity }) {
     }
   };
   return (
-    <div className="addQuantityButton d-flex justify-content-around rounded-3 w-100 px-2 py-1">
+    <div className="addQuantityButton d-flex justify-content-around rounded-3 w-100 px-2">
       <button
         onClick={() => handleQuantityOnClick("minus")}
         className="bg-transparent text-white"
