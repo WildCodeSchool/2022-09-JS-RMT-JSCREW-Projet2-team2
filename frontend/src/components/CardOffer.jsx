@@ -1,4 +1,5 @@
 import React from "react";
+import pokemons from "@services/data";
 import CardOfferCard from "./CardOfferCard";
 
 const carrouselInfo = [
@@ -9,6 +10,7 @@ const carrouselInfo = [
     alt: "Carte Pokémon en promo",
     price: "50",
     oldPrice: "80",
+    n: 1,
   },
   {
     htmlFor: "item-2",
@@ -17,6 +19,7 @@ const carrouselInfo = [
     alt: "Carte Pokémon en promo",
     price: "60",
     oldPrice: "100",
+    n: 2,
   },
   {
     htmlFor: "item-3",
@@ -25,6 +28,7 @@ const carrouselInfo = [
     alt: "Carte Pokémon en promo",
     price: "45",
     oldPrice: "72",
+    n: 3,
   },
 ];
 
@@ -32,7 +36,7 @@ export default function CardOffer() {
   return (
     <div className="cards position-relative mb-2">
       {carrouselInfo.map((carrouselprops) => (
-        <CardOfferCard carrouselprops={carrouselprops} />
+        <CardOfferCard carrouselprops={carrouselprops} pokemon={pokemons} />
       ))}
     </div>
   );

@@ -51,8 +51,8 @@
 }
 
 .carrouselOffer {
-  width: 300px;
-  height: 350px;
+  width: 500px;
+  height: 550px;
   transform-style: preserve-3d;
 }
 
@@ -61,10 +61,34 @@
   height: 100%;
 }
 
-.cardOffer img {
+.card-info-bis {
+  color: black;
+  background: #3e3e3e;
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+.card-front-bis {
+  background-color: #ffba35;
+  width: 100%;
+  height: 100%;
+}
+
+.container-card-bis {
+  grid-template-columns: 300px;
+  width: 100%;
+  object-fit: fill;
+}
+
+.bottom-of-card-bis {
+  font-size: x-small;
+  object-fit: fill;
+}
+
+.card-img-top-bis {
+  height: 170px;
+  width: 100%;
 }
 
 #item-1:checked ~ .cards #offre-3,
