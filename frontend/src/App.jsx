@@ -22,7 +22,7 @@ function App() {
       {page.path === "AllProduct" && <AllProduct setPage={setPage} />}
       {/* On filtre les pokemons, et quand la valeur de page = ID d'un pokemon on se trouve sur la page correspondante */}
       {page.path === "OneProduct" && <OneProduct pokemon={pokemons[page.id]} />}
-      <Footer />
+      <Footer setPage={setPage} />
     </div>
   );
 }
