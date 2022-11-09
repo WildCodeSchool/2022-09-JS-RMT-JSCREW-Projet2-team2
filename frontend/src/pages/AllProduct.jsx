@@ -15,8 +15,8 @@ function AllProduct({ setPage }) {
           return (
             <div
               role="button"
-              onClick={() => setPage({ path: "OneProduct", id: pokemon.id })}
-              onKeyDown={() => setPage({ path: "OneProduct", id: pokemon.id })}
+              onClick={() => setPage({ path: "OneProduct", id: pokemon.pokedex_index })}
+              onKeyDown={() => setPage({ path: "OneProduct", id: pokemon.pokedex_index })}
               tabIndex={0}
             >)
         })}
