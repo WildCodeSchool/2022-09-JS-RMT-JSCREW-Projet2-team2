@@ -4,7 +4,7 @@ import ShowMoreCard from "@components/ShowMoreCard";
 import "./allProducts.css";
 import pokemons from "@services/data";
 
-function AllProduct() {
+function AllProduct({ setPage }) {
   const [numberOfCard, setNumberOfCard] = useState(0);
 
   return (
@@ -13,9 +13,15 @@ function AllProduct() {
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
         {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
           return (
-            <div className="allproduct-card-container">
-              <TemplateCard key={pokemon.id} pokemon={pokemon} />;
-            </div>
+            <button
+              className="bg-transparent allproduct-card-container"
+              type="button"
+              onClick={() =>
+                setPage({ path: "OneProduct", id: pokemon.pokedex_index })
+              }
+            >
+              <TemplateCard key={pokemon.id} pokemon={pokemon} />
+            </button>
           );
         })}
       </div>
