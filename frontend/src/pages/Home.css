@@ -52,7 +52,7 @@
 
 .carrouselOffer {
   width: 500px;
-  height: 550px;
+  height: 500px;
   transform-style: preserve-3d;
 }
 
@@ -82,8 +82,18 @@
 }
 
 .bottom-of-card-bis {
-  font-size: x-small;
+  font-size: 6px;
+  margin: 0;
+  padding: 0;
   object-fit: fill;
+}
+
+.move-attack {
+  font-size: 10px;
+}
+
+.top-of-card {
+  font-size: 12px;
 }
 
 .card-img-top-bis {
@@ -168,6 +178,22 @@
 
   .accueilBackground {
     margin-top: 62px; /*marge pour navbar*/
+  }
+
+  .carrouselOffer {
+    height: 550px;
+  }
+
+  .bottom-of-card-bis {
+    font-size: x-small;
+  }
+
+  .move-attack {
+    font-size: medium;
+  }
+
+  .top-of-card {
+    font-size: medium;
   }
 }
 

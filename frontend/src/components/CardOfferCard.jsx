@@ -60,16 +60,16 @@ export default function CardOfferCard({ carrouselprops, pokemon }) {
           </div>
           <div className="bottom-of-card-bis align-items-center container-fluid mt-3 bg-light">
             <ul className="d-flex list-unstyled mb-0">
-              <li className="m-auto">Def:{pokemon[n].stats.defense}</li>
-              <li className="m-auto">
+              <li className="taille m-auto">Def:{pokemon[n].stats.defense}</li>
+              <li className="taille m-auto">
                 S.Def:{pokemon[n].stats.special_defence}
               </li>
-              <li className="m-auto">Att:{pokemon[n].stats.attack}</li>
-              <li className="m-auto">
+              <li className="taille m-auto">Att:{pokemon[n].stats.attack}</li>
+              <li className="taille m-auto">
                 S.Att:{pokemon[n].stats.special_attack}
               </li>
-              <li className="m-auto">Speed:{pokemon[n].stats.speed}</li>
-              <li className="m-auto">Exp:{pokemon[n].experience}</li>
+              <li className="taille m-auto">Speed:{pokemon[n].stats.speed}</li>
+              <li className="taille m-auto">Exp:{pokemon[n].experience}</li>
             </ul>
           </div>
         </div>
