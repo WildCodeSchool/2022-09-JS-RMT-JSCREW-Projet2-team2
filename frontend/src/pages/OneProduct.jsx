@@ -21,6 +21,7 @@ function OneProduct() {
         <div className="w-50">
           {/* Mettre le composant Add to cart (il s'agirat d'un bouton type submit) */}
         </div>
+      </div>
     </div>
   );
 }

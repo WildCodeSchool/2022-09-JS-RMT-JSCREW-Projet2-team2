@@ -13,12 +13,16 @@ function AllProduct({ setPage }) {
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
         {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
           return (
-            <div
-              role="button"
-              onClick={() => setPage({ path: "OneProduct", id: pokemon.pokedex_index })}
-              onKeyDown={() => setPage({ path: "OneProduct", id: pokemon.pokedex_index })}
-              tabIndex={0}
-            >)
+            <button
+              className="bg-transparent allproduct-card-container"
+              type="button"
+              onClick={() =>
+                setPage({ path: "OneProduct", id: pokemon.pokedex_index })
+              }
+            >
+              <TemplateCard key={pokemon.id} pokemon={pokemon} />
+            </button>
+          );
         })}
       </div>
       <ShowMoreCard
