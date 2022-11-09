@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TemplateCard from "@components/TemplateCard";
 import ShowMoreCard from "@components/ShowMoreCard";
+import "./allProducts.css";
 import pokemons from "@services/data";
 
 function AllProduct({ setPage }) {
@@ -10,17 +11,14 @@ function AllProduct({ setPage }) {
     <section>
       <div>AllProduct</div>
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
-        {pokemons.slice(0, numberOfCard + 8).map((pokemon, index) => {
+        {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
           return (
             <div
               role="button"
-              onClick={() => setPage({ path: "OneProduct", id: index })}
-              onKeyDown={() => setPage({ path: "OneProduct", id: index })}
+              onClick={() => setPage({ path: "OneProduct", id: pokemon.id })}
+              onKeyDown={() => setPage({ path: "OneProduct", id: pokemon.id })}
               tabIndex={0}
-            >
-              <TemplateCard key={pokemon.id} pokemon={pokemon} />;
-            </div>
-          );
+            >)
         })}
       </div>
       <ShowMoreCard
