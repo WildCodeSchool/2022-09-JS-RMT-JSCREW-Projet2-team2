@@ -15,7 +15,7 @@ export default function Home({ setPage }) {
           <h2 className="text-white fs-1">Pokemon shop</h2>
           <button
             onClick={() => setPage({ path: "AllProduct", id: null })}
-            className="btn btn btn-warning mb-5"
+            className="btn btn-warning mb-5"
             type="button"
           >
             Catch them !
