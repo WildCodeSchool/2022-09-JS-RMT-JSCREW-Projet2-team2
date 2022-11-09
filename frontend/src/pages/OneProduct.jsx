@@ -5,7 +5,9 @@ function OneProduct() {
   return (
     <div className="container d-flex flex-column align-items-center justify-content-around text-dark pt-2 bg-container">
       <h1>Product</h1>
-      <TemplateCard />
+      <div className="allproduct-card-container">
+        <TemplateCard />
+      </div>
     </div>
   );
 }
