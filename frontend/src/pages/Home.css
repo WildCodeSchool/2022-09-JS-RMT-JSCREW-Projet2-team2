@@ -42,7 +42,7 @@
 }
 
 .cardOffer {
-  width: 60%;
+  width: 400px;
   height: 100%;
   left: 0;
   right: 0;
@@ -51,8 +51,8 @@
 }
 
 .carrouselOffer {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 700px;
   transform-style: preserve-3d;
 }
 
@@ -178,10 +178,6 @@
 
   .accueilBackground {
     margin-top: 62px; /*marge pour navbar*/
-  }
-
-  .carrouselOffer {
-    height: 550px;
   }
 
   .bottom-of-card-bis {

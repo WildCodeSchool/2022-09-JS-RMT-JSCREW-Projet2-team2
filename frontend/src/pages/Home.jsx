@@ -27,9 +27,9 @@ export default function Home() {
           doloremque.
         </p>
       </div>
-      <div className="specialOffer d-flex align-items-center justify-content-center pt-5 text-white">
+      <div className="specialOffer d-flex align-items-center justify-content-center pt-5">
         <div className="carrouselOffer d-flex justify-content-center flex-column align-items-center mb-3">
-          <h2>Special Offers</h2>
+          <h2 className="text-white">Special Offers</h2>
           <br />
           <input
             className="d-none"
