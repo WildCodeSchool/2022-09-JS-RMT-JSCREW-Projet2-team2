@@ -42,7 +42,7 @@
 }
 
 .cardOffer {
-  width: 60%;
+  width: 400px;
   height: 100%;
   left: 0;
   right: 0;
@@ -51,8 +51,8 @@
 }
 
 .carrouselOffer {
-  width: 300px;
-  height: 350px;
+  width: 100%;
+  height: 700px;
   transform-style: preserve-3d;
 }
 
@@ -61,10 +61,44 @@
   height: 100%;
 }
 
-.cardOffer img {
+.card-info-bis {
+  color: black;
+  background: #3e3e3e;
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+.card-front-bis {
+  background-color: #ffba35;
+  width: 100%;
+  height: 100%;
+}
+
+.container-card-bis {
+  grid-template-columns: 300px;
+  width: 100%;
+  object-fit: fill;
+}
+
+.bottom-of-card-bis {
+  font-size: 6px;
+  margin: 0;
+  padding: 0;
+  object-fit: fill;
+}
+
+.move-attack {
+  font-size: 10px;
+}
+
+.top-of-card {
+  font-size: 12px;
+}
+
+.card-img-top-bis {
+  height: 170px;
+  width: 100%;
 }
 
 #item-1:checked ~ .cards #offre-3,
@@ -144,6 +178,18 @@
 
   .accueilBackground {
     margin-top: 62px; /*marge pour navbar*/
+  }
+
+  .bottom-of-card-bis {
+    font-size: x-small;
+  }
+
+  .move-attack {
+    font-size: medium;
+  }
+
+  .top-of-card {
+    font-size: medium;
   }
 }
 
