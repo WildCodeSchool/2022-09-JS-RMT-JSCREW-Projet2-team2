@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -16,6 +17,7 @@ const toastifyConfig = {
 function MyForm() {
   const [username, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const submitContactForm = (e) => {
     e.preventDefault();
@@ -51,7 +53,12 @@ function MyForm() {
       </div>
 
       <div className="mb-2 p-2">
-        <textarea className="textarea w-100 p-2" placeholder="Enter your message" />
+        <textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="textarea w-100 p-2"
+          placeholder="Enter your message"
+        />
       </div>
 
       <div className="mb-2">
