@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import TemplateCard from "@components/TemplateCard";
 import ShowMoreCard from "@components/ShowMoreCard";
+import TemplateSearch from "@components/TemplateSearch";
+
 import "./allProducts.css";
+
 import pokemons from "@services/data";
 
 function AllProduct({ setPage }) {
@@ -10,6 +13,7 @@ function AllProduct({ setPage }) {
   return (
     <section>
       <div>AllProduct</div>
+      <TemplateSearch />
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
         {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
           return (
