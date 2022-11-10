@@ -1,5 +1,4 @@
 import React from "react";
-import pokemons from "@services/data";
 import CardOfferCard from "./CardOfferCard";
 
 const carrouselInfo = [
@@ -24,7 +23,7 @@ export default function CardOffer() {
   return (
     <div className="cards position-relative mb-2 text">
       {carrouselInfo.map((carrouselprops) => (
-        <CardOfferCard carrouselprops={carrouselprops} pokemon={pokemons} />
+        <CardOfferCard carrouselprops={carrouselprops} />
       ))}
     </div>
   );
