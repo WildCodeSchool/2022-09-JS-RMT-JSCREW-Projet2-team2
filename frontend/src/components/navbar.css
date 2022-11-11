@@ -23,3 +23,21 @@
 .navbar-icon {
     height: 40px;
 }
+
+.pokebiz-searchBar-mobile{
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    opacity: 90%;
+}
+
+.pokebiz-searchBar-mobile input{
+    height: 10vh;
+    background: none;
+}
+
+.pokebiz-searchBar-mobile input::placeholder {
+    font-style: italic;
+    opacity: 70%;
+}
