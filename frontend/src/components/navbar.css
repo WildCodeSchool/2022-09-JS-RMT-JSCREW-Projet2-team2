@@ -35,9 +35,18 @@
 .pokebiz-searchBar-mobile input{
     height: 10vh;
     background: none;
+    width: 60%;
+}
+.pokebiz-searchBar-mobile button{
+    height: 10vh;
+    width: 20%;
 }
 
 .pokebiz-searchBar-mobile input::placeholder {
     font-style: italic;
     opacity: 70%;
+}
+
+.pokebiz-searchBar-isDisplay{
+    display: none;
 }

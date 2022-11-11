@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBar from "@components/SearchBar";
 import "./navbar.css";
 
 function Navbar({ setPage }) {
+  const [displaySearchBar, setDisplaySearchBar] = useState("d-none");
+  const handleSearchBarDisplay = () => {
+    if (displaySearchBar === "d-none") {
+      setDisplaySearchBar("d-block");
+    } else if (displaySearchBar === "d-block") {
+      setDisplaySearchBar("d-none");
+    }
+  };
   return (
     <div>
-      <SearchBar />
+      <div className={displaySearchBar}>
+        <SearchBar />
+      </div>
       <div>
         {/* NAVBAR - MOBILE */}
         <div className="navbar-mobile fixed-bottom container-md d-md-none">
@@ -33,7 +43,11 @@ function Navbar({ setPage }) {
                   alt="store-icon"
                 />
               </button>
-              <button className="border border-0 bg-transparent" type="button">
+              <button
+                onClick={handleSearchBarDisplay}
+                className="border border-0 bg-transparent"
+                type="button"
+              >
                 <img
                   className="navbar-icon"
                   src="./src/assets/navbar-icons/search-black.png"
