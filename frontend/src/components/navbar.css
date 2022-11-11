@@ -8,10 +8,6 @@
         background-color: #191919;
     }
 
-    .navbar-desktop-right-icon {
-        width: 10%;
-    }
-
     .navbar-desktop-store-icon {
         color: #FFBA35;
     }
@@ -47,6 +43,6 @@
     opacity: 70%;
 }
 
-.pokebiz-searchBar-isDisplay{
-    display: none;
+.pokebiz-seachBar-Desktop{
+    background: none;
 }

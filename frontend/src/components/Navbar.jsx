@@ -97,22 +97,31 @@ function Navbar({ setPage }) {
                 </div>
               </button>
               <div className="navbar-desktop-right-icon d-flex justify-content-around">
+                <form action="">
+                  <label className="d-flex bg-dark rounded-3 px-3 py-1">
+                    <input
+                      className="pokebiz-seachBar-Desktop"
+                      type="text"
+                      placeholder="Find your Pokemon"
+                    />
+                    <button
+                      className="border border-0 bg-transparent"
+                      type="submit"
+                    >
+                      <img
+                        className="navbar-icon"
+                        src="./src/assets/navbar-icons/search-orange.png"
+                        alt="search-icon"
+                      />
+                    </button>
+                  </label>
+                </form>
                 <button
                   className="border border-0 bg-transparent"
                   type="button"
                 >
                   <img
-                    className="navbar-icon me-4"
-                    src="./src/assets/navbar-icons/search-orange.png"
-                    alt="search-icon"
-                  />
-                </button>
-                <button
-                  className="border border-0 bg-transparent"
-                  type="button"
-                >
-                  <img
-                    className="navbar-icon"
+                    className="navbar-icon ms-4"
                     src="./src/assets/navbar-icons/basket-orange.png"
                     alt="basket-icon"
                   />
