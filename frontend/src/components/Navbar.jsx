@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "@components/SearchBar";
 import "./navbar.css";
 
-function Navbar({ setPage }) {
+function Navbar({ setPage, pokemons }) {
   const [displaySearchBar, setDisplaySearchBar] = useState("d-none");
   const handleSearchBarDisplay = () => {
     if (displaySearchBar === "d-none") {
@@ -15,7 +15,7 @@ function Navbar({ setPage }) {
     <div>
       {/* SEARCH BAR MOBILE */}
       <div className={displaySearchBar}>
-        <SearchBar />
+        <SearchBar pokemons={pokemons} />
       </div>
       <div>
         {/* NAVBAR - MOBILE */}

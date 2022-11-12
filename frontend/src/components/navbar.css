@@ -47,6 +47,10 @@ input:focus::placeholder {
     opacity: 70%;
 }
 
+#pokebiz-searchBar-value{
+    height: 65px;
+}
+
 /* DESKTOP SEARCHBAR */
 .pokebiz-seachBar-Desktop{
     background: none;
