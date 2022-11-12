@@ -20,6 +20,10 @@
     height: 40px;
 }
 
+/* MOBILE SEARCHBAR */
+input:focus::placeholder {
+    color: transparent;
+  }
 .pokebiz-searchBar-mobile{
     position: fixed;
     z-index: 1;
@@ -43,6 +47,15 @@
     opacity: 70%;
 }
 
+/* DESKTOP SEARCHBAR */
 .pokebiz-seachBar-Desktop{
     background: none;
 }
+.pokebiz-seachBar-Desktop::placeholder{
+    font-style: italic;
+    opacity: 70%;
+}
+.pokebiz-seachBar-Desktop:focus{
+    outline: none;
+}
+

@@ -13,6 +13,7 @@ function Navbar({ setPage }) {
   };
   return (
     <div>
+      {/* SEARCH BAR MOBILE */}
       <div className={displaySearchBar}>
         <SearchBar />
       </div>
@@ -21,6 +22,7 @@ function Navbar({ setPage }) {
         <div className="navbar-mobile fixed-bottom container-md d-md-none">
           <nav className="p-3">
             <ul className="list-unstyled d-flex justify-content-around m-0">
+              {/* LOGO */}
               <button
                 onClick={() => setPage({ path: "", id: null })}
                 className="border border-0 bg-transparent"
@@ -32,6 +34,7 @@ function Navbar({ setPage }) {
                   alt="logo-icon"
                 />
               </button>
+              {/* ALL PRODUCT BUTTON */}
               <button
                 onClick={() => setPage({ path: "AllProduct", id: null })}
                 className="border border-0 bg-transparent"
@@ -43,6 +46,7 @@ function Navbar({ setPage }) {
                   alt="store-icon"
                 />
               </button>
+              {/* SEARCH BUTTON */}
               <button
                 onClick={handleSearchBarDisplay}
                 className="border border-0 bg-transparent"
@@ -54,6 +58,7 @@ function Navbar({ setPage }) {
                   alt="search-icon"
                 />
               </button>
+              {/* BASKET BUTTON */}
               <button className="border border-0 bg-transparent" type="button">
                 <img
                   className="navbar-icon"
@@ -64,10 +69,11 @@ function Navbar({ setPage }) {
             </ul>
           </nav>
         </div>
-        {/* NAVBAR - DESKTOP */}
+        {/* ------ NAVBAR DESKTOP ------- */}
         <div className="navbar-desktop fixed-top d-none d-md-block container-fluid">
           <nav className="p-3">
             <ul className="list-unstyled d-flex justify-content-between m-0">
+              {/* LOGO */}
               <button
                 onClick={() => setPage({ path: "", id: null })}
                 className="navbar-button border border-0 bg-transparent"
@@ -82,6 +88,7 @@ function Navbar({ setPage }) {
                   <h2 className="ms-2">Pokebiz</h2>
                 </div>
               </button>
+              {/* ALL PRODUCTS BUTTON */}
               <button
                 onClick={() => setPage({ path: "AllProduct", id: null })}
                 className="border border-0 bg-transparent"
@@ -97,10 +104,11 @@ function Navbar({ setPage }) {
                 </div>
               </button>
               <div className="navbar-desktop-right-icon d-flex justify-content-around">
+                {/* SEARCH BAR */}
                 <form action="">
                   <label className="d-flex bg-dark rounded-3 px-3 py-1">
                     <input
-                      className="pokebiz-seachBar-Desktop"
+                      className="pokebiz-seachBar-Desktop text-white"
                       type="text"
                       placeholder="Find your Pokemon"
                     />
@@ -116,6 +124,7 @@ function Navbar({ setPage }) {
                     </button>
                   </label>
                 </form>
+                {/* BASKET BUTTON */}
                 <button
                   className="border border-0 bg-transparent"
                   type="button"
