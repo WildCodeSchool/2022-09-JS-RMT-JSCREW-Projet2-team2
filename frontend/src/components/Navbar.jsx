@@ -11,11 +11,19 @@ function Navbar({ setPage, pokemons }) {
       setDisplaySearchBar("d-none");
     }
   };
+  const goToOneProduct = (pokemonInput) => {
+    setPage({ path: "OneProduct", id: pokemonInput.pokedex_index - 1 });
+    handleSearchBarDisplay();
+  };
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
       <div className={displaySearchBar}>
-        <SearchBar pokemons={pokemons} />
+        <SearchBar
+          pokemons={pokemons}
+          setPage={setPage}
+          goToOneProduct={goToOneProduct}
+        />
       </div>
       <div>
         {/* NAVBAR - MOBILE */}

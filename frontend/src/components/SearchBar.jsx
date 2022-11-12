@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SearchBar({ pokemons }) {
+function SearchBar({ pokemons, goToOneProduct }) {
   const [searchValue, setSearchValue] = useState("");
 
   return (
@@ -12,14 +12,11 @@ function SearchBar({ pokemons }) {
         <div>
           <input
             onChange={(e) => setSearchValue(e.target.value)}
-            className="p-3 border border-4 border-end-0 border-white text-white rounded-start fs-1 w-75"
+            className="p-3 border border-4 border-white text-white rounded-start fs-1 w-100"
             placeholder="Find your Pokemon"
             type="text"
             id="pokemons"
           />
-          <button className="px-3 rounded-end fs-1" type="submit">
-            Go!
-          </button>
         </div>
       </form>
       <div
@@ -38,6 +35,7 @@ function SearchBar({ pokemons }) {
                   id="pokebiz-searchBar-value"
                   type="button"
                   className="text-white list-unstyled bg-transparent border m-2 w-25"
+                  onClick={() => goToOneProduct(pokemon)}
                 >
                   {pokemon.name}
                 </button>
