@@ -125,7 +125,6 @@ function Navbar({ setPage, pokemons }) {
                       placeholder="Find your Pokemon"
                     />
                     <button
-                      onClick={handleSearchBarDisplay}
                       className="border border-0 bg-transparent"
                       type="button"
                     >
