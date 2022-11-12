@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-function SearchBar({ pokemons, goToOneProduct }) {
-  const [searchValue, setSearchValue] = useState("");
-
+function SearchBar({ pokemons, goToOneProduct, searchValue, setSearchValue }) {
   return (
     <div className="pokebiz-searchBar-mobile d-flex flex-column justify-content-center bg-dark d-md-none overflow-auto">
       <form
@@ -15,7 +13,6 @@ function SearchBar({ pokemons, goToOneProduct }) {
             className="p-3 border border-4 border-white text-white rounded-start fs-1 w-100"
             placeholder="Find your Pokemon"
             type="text"
-            id="pokemons"
           />
         </div>
       </form>
@@ -34,7 +31,7 @@ function SearchBar({ pokemons, goToOneProduct }) {
                 <button
                   id="pokebiz-searchBar-value"
                   type="button"
-                  className="text-white list-unstyled bg-transparent border m-2 w-25"
+                  className=" pokebiz-searchBar-output text-white list-unstyled bg-transparent border m-2 w-25"
                   onClick={() => goToOneProduct(pokemon)}
                 >
                   {pokemon.name}

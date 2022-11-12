@@ -4,6 +4,7 @@ import "./navbar.css";
 
 function Navbar({ setPage, pokemons }) {
   const [displaySearchBar, setDisplaySearchBar] = useState("d-none");
+  const [searchValue, setSearchValue] = useState("");
   const handleSearchBarDisplay = () => {
     if (displaySearchBar === "d-none") {
       setDisplaySearchBar("d-block");
@@ -23,6 +24,8 @@ function Navbar({ setPage, pokemons }) {
           pokemons={pokemons}
           setPage={setPage}
           goToOneProduct={goToOneProduct}
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
         />
       </div>
       <div>
@@ -116,13 +119,15 @@ function Navbar({ setPage, pokemons }) {
                 <form action="">
                   <label className="d-flex bg-dark rounded-3 px-3 py-1">
                     <input
+                      onChange={(e) => setSearchValue(e.target.value)}
                       className="pokebiz-seachBar-Desktop text-white"
                       type="text"
                       placeholder="Find your Pokemon"
                     />
                     <button
+                      onClick={handleSearchBarDisplay}
                       className="border border-0 bg-transparent"
-                      type="submit"
+                      type="button"
                     >
                       <img
                         className="navbar-icon"
@@ -131,6 +136,29 @@ function Navbar({ setPage, pokemons }) {
                       />
                     </button>
                   </label>
+                  <div
+                    className={
+                      !searchValue
+                        ? "d-none"
+                        : "pokebiz-searchBar-output-container d-flex flex-column align-items-start container-fluid h-50 mt-3 position-absolute overflow-auto"
+                    }
+                  >
+                    {pokemons
+                      .filter((pokemon) =>
+                        pokemon.name.toLowerCase().includes(searchValue)
+                      )
+                      .map((pokemon) => {
+                        return (
+                          <button
+                            type="button"
+                            className="pokebiz-searchBar-output text-white bg-transparent fs-5"
+                            onClick={() => goToOneProduct(pokemon)}
+                          >
+                            {pokemon.name}
+                          </button>
+                        );
+                      })}
+                  </div>
                 </form>
                 {/* BASKET BUTTON */}
                 <button
