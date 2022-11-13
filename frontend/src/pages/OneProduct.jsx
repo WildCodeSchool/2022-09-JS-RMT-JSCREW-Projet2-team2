@@ -16,16 +16,16 @@ function OneProduct({ pokemon }) {
       {/* ONE PRODUCT MOBILE VERSION */}
       <div className="oneProductPage d-lg-none container-fluid d-flex flex-column align-items-center justify-content-around text-dark pt-5 bg-container">
         <h1 className="text-white pb-2 text-capitalize">{pokemon.name} card</h1>
-        <div className="allproduct-card-container">
+        <div className="pokebiz-card-container">
           <TemplateCard pokemon={pokemon} />
         </div>
         <div className="mt-3 d-flex">
           <AddFavorite />
         </div>
-        <div>
+        <div className="pokebiz-progreesBar-oneProduct d-flex">
           <ProgressBar pokemon={pokemon} />
         </div>
-        <div className="oneProduct-postCard-element my-5 d-flex align-items-center justify-content-around">
+        <div className="oneProduct-postCard-element my-5 d-flex align-items-center justify-content-between">
           <div className="pokemonPrice">
             {/* Mettre le prix en dynamique avec les props reçues */}
             <h3 className="priceStyle">{pokemon.price} £</h3>
