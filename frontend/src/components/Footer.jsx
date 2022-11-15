@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 
-import MyForm from "./ContactForm";
+import ContactForm from "./ContactForm";
 
 function Footer({ setPage }) {
   return (
@@ -33,7 +33,7 @@ function Footer({ setPage }) {
             />
           </div>
           <div className="col-md-6 col-12">
-            <MyForm />
+            <ContactForm />
           </div>
         </div>
       </div>
