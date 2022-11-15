@@ -13,7 +13,7 @@ const toastifyConfig = {
   theme: "light",
 };
 
-function MyForm() {
+function ContactForm() {
   const [username, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -79,4 +79,4 @@ function MyForm() {
   );
 }
 
-export default MyForm;
+export default ContactForm;
