@@ -6,14 +6,18 @@ import SocialMedia from "@components/SocialMedia";
 import LogoWhyUs from "@components/LogoWhyUS";
 import CardOffer from "@components/CardOffer";
 
-export default function Home() {
+export default function Home({ setPage }) {
   return (
     <div className="accueilBackground bg-gradient">
       <div className="prez position-relative d-flex flex-column justify-content-end">
         <div className="position-absolute">
           <h1 className="text-white fs-2">Welcome to PokeBiz</h1>
           <h2 className="text-white fs-1">Pokemon shop</h2>
-          <button className="btn btn btn-warning mb-5" type="button">
+          <button
+            onClick={() => setPage({ path: "AllProduct", id: null })}
+            className="btn btn-warning mb-5"
+            type="button"
+          >
             Catch them !
           </button>
         </div>
@@ -27,9 +31,9 @@ export default function Home() {
           doloremque.
         </p>
       </div>
-      <div className="specialOffer d-flex align-items-center justify-content-center pt-5 text-white">
+      <div className="specialOffer d-flex align-items-center justify-content-center pt-5">
         <div className="carrouselOffer d-flex justify-content-center flex-column align-items-center mb-3">
-          <h2>Special Offers</h2>
+          <h2 className="text-white">Special Offers</h2>
           <br />
           <input
             className="d-none"

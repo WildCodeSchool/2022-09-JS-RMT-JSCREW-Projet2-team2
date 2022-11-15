@@ -19,7 +19,7 @@ function AddToCartButton({
     <div>
       <button
         onClick={addPokemonToCart}
-        className="buttonColor mt-4 mb-2 btn btn-warning"
+        className="buttonColor p-2 fs-4 btn-warning"
         type="button"
       >
         Add to cart
