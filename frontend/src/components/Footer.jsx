@@ -1,6 +1,5 @@
 import React from "react";
 import "./footer.css";
-
 import ContactForm from "./ContactForm";
 
 function Footer({ setPage }) {
