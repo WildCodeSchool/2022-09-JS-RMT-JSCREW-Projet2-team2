@@ -22,7 +22,7 @@ function OneProduct({ pokemon }) {
         <div className="mt-3 d-flex">
           <AddFavorite />
         </div>
-        <div className="pokebiz-progreesBar-oneProduct d-flex">
+        <div className="pokebiz-progressBar-oneProduct d-flex">
           <ProgressBar pokemon={pokemon} />
         </div>
         <div className="oneProduct-postCard-element my-5 d-flex align-items-center justify-content-between">
