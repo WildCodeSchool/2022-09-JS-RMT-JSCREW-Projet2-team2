@@ -1,30 +1,33 @@
 import React from "react";
-import "./footer.css";
+import { Link } from "react-router-dom";
 import ContactForm from "./ContactForm";
+import "./footer.css";
 
-function Footer({ setPage }) {
+function Footer() {
   return (
     <footer>
       <div className="footer-contact container-fluid align-items-center justify-content-around mb-md-0">
         <div className="row ">
           <ul className="footer-list-button d-none d-md-block list-unstyled col-md-3 my-auto">
             <li>
-              <button
-                className="footer-list-button bg-transparent"
-                type="button"
-                onClick={() => setPage({ path: "", id: null })}
-              >
-                Home
-              </button>
+              <Link to="/">
+                <button
+                  className="footer-list-button bg-transparent"
+                  type="button"
+                >
+                  Home
+                </button>
+              </Link>
             </li>
             <li>
-              <button
-                className="footer-list-button bg-transparent"
-                type="button"
-                onClick={() => setPage({ path: "AllProduct", id: null })}
-              >
-                Our Cards
-              </button>
+              <Link to="/AllProducts">
+                <button
+                  className="footer-list-button bg-transparent"
+                  type="button"
+                >
+                  Our Cards
+                </button>
+              </Link>
             </li>
           </ul>
           <div className="col-12 d-md-block col-md-3 my-auto order-md-last d-none">
