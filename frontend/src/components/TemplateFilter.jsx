@@ -59,7 +59,7 @@ function TemplateFilter({ handleCheck, filterTypes }) {
                       // onClick={() =>setFilter(type)}
                       className="form-check-input"
                       type="checkbox"
-                      checked
+                      checked={type.checked}
                       id="checkbox"
                       onChange={() => handleCheck(type)}
                     />
