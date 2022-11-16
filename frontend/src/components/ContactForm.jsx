@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 const toastifyConfig = {
   position: "top-right",
@@ -14,6 +15,7 @@ const toastifyConfig = {
 };
 
 function ContactForm() {
+  const form = useRef();
   const [username, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -27,15 +29,34 @@ function ContactForm() {
     }
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+  };
+  emailjs
+    .sendForm(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      form.current,
+      "YOUR_PUBLIC_KEY"
+    )
+    .then(
+      (result) => {
+        console.warn(result.text);
+      },
+      (error) => {
+        console.warn(error.text);
+      }
+    );
+
   return (
-    <form className="footer-form">
+    <form ref={form} onSubmit={sendEmail} className="footer-form">
       <div className="mb-2 mt-1 p-2">
         <input
           value={username}
           onChange={(e) => setName(e.target.value)}
           className="input-name w-100 p-2"
           type="text"
-          name="name"
+          name="user_name"
           placeholder="Name"
         />
       </div>
@@ -46,7 +67,7 @@ function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
           className="input-email w-100 p-2"
           type="email"
-          name="email"
+          name="user_email"
           placeholder="Adress email"
         />
       </div>
@@ -56,6 +77,7 @@ function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className="textarea w-100 p-2"
+          name="message"
           placeholder="Enter your message"
         />
       </div>
