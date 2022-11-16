@@ -8,15 +8,15 @@ import "./allProducts.css";
 import pokemons from "@services/data";
 
 const types = [
-  { name: "fire", checked: false },
+  { name: "fire", checked: true },
   { name: "normal", checked: false },
   { name: "flying", checked: false },
-  { name: "grass", checked: false },
+  { name: "grass", checked: true },
   { name: "poison", checked: false },
   { name: "bug", checked: false },
   { name: "electric", checked: false },
   { name: "ground", checked: false },
-  { name: "fairy", checked: false },
+  { name: "fairy", checked: true },
 ];
 
 function AllProduct({ setPage }) {
@@ -24,8 +24,10 @@ function AllProduct({ setPage }) {
   const [filterTypes, setFilterTypes] = useState(types);
 
   const handleCheck = (type) => {
-    console.warn(type);
-    setFilterTypes(types);
+    const newFilterType = [...filterTypes];
+    const index = newFilterType.indexOf(type);
+    newFilterType[index].checked = !newFilterType[index].checked;
+    setFilterTypes(newFilterType);
   };
 
   return (
