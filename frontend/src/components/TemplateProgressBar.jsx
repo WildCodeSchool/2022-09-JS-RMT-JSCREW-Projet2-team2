@@ -6,7 +6,7 @@ function TemplateProgressBar({ stats, statName }) {
       <h3 className="text-white ms-2 mt-2 mb-1 fs-6 text-capitalize">
         {statName}
       </h3>
-      <div className="d-flex w-100 align-items-center justify-content-between">
+      <div className="d-flex w-100 align-items-center justify-content-around">
         <div className="progress" style={{ width: 100 * 2.8 }}>
           <div
             className="progress-bar progress-bar-striped progress-bar-animated"
