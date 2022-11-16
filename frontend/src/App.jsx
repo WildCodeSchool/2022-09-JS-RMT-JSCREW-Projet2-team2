@@ -34,9 +34,6 @@ function App() {
             element={<OneProduct pokemon={pokemons[page.id]} />}
           />
         </Routes>
-        {/* {page.path === "OneProduct" && (
-          <OneProduct pokemon={pokemons[page.id]} />
-        )} */}
         <Footer setPage={setPage} />
       </div>
     </Router>
