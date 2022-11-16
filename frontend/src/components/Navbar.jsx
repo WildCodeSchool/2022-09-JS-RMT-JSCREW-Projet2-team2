@@ -3,23 +3,16 @@ import SearchBar from "@components/SearchBar";
 import "./navbar.css";
 
 function Navbar({ setPage, pokemons }) {
-  const [displaySearchBar, setDisplaySearchBar] = useState("d-none");
+  const [displaySearchBar, setDisplaySearchBar] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const handleSearchBarDisplay = () => {
-    if (displaySearchBar === "d-none") {
-      setDisplaySearchBar("d-block");
-    } else if (displaySearchBar === "d-block") {
-      setDisplaySearchBar("d-none");
-    }
-  };
   const goToOneProduct = (pokemonInput) => {
     setPage({ path: "OneProduct", id: pokemonInput.pokedex_index - 1 });
-    handleSearchBarDisplay();
+    setDisplaySearchBar(!displaySearchBar);
   };
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
-      <div className={displaySearchBar}>
+      <div className={displaySearchBar ? "d-none" : "d-block"}>
         <SearchBar
           pokemons={pokemons}
           setPage={setPage}
@@ -59,7 +52,7 @@ function Navbar({ setPage, pokemons }) {
               </button>
               {/* SEARCH BUTTON */}
               <button
-                onClick={handleSearchBarDisplay}
+                onClick={() => setDisplaySearchBar(!displaySearchBar)}
                 className="border border-0 bg-transparent"
                 type="button"
               >
