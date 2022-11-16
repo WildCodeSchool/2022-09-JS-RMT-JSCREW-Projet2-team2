@@ -41,7 +41,7 @@ function Navbar({ setPage, pokemons }) {
                 </button>
               </Link>
               {/* ALL PRODUCT BUTTON */}
-              <Link to="/allProduct">
+              <Link to="/AllProducts">
                 <button
                   className="border border-0 bg-transparent"
                   type="button"
@@ -97,7 +97,7 @@ function Navbar({ setPage, pokemons }) {
                 </button>
               </Link>
               {/* ALL PRODUCTS BUTTON */}
-              <Link to="/allProduct">
+              <Link to="/AllProducts">
                 <button
                   className="border border-0 bg-transparent"
                   type="button"

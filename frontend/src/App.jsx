@@ -25,14 +25,18 @@ function App() {
           />
           {/* Si la valeur de page = AllProduct alors on est sur la page de vente */}
           <Route
-            path="/allProduct"
+            path="/AllProducts"
             element={<AllProduct setPage={setPage} pokemons={pokemons} />}
           />
+          {/* On filtre les pokemons, et quand la valeur de page = ID d'un pokemon on se trouve sur la page correspondante */}
+          <Route
+            path="/AllProducts/:id"
+            element={<OneProduct pokemon={pokemons[page.id]} />}
+          />
         </Routes>
-        {/* On filtre les pokemons, et quand la valeur de page = ID d'un pokemon on se trouve sur la page correspondante */}
-        {page.path === "OneProduct" && (
+        {/* {page.path === "OneProduct" && (
           <OneProduct pokemon={pokemons[page.id]} />
-        )}
+        )} */}
         <Footer setPage={setPage} />
       </div>
     </Router>

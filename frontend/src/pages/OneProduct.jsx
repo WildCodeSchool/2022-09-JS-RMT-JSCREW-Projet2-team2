@@ -11,6 +11,7 @@ import "./oneProduct.css";
 function OneProduct({ pokemon }) {
   // Création du state pour enregistrer la quantité souaihtée.
   const [quantity, setQuantity] = useState(1);
+
   return (
     <div>
       {/* ONE PRODUCT MOBILE VERSION */}
