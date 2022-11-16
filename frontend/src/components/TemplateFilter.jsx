@@ -1,7 +1,7 @@
 import React from "react";
 import "./TemplateFilter.css";
 
-function TemplateFilter({ handleCheck, types }) {
+function TemplateFilter({ handleCheck, filterTypes }) {
   return (
     <div>
       {/* Template-search - MOBILE */}
@@ -52,7 +52,7 @@ function TemplateFilter({ handleCheck, types }) {
                   Sort by price(ASC)
                 </label>
               </div>
-              {types.map((type) => {
+              {filterTypes.map((type) => {
                 return (
                   <div className="form-check mb-2" key={type.name}>
                     <input

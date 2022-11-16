@@ -21,16 +21,18 @@ const types = [
 
 function AllProduct({ setPage }) {
   const [numberOfCard, setNumberOfCard] = useState(0);
+  const [filterTypes, setFilterTypes] = useState(types);
 
   const handleCheck = (type) => {
     console.warn(type);
+    setFilterTypes(types);
   };
 
   return (
     <section>
       <div>AllProduct</div>
 
-      <TemplateFilter handleCheck={handleCheck} types={types} />
+      <TemplateFilter handleCheck={handleCheck} filterTypes={filterTypes} />
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
         {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
           return (
