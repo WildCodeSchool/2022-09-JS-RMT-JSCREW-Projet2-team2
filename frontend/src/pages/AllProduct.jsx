@@ -11,6 +11,7 @@ const types = [
   { name: "fire", checked: true },
   { name: "normal", checked: false },
   { name: "flying", checked: false },
+  { name: "water", checked: false },
   { name: "grass", checked: true },
   { name: "poison", checked: false },
   { name: "bug", checked: false },
@@ -30,25 +31,37 @@ function AllProduct({ setPage }) {
     setFilterTypes(newFilterType);
   };
 
+  const getSelected = () => {
+    if (filterTypes.every((filter) => !filter.checked)) return pokemons;
+    return pokemons.filter((pokemon) => {
+      const el = filterTypes.find(
+        (type) => type.name === pokemon.type.primary_type
+      );
+      return el.checked;
+    });
+  };
+
   return (
     <section>
       <div>AllProduct</div>
 
       <TemplateFilter handleCheck={handleCheck} filterTypes={filterTypes} />
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
-        {pokemons.slice(0, numberOfCard + 8).map((pokemon) => {
-          return (
-            <button
-              className="bg-transparent allproduct-card-container"
-              type="button"
-              onClick={() =>
-                setPage({ path: "OneProduct", id: pokemon.pokedex_index })
-              }
-            >
-              <TemplateCard key={pokemon.id} pokemon={pokemon} />
-            </button>
-          );
-        })}
+        {getSelected(pokemons)
+          .slice(0, numberOfCard + 8)
+          .map((pokemon) => {
+            return (
+              <button
+                className="bg-transparent allproduct-card-container"
+                type="button"
+                onClick={() =>
+                  setPage({ path: "OneProduct", id: pokemon.pokedex_index })
+                }
+              >
+                <TemplateCard key={pokemon.id} pokemon={pokemon} />
+              </button>
+            );
+          })}
       </div>
       <ShowMoreCard
         numberOfCard={numberOfCard}
