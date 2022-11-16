@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "./navbar.css";
 
@@ -27,29 +28,31 @@ function Navbar({ setPage, pokemons }) {
           <nav className="p-3">
             <ul className="list-unstyled d-flex justify-content-around m-0">
               {/* LOGO */}
-              <button
-                onClick={() => setPage({ path: "", id: null })}
-                className="border border-0 bg-transparent"
-                type="button"
-              >
-                <img
-                  className="navbar-icon"
-                  src="./src/assets/navbar-icons/logo-black.png"
-                  alt="logo-icon"
-                />
-              </button>
+              <Link to="/">
+                <button
+                  className="border border-0 bg-transparent"
+                  type="button"
+                >
+                  <img
+                    className="navbar-icon"
+                    src="./src/assets/navbar-icons/logo-black.png"
+                    alt="logo-icon"
+                  />
+                </button>
+              </Link>
               {/* ALL PRODUCT BUTTON */}
-              <button
-                onClick={() => setPage({ path: "AllProduct", id: null })}
-                className="border border-0 bg-transparent"
-                type="button"
-              >
-                <img
-                  className="navbar-icon"
-                  src="./src/assets/navbar-icons/cards.png"
-                  alt="store-icon"
-                />
-              </button>
+              <Link to="/allProduct">
+                <button
+                  className="border border-0 bg-transparent"
+                  type="button"
+                >
+                  <img
+                    className="navbar-icon"
+                    src="./src/assets/navbar-icons/cards.png"
+                    alt="store-icon"
+                  />
+                </button>
+              </Link>
               {/* SEARCH BUTTON */}
               <button
                 onClick={() => setDisplaySearchBar(!displaySearchBar)}
@@ -78,35 +81,37 @@ function Navbar({ setPage, pokemons }) {
           <nav className="p-3">
             <ul className="list-unstyled d-flex justify-content-between m-0">
               {/* LOGO */}
-              <button
-                onClick={() => setPage({ path: "", id: null })}
-                className="navbar-button border border-0 bg-transparent"
-                type="button"
-              >
-                <div className="d-flex">
-                  <img
-                    className="navbar-icon"
-                    src="./src/assets/navbar-icons/logo.png"
-                    alt="logo-icon"
-                  />
-                  <h2 className="ms-2">Pokebiz</h2>
-                </div>
-              </button>
+              <Link to="/">
+                <button
+                  className="navbar-button border border-0 bg-transparent"
+                  type="button"
+                >
+                  <div className="d-flex">
+                    <img
+                      className="navbar-icon"
+                      src="./src/assets/navbar-icons/logo.png"
+                      alt="logo-icon"
+                    />
+                    <h2 className="ms-2">Pokebiz</h2>
+                  </div>
+                </button>
+              </Link>
               {/* ALL PRODUCTS BUTTON */}
-              <button
-                onClick={() => setPage({ path: "AllProduct", id: null })}
-                className="border border-0 bg-transparent"
-                type="button"
-              >
-                <div className="navbar-desktop-store-icon d-flex align-items-center">
-                  <img
-                    className="navbar-icon"
-                    src="./src/assets/navbar-icons/cards-orange.png"
-                    alt="store-icon"
-                  />
-                  <p className="m-0 ms-2 fs-6">Our cards</p>
-                </div>
-              </button>
+              <Link to="/allProduct">
+                <button
+                  className="border border-0 bg-transparent"
+                  type="button"
+                >
+                  <div className="navbar-desktop-store-icon d-flex align-items-center">
+                    <img
+                      className="navbar-icon"
+                      src="./src/assets/navbar-icons/cards-orange.png"
+                      alt="store-icon"
+                    />
+                    <p className="m-0 ms-2 fs-6">Our cards</p>
+                  </div>
+                </button>
+              </Link>
               <div className="navbar-desktop-right-icon d-flex justify-content-around">
                 {/* SEARCH BAR */}
                 <form action="">
