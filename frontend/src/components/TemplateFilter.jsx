@@ -1,7 +1,7 @@
 import React from "react";
-import "./TemplateSearch.css";
+import "./TemplateFilter.css";
 
-function TemplateSearch() {
+function TemplateFilter({ handleCheck, types }) {
   return (
     <div>
       {/* Template-search - MOBILE */}
@@ -16,7 +16,7 @@ function TemplateSearch() {
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseOne"
             >
               Filter
@@ -24,44 +24,52 @@ function TemplateSearch() {
           </h2>
           <div
             id="collapseOne"
-            className="accordion-collapse collapse show"
+            className="accordion-collapse collapse show color-accordion text-white"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <div className="form-check">
+              <div className="form-check mb-1">
                 <input
+                  onClick={() => "favoris"}
                   className="form-check-input"
                   type="checkbox"
-                  value=""
+                  checked={false}
                   id="flexCheckDefault"
                 />
                 <label className="form-check-label" htmlFor="flexCheckDefault">
-                  Default checkbox
+                  Favoris
                 </label>
               </div>
               <div className="form-check">
                 <input
                   className="form-check-input"
                   type="checkbox"
-                  value=""
+                  checked={false}
                   id="flexCheckDefault"
                 />
                 <label className="form-check-label" htmlFor="flexCheckDefault">
-                  Default checkbox
+                  Sort by price(ASC)
                 </label>
               </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
-                <label className="form-check-label" htmlFor="flexCheckDefault">
-                  Default checkbox
-                </label>
-              </div>
+              {types.map((type) => {
+                return (
+                  <div className="form-check mb-2" key={type.name}>
+                    <input
+                      // onClick={() =>setFilter(type)}
+                      className="form-check-input"
+                      type="checkbox"
+                      checked
+                      id="checkbox"
+                      onChange={() => handleCheck(type)}
+                    />
+                    <label className="form-check-label" htmlFor="checkbox">
+                      {type.name}
+                    </label>
+                    {/* <div>{checked ? "Checked" : "Not checked"}</div> */}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -70,4 +78,4 @@ function TemplateSearch() {
   );
 }
 
-export default TemplateSearch;
+export default TemplateFilter;
