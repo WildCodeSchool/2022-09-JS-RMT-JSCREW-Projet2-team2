@@ -146,13 +146,15 @@ function Navbar({ setPage, pokemons }) {
                       )
                       .map((pokemon) => {
                         return (
-                          <button
-                            type="button"
-                            className="pokebiz-searchBar-output text-white bg-transparent fs-5"
-                            onClick={() => goToOneProduct(pokemon)}
-                          >
-                            {pokemon.name}
-                          </button>
+                          <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                            <button
+                              type="button"
+                              className="pokebiz-searchBar-output text-white bg-transparent fs-5"
+                              onClick={() => goToOneProduct(pokemon)}
+                            >
+                              {pokemon.name}
+                            </button>
+                          </Link>
                         );
                       })}
                   </div>
