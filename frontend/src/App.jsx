@@ -15,7 +15,7 @@ function App() {
   const [page, setPage] = useState({ path: "", id: null });
   return (
     <div className="App">
-      <Navbar setPage={setPage} />
+      <Navbar setPage={setPage} pokemons={pokemons} />
       {/* Si la valeur de page = Home alors on est sur la home */}
       {page.path === "" && <Home setPage={setPage} pokemons={pokemons} />}
       {/* Si la valeur de page = AllProduct alors on est sur la page de vente */}

@@ -8,10 +8,6 @@
         background-color: #191919;
     }
 
-    .navbar-desktop-right-icon {
-        width: 10%;
-    }
-
     .navbar-desktop-store-icon {
         color: #FFBA35;
     }
@@ -23,3 +19,54 @@
 .navbar-icon {
     height: 40px;
 }
+
+/* MOBILE SEARCHBAR */
+input:focus::placeholder {
+    color: transparent;
+  }
+.pokebiz-searchBar-mobile{
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    opacity: 90%;
+}
+
+.pokebiz-searchBar-mobile input{
+    height: 10vh;
+    background: none;
+    width: 60%;
+}
+.pokebiz-searchBar-mobile button{
+    height: 10vh;
+    width: 20%;
+}
+
+.pokebiz-searchBar-mobile input::placeholder {
+    font-style: italic;
+    opacity: 70%;
+}
+
+.pokebiz-searchBar-output{
+    height: 65px!important;
+}
+
+/* DESKTOP SEARCHBAR */
+.pokebiz-seachBar-Desktop{
+    background: none;
+}
+.pokebiz-searchBar-output-container{
+    height: 50vh!important;
+    background-color : rgba(0,0,0,0.5);
+    width: 275px;
+}
+.pokebiz-searchBar-output:hover{
+    color: #FFBA35!important;
+}
+.pokebiz-seachBar-Desktop::placeholder{
+    font-style: italic;
+}
+.pokebiz-seachBar-Desktop:focus{
+    outline: none;
+}
+
