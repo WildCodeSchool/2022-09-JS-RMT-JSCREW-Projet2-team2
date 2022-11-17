@@ -55,7 +55,10 @@ function AllProduct({ setPage }) {
               <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
                 <button
                   onClick={() =>
-                    setPage({ path: "OneProduct", id: pokemon.pokedex_index - 1 })
+                    setPage({
+                      path: "OneProduct",
+                      id: pokemon.pokedex_index - 1,
+                    })
                   }
                   className="bg-transparent allproduct-card-container"
                   type="button"
