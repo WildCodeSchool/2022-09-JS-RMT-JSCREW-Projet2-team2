@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function SearchBar({ pokemons, goToOneProduct, searchValue, setSearchValue }) {
   return (
@@ -28,14 +29,16 @@ function SearchBar({ pokemons, goToOneProduct, searchValue, setSearchValue }) {
             )
             .map((pokemon) => {
               return (
-                <button
-                  id="pokebiz-searchBar-value"
-                  type="button"
-                  className=" pokebiz-searchBar-output text-white list-unstyled bg-transparent border m-2 w-25"
-                  onClick={() => goToOneProduct(pokemon)}
-                >
-                  {pokemon.name}
-                </button>
+                <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                  <button
+                    id="pokebiz-searchBar-value"
+                    type="button"
+                    className=" pokebiz-searchBar-output text-white list-unstyled bg-transparent border m-2 w-25"
+                    onClick={() => goToOneProduct(pokemon)}
+                  >
+                    {pokemon.name}
+                  </button>
+                </Link>
               );
             })}
         </ul>

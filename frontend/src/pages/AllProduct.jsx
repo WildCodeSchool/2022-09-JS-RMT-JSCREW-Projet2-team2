@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import TemplateCard from "@components/TemplateCard";
 import ShowMoreCard from "@components/ShowMoreCard";
 import TemplateFilter from "@components/TemplateFilter";
@@ -51,15 +52,20 @@ function AllProduct({ setPage }) {
           .slice(0, numberOfCard + 8)
           .map((pokemon) => {
             return (
-              <button
-                className="bg-transparent allproduct-card-container"
-                type="button"
-                onClick={() =>
-                  setPage({ path: "OneProduct", id: pokemon.pokedex_index })
-                }
-              >
-                <TemplateCard key={pokemon.id} pokemon={pokemon} />
-              </button>
+              <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                <button
+                  onClick={() =>
+                    setPage({
+                      path: "OneProduct",
+                      id: pokemon.pokedex_index - 1,
+                    })
+                  }
+                  className="bg-transparent allproduct-card-container"
+                  type="button"
+                >
+                  <TemplateCard key={pokemon.id} pokemon={pokemon} />
+                </button>
+              </Link>
             );
           })}
       </div>
