@@ -25,7 +25,7 @@ function Navbar({ setPage, pokemons }) {
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
-      <div className={displaySearchBar ? "d-none" : "d-block"}>
+      <div className={!displaySearchBar ? "d-none" : "d-block"}>
         <SearchBar
           pokemons={pokemons}
           setPage={setPage}
@@ -67,7 +67,11 @@ function Navbar({ setPage, pokemons }) {
                 </button>
               </Link>
               {/* SEARCH BUTTON */}
-              <button className="border border-0 bg-transparent" type="button">
+              <button
+                onClick={() => setDisplaySearchBar(!displaySearchBar)}
+                className="border border-0 bg-transparent"
+                type="button"
+              >
                 <img
                   className="navbar-icon"
                   src="./src/assets/navbar-icons/search-black.png"
