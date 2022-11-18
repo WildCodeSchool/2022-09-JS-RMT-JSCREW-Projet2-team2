@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "./navbar.css";
@@ -13,9 +13,14 @@ function Navbar({ setPage, pokemons }) {
   const handleDisplaySearchDesktop = () => {
     if (searchValue.length > 0) {
       setSearchValue("");
-      setDisplaySearchBar(!displaySearchBar);
+      setDisplaySearchBar(false);
     }
   };
+  useEffect(() => {
+    document.body.addEventListener("click", handleDisplaySearchDesktop);
+    return () =>
+      document.body.addEventListener("click", handleDisplaySearchDesktop);
+  }, []);
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
@@ -124,6 +129,7 @@ function Navbar({ setPage, pokemons }) {
                       onChange={(e) => setSearchValue(e.target.value)}
                       className="pokebiz-seachBar-Desktop text-white"
                       type="text"
+                      value={searchValue}
                       placeholder="Find your Pokemon"
                     />
                     <button
@@ -138,7 +144,7 @@ function Navbar({ setPage, pokemons }) {
                       />
                     </button>
                   </label>
-                  {(searchValue === true || searchValue.length > 0) && (
+                  {searchValue.length > 0 && (
                     <div className="pokebiz-searchBar-output-container d-flex flex-column align-items-start container-fluid h-50 mt-3 position-absolute overflow-auto">
                       {pokemons
                         .filter((pokemon) =>
