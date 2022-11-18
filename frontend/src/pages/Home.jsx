@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Home.css";
 
@@ -6,20 +7,18 @@ import SocialMedia from "@components/SocialMedia";
 import LogoWhyUs from "@components/LogoWhyUS";
 import CardOffer from "@components/CardOffer";
 
-export default function Home({ setPage }) {
+export default function Home() {
   return (
     <div className="accueilBackground bg-gradient">
       <div className="prez position-relative d-flex flex-column justify-content-end">
         <div className="position-absolute">
           <h1 className="text-white fs-2">Welcome to PokeBiz</h1>
           <h2 className="text-white fs-1">Pokemon shop</h2>
-          <button
-            onClick={() => setPage({ path: "AllProduct", id: null })}
-            className="btn btn-warning mb-5"
-            type="button"
-          >
-            Catch them !
-          </button>
+          <Link to="/AllProducts">
+            <button className="btn btn-warning mb-5" type="button">
+              Catch them !
+            </button>
+          </Link>
         </div>
       </div>
       <div className="prezIntro pt-5 mx-auto d-none d-md-block d-lg-block">
