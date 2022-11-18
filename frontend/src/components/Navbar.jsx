@@ -142,7 +142,7 @@ function Navbar({ setPage, pokemons }) {
                   >
                     {pokemons
                       .filter((pokemon) =>
-                        pokemon.name.toLowerCase().includes(searchValue)
+                        pokemon.name.toLowerCase().startsWith(searchValue)
                       )
                       .map((pokemon) => {
                         return (

@@ -25,7 +25,7 @@ function SearchBar({ pokemons, goToOneProduct, searchValue, setSearchValue }) {
         <ul className="p-0 m-0 container-fluid">
           {pokemons
             .filter((pokemon) =>
-              pokemon.name.toLowerCase().includes(searchValue)
+              pokemon.name.toLowerCase().startsWith(searchValue)
             )
             .map((pokemon) => {
               return (
