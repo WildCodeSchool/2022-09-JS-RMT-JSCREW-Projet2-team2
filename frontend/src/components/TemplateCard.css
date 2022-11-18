@@ -1,0 +1,47 @@
+.container {
+  background: linear-gradient(
+    36deg,
+    rgba(16, 20, 20, 0.9584034297312675) 0%,
+    rgba(16, 20, 20, 1) 100%
+  );
+}
+
+.bg-container {
+  background: rgb(16, 20, 20);
+  background: linear-gradient(
+    36deg,
+    rgba(16, 20, 20, 0.9584034297312675) 0%,
+    rgba(16, 20, 20, 1) 100%
+  );
+}
+
+.card-info {
+  background: #3e3e3e;
+}
+
+.card-front {
+  background-color: #ffba35;
+}
+
+.picture-card-oneProduct {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.card-img-top {
+  height: 270px;
+}
+
+.attack-card {
+  background-color: #a17723a7;
+}
+
+.bottom-of-card {
+  font-size: x-small;
+}
+
+.buttonColor {
+  background-color: #ffba35;
+  border: 2px solid orange;
+}
