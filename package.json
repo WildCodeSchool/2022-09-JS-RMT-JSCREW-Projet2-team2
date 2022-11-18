@@ -18,9 +18,5 @@
   "devDependencies": {
     "concurrently": "^7.0.0",
     "husky": "^7.0.0"
-  },
-  "dependencies": {
-    "react-router-dom": "^6.4.3",
-    "react-toastify": "^9.1.1"
   }
 }
