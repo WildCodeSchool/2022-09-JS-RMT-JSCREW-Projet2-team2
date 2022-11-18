@@ -10,6 +10,12 @@ function Navbar({ setPage, pokemons }) {
     setPage({ path: "OneProduct", id: pokemonInput.pokedex_index - 1 });
     setDisplaySearchBar(!displaySearchBar);
   };
+  const handleDisplaySearchDesktop = () => {
+    if (searchValue.length > 0) {
+      setSearchValue("");
+      setDisplaySearchBar(!displaySearchBar);
+    }
+  };
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
@@ -43,6 +49,7 @@ function Navbar({ setPage, pokemons }) {
               {/* ALL PRODUCT BUTTON */}
               <Link to="/AllProducts">
                 <button
+                  onClick={() => setDisplaySearchBar(false)}
                   className="border border-0 bg-transparent"
                   type="button"
                 >
@@ -54,17 +61,14 @@ function Navbar({ setPage, pokemons }) {
                 </button>
               </Link>
               {/* SEARCH BUTTON */}
-              <button
-                onClick={() => setDisplaySearchBar(!displaySearchBar)}
-                className="border border-0 bg-transparent"
-                type="button"
-              >
+              <button className="border border-0 bg-transparent" type="button">
                 <img
                   className="navbar-icon"
                   src="./src/assets/navbar-icons/search-black.png"
                   alt="search-icon"
                 />
               </button>
+
               {/* BASKET BUTTON */}
               <button className="border border-0 bg-transparent" type="button">
                 <img
@@ -123,6 +127,7 @@ function Navbar({ setPage, pokemons }) {
                       placeholder="Find your Pokemon"
                     />
                     <button
+                      onClick={handleDisplaySearchDesktop}
                       className="border border-0 bg-transparent"
                       type="button"
                     >
@@ -133,31 +138,27 @@ function Navbar({ setPage, pokemons }) {
                       />
                     </button>
                   </label>
-                  <div
-                    className={
-                      !searchValue
-                        ? "d-none"
-                        : "pokebiz-searchBar-output-container d-flex flex-column align-items-start container-fluid h-50 mt-3 position-absolute overflow-auto"
-                    }
-                  >
-                    {pokemons
-                      .filter((pokemon) =>
-                        pokemon.name.toLowerCase().startsWith(searchValue)
-                      )
-                      .map((pokemon) => {
-                        return (
-                          <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
-                            <button
-                              type="button"
-                              className="pokebiz-searchBar-output text-white bg-transparent fs-5"
-                              onClick={() => goToOneProduct(pokemon)}
-                            >
-                              {pokemon.name}
-                            </button>
-                          </Link>
-                        );
-                      })}
-                  </div>
+                  {(searchValue === true || searchValue.length > 0) && (
+                    <div className="pokebiz-searchBar-output-container d-flex flex-column align-items-start container-fluid h-50 mt-3 position-absolute overflow-auto">
+                      {pokemons
+                        .filter((pokemon) =>
+                          pokemon.name.toLowerCase().startsWith(searchValue)
+                        )
+                        .map((pokemon) => {
+                          return (
+                            <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                              <button
+                                type="button"
+                                className="pokebiz-searchBar-output text-white bg-transparent fs-5"
+                                onClick={() => goToOneProduct(pokemon)}
+                              >
+                                {pokemon.name}
+                              </button>
+                            </Link>
+                          );
+                        })}
+                    </div>
+                  )}
                 </form>
                 {/* BASKET BUTTON */}
                 <button
