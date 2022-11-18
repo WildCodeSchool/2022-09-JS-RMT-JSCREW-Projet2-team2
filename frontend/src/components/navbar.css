@@ -57,7 +57,7 @@ input:focus::placeholder {
 }
 .pokebiz-searchBar-output-container{
     height: 50vh!important;
-    background-color : rgba(0,0,0,0.5);
+    background-color : rgba(0,0,0,0.9);
     width: 275px;
 }
 .pokebiz-searchBar-output:hover{
