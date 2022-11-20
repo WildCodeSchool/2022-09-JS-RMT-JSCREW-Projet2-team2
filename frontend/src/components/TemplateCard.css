@@ -18,12 +18,36 @@
 .card-info {
   background: #3e3e3e;
 }
-
+/* Cards background color */
 .electric-color {
   background-color: #ffba35;
 }
 .water-color {
   background-color: #3590ff;
+}
+.fire-color {
+  background-color: #ff6135;
+}
+.normal-color {
+  background-color: #e4e4e4;
+}
+.flying-color {
+  background-color: #ffdf9e;
+}
+.grass-color {
+  background-color: #6ddc4b;
+}
+.poison-color {
+  background-color: #90419b;
+}
+.bug-color {
+  background-color: #0f8010;
+}
+.ground-color {
+  background-color: #9d6900;
+}
+.fairy-color {
+  background-color: #ff84e4;
 }
 
 .picture-card-oneProduct {
