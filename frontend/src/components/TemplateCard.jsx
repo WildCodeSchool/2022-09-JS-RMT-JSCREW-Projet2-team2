@@ -2,10 +2,24 @@ import React from "react";
 import "./TemplateCard.css";
 
 function TemplateCard({ pokemon }) {
+  const bgCardColor = [
+    { type: "fire", color: "fire-color" },
+    { type: "normal", color: "normal-color" },
+    { type: "flying", color: "flying-color" },
+    { type: "water", color: "water-color" },
+    { type: "grass", color: "grass-color" },
+    { type: "poison", color: "poison-color" },
+    { type: "bug", color: "bug-color" },
+    { type: "electric", color: "electric-color" },
+    { type: "ground", color: "ground-color" },
+    { type: "fairy", color: "fairy-color" },
+  ];
   return (
     <div>
       <div className="card-info rounded-3 p-2 mx-2">
-        <div className="card-front align-items-center w-100 h-100 p-3 rounded-3">
+        <div
+          className={`${bgCardColor[7].color} align-items-center w-100 h-100 p-3 rounded-3`}
+        >
           <div className="container-card d-grid w-100">
             <div className="top-of-card d-flex justify-content-between align-items-center fw-bold">
               <p className="text-uppercase">{pokemon.name}</p>

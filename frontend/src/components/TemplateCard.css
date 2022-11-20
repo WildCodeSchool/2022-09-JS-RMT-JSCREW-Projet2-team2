@@ -19,8 +19,11 @@
   background: #3e3e3e;
 }
 
-.card-front {
+.electric-color {
   background-color: #ffba35;
+}
+.water-color {
+  background-color: #3590ff;
 }
 
 .picture-card-oneProduct {
