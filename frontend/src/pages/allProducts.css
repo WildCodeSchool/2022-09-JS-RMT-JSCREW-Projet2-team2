@@ -1,3 +1,9 @@
 .allproduct-card-container{
     width: 380px;
 }
+
+@media only screen and (min-width: 768px) {
+    .pokebiz-allProduct-container {
+        margin-top: 80px;
+    }
+}

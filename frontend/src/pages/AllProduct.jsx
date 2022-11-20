@@ -43,7 +43,7 @@ function AllProduct({ setPage }) {
   };
 
   return (
-    <section>
+    <section className="pokebiz-allProduct-container">
       <div>AllProduct</div>
 
       <TemplateFilter handleCheck={handleCheck} filterTypes={filterTypes} />
