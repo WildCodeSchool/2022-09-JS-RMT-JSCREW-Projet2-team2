@@ -2,7 +2,7 @@ import React from "react";
 import "./TemplateCard.css";
 
 function TemplateCard({ pokemon }) {
-  const bgCardColor = [
+  const bgColorCards = [
     { type: "fire", color: "fire-color" },
     { type: "normal", color: "normal-color" },
     { type: "flying", color: "flying-color" },
@@ -14,11 +14,19 @@ function TemplateCard({ pokemon }) {
     { type: "ground", color: "ground-color" },
     { type: "fairy", color: "fairy-color" },
   ];
+  const funct = () => {
+    bgColorCards.filter(
+      (bgColorCard) =>
+        bgColorCard.type === pokemon.type.primary_type && bgColorCard.color
+    );
+  };
+
+  funct();
   return (
     <div>
       <div className="card-info rounded-3 p-2 mx-2">
         <div
-          className={`${bgCardColor[7].color} align-items-center w-100 h-100 p-3 rounded-3`}
+          className={`${funct()} align-items-center w-100 h-100 p-3 rounded-3`}
         >
           <div className="container-card d-grid w-100">
             <div className="top-of-card d-flex justify-content-between align-items-center fw-bold">
