@@ -44,8 +44,7 @@ function AllProduct({ setPage }) {
 
   return (
     <section className="pokebiz-allProduct-container">
-      <div>AllProduct</div>
-
+      <h1>Our cards</h1>
       <TemplateFilter handleCheck={handleCheck} filterTypes={filterTypes} />
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
         {getSelected(pokemons)
