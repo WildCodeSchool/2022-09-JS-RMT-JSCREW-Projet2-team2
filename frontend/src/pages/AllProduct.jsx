@@ -7,6 +7,8 @@ import TemplateFilter from "@components/TemplateFilter";
 import "./allProducts.css";
 
 import pokemons from "@services/data";
+import AddToCartButton from "@components/AddToCartButton";
+import AddFavorite from "@components/AddFavorite";
 
 const types = [
   { name: "fire", checked: true },
@@ -52,20 +54,30 @@ function AllProduct({ setPage }) {
           .slice(0, numberOfCard + 8)
           .map((pokemon) => {
             return (
-              <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
-                <button
-                  onClick={() =>
-                    setPage({
-                      path: "OneProduct",
-                      id: pokemon.pokedex_index - 1,
-                    })
-                  }
-                  className="bg-transparent allproduct-card-container"
-                  type="button"
-                >
-                  <TemplateCard key={pokemon.id} pokemon={pokemon} />
-                </button>
-              </Link>
+              <div>
+                <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                  <button
+                    onClick={() =>
+                      setPage({
+                        path: "OneProduct",
+                        id: pokemon.pokedex_index - 1,
+                      })
+                    }
+                    className="bg-transparent allproduct-card-container"
+                    type="button"
+                  >
+                    <TemplateCard key={pokemon.id} pokemon={pokemon} />
+                  </button>
+                </Link>
+                <div className="d-flex align-items-center justify-content-around mt-3 mb-5">
+                  <div className="pokemonPrice">
+                    {/* Mettre le prix en dynamique avec les props reçues */}
+                    <h3 className="priceStyle">{pokemon.price} £</h3>
+                  </div>
+                  <AddToCartButton />
+                  <AddFavorite />
+                </div>
+              </div>
             );
           })}
       </div>
