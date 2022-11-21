@@ -46,23 +46,10 @@ function TemplateFilter({ handleCheck, filterTypes }) {
                     Favoris
                   </label>
                 </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    checked={false}
-                    id="flexCheckDefault"
-                  />
-                  <label
-                    className="form-check-label"
-                    htmlFor="flexCheckDefault"
-                  >
-                    Sort by price(ASC)
-                  </label>
-                </div>
+                <div className="form-checkborder border-3 border-bottom border-white" />
                 {filterTypes.map((type) => {
                   return (
-                    <div className="form-check mb-2" key={type.name}>
+                    <div className="form-check mb-1 mt-2" key={type.name}>
                       <input
                         // onClick={() =>setFilter(type)}
                         className="form-check-input"
