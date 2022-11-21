@@ -19,8 +19,6 @@ function Navbar({ setPage, pokemons }) {
   // useEffect permet de gérer le d-none de la modale quand on clique à côté.
   useEffect(() => {
     document.body.addEventListener("click", handleDisplaySearchDesktop);
-    return () =>
-      document.body.addEventListener("click", handleDisplaySearchDesktop);
   }, []);
   return (
     <div>
