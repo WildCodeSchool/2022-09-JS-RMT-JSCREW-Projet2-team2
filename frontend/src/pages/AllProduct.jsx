@@ -45,11 +45,10 @@ function AllProduct({ setPage }) {
   };
 
   return (
-    <section>
-      <div>AllProduct</div>
-
+    <section className="pokebiz-allProduct-container">
+      <h1 className="py-3 m-0">Our cards</h1>
       <TemplateFilter handleCheck={handleCheck} filterTypes={filterTypes} />
-      <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
+      <div className="container-fluid bg-container d-flex justify-content-center flex-wrap py-3">
         {getSelected(pokemons)
           .slice(0, numberOfCard + 8)
           .map((pokemon) => {
