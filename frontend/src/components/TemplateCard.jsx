@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./TemplateCard.css";
 
+const bgColorCards = [
+  { type: "fire", color: "fire-color" },
+  { type: "normal", color: "normal-color" },
+  { type: "flying", color: "flying-color" },
+  { type: "water", color: "water-color" },
+  { type: "grass", color: "grass-color" },
+  { type: "poison", color: "poison-color" },
+  { type: "bug", color: "bug-color" },
+  { type: "electric", color: "electric-color" },
+  { type: "ground", color: "ground-color" },
+  { type: "fairy", color: "fairy-color" },
+];
 function TemplateCard({ pokemon }) {
-  const bgColorCards = [
-    { type: "fire", color: "fire-color" },
-    { type: "normal", color: "normal-color" },
-    { type: "flying", color: "flying-color" },
-    { type: "water", color: "water-color" },
-    { type: "grass", color: "grass-color" },
-    { type: "poison", color: "poison-color" },
-    { type: "bug", color: "bug-color" },
-    { type: "electric", color: "electric-color" },
-    { type: "ground", color: "ground-color" },
-    { type: "fairy", color: "fairy-color" },
-  ];
-
   const [cardBgColor, setCardBgColor] = useState();
   useEffect(() => {
-    bgColorCards.filter(
+    bgColorCards.find(
       (bgColorCard) =>
         bgColorCard.type === pokemon.type.primary_type &&
         setCardBgColor(bgColorCard.color)
