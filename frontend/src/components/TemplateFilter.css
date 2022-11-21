@@ -17,6 +17,25 @@
 .accordion-item {
   border: 0;
 }
+
 .accordion-body {
   background-color: #414447;
+}
+
+@media (min-width: 780px) {
+  .filterDesktop {
+    top: 8rem;
+    position: relative;
+  }
+  .sidebar {
+    position: absolute;
+    max-width: 200px;
+    transition: transform 0.5s;
+  }
+  .sidebar__trigger:not(:checked) ~ .sidebar {
+    position: fixed;
+  }
+  .accordion-button {
+    padding: 0.5rem 0.8rem;
+  }
 }
