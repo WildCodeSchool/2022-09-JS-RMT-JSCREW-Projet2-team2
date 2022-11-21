@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./TemplateCard.css";
 
 function TemplateCard({ pokemon }) {
@@ -14,19 +14,21 @@ function TemplateCard({ pokemon }) {
     { type: "ground", color: "ground-color" },
     { type: "fairy", color: "fairy-color" },
   ];
-  const funct = () => {
+
+  const [cardBgColor, setCardBgColor] = useState();
+  useEffect(() => {
     bgColorCards.filter(
       (bgColorCard) =>
-        bgColorCard.type === pokemon.type.primary_type && bgColorCard.color
+        bgColorCard.type === pokemon.type.primary_type &&
+        setCardBgColor(bgColorCard.color)
     );
-  };
+  }, [cardBgColor]);
 
-  funct();
   return (
     <div>
       <div className="card-info rounded-3 p-2 mx-2">
         <div
-          className={`${funct()} align-items-center w-100 h-100 p-3 rounded-3`}
+          className={`${cardBgColor} align-items-center w-100 h-100 p-3 rounded-3`}
         >
           <div className="container-card d-grid w-100">
             <div className="top-of-card d-flex justify-content-between align-items-center fw-bold">
