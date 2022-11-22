@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import "./Home.css";
 
@@ -11,6 +12,14 @@ import CardOfferCardMobile from "@components/CardOfferCardMobile";
 export default function Home() {
   return (
     <div className="accueilBackground bg-gradient">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home Page</title>
+        <meta
+          name="description"
+          content="Welcome to pokebiz, the premium pokemon card site"
+        />
+      </Helmet>
       <div className="prez position-relative d-flex flex-column justify-content-end">
         <div className="position-absolute">
           <h1 className="text-white fs-2">Welcome to PokeBiz</h1>
