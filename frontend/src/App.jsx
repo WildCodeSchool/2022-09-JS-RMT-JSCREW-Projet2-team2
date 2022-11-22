@@ -15,8 +15,11 @@ import "./App.css";
 function App() {
   const [page, setPage] = useState({ path: "", id: null });
   const [basket, setBasket] = useState([
+    {},
     { id: 4, quantity: 1 },
     { id: 3, quantity: 4 },
+    { id: 8, quantity: 2 },
+    { id: 9, quantity: 3 },
   ]);
 
   const deleteFromBasket = (pokemon) => {
@@ -32,6 +35,10 @@ function App() {
       newBasket[index].quantity = value;
       setBasket(newBasket);
     }
+  };
+
+  const addBasket = (pokemon) => {
+    setBasket([...basket, { id: pokemon.id, quantity: 1 }]);
   };
 
   return (
@@ -52,7 +59,9 @@ function App() {
           {/* On filtre les pokemons, et quand la valeur de page = ID d'un pokemon on se trouve sur la page correspondante */}
           <Route
             path="/AllProducts/:id"
-            element={<OneProduct pokemon={pokemons[page.id]} />}
+            element={
+              <OneProduct pokemon={pokemons[page.id]} addBasket={addBasket} />
+            }
           />
           {/* On accède à la page panier */}
           <Route

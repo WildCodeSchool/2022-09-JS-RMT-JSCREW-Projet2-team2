@@ -1,24 +1,10 @@
 import React from "react";
 // Composant à appeller dans OneProduct et dans le "map" de AllProduct avec le composant TemplateCard
-function AddToCartButton({
-  setPokemonToCart,
-  pokemonToCart,
-  quantity,
-  setQuantity,
-  pokemon,
-}) {
-  const addPokemonToCart = () => {
-    if (pokemonToCart === "") {
-      setPokemonToCart(pokemon);
-    }
-    if (pokemonToCart === pokemon) {
-      setQuantity(quantity + 1);
-    }
-  };
+function AddToCartButton({ addBasket, pokemon }) {
   return (
     <div>
       <button
-        onClick={addPokemonToCart}
+        onClick={() => addBasket(pokemon)}
         className="buttonColor p-2 fs-4 btn-warning"
         type="button"
       >
