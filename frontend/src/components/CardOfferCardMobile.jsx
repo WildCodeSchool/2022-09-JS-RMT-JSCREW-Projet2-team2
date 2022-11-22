@@ -34,7 +34,7 @@ export default function CardOfferCard({ addBasket, handleQuantity }) {
               </div>
               <div>
                 {pokemon ? (
-                  <div className="addToCartButton">
+                  <div>
                     <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
                   </div>
                 ) : (

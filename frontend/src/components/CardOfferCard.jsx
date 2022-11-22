@@ -38,11 +38,11 @@ export default function CardOfferCard({
                 </h3>
               </div>
               <div>
-                <h3 className="text-white">{pokemon[n].pokemonPrice / 2}£</h3>
+                <h3 className="priceStyle">{pokemon[n].pokemonPrice / 2}£</h3>
               </div>
               <div>
                 {pokemon ? (
-                  <div className="addToCartButton">
+                  <div>
                     <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
                   </div>
                 ) : (
