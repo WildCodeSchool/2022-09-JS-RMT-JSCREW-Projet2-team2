@@ -30,7 +30,7 @@ function Navbar() {
   useEffect(() => {
     document.body.addEventListener("click", handleDisplaySearchDesktop);
   }, []);
-  
+
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
@@ -166,7 +166,9 @@ function Navbar() {
                     <div className="pokebiz-searchBar-output-container d-flex flex-column align-items-start container-fluid h-50 mt-3 position-absolute overflow-auto">
                       {pokemons
                         .filter((pokemon) =>
-                          pokemon.pokemonName.toLowerCase().startsWith(searchValue)
+                          pokemon.pokemonName
+                            .toLowerCase()
+                            .startsWith(searchValue)
                         )
                         .map((pokemon) => {
                           return (

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import TemplateCard from "@components/TemplateCard";
 import ShowMoreCard from "@components/ShowMoreCard";
 import TemplateFilter from "@components/TemplateFilter";
+import AddToCartButton from "@components/AddToCartButton";
+import AddFavorite from "@components/AddFavorite";
 
 import "./allProducts.css";
 
@@ -55,20 +57,21 @@ function AllProduct({ setPage }) {
           .slice(0, numberOfCard + 6)
           .map((pokemon) => {
             return (
-              <Link to={`/AllProducts/${pokemon.id}`}>
-                <button
-                  onClick={() =>
-                    setPage({
-                      path: "OneProduct",
-                      id: pokemon.id - 1,
-                    })
-                  }
-                  className="bg-transparent allproduct-card-container"
-                  type="button"
-                >
-                  <TemplateCard key={pokemon.id} pokemon={pokemon} />
-                </button>
-              </Link>
+              <div>
+                <Link to={`/AllProducts/${pokemon.id}`}>
+                  <button
+                    onClick={() =>
+                      setPage({
+                        path: "OneProduct",
+                        id: pokemon.id - 1,
+                      })
+                    }
+                    className="bg-transparent allproduct-card-container"
+                    type="button"
+                  >
+                    <TemplateCard key={pokemon.id} pokemon={pokemon} />
+                  </button>
+                </Link>
                 <div className="d-flex align-items-center justify-content-around mt-3 mb-5">
                   <div className="pokemonPrice">
                     {/* Mettre le prix en dynamique avec les props reçues */}
