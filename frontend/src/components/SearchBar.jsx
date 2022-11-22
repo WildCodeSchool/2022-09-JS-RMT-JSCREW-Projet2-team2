@@ -25,18 +25,18 @@ function SearchBar({ pokemons, goToOneProduct, searchValue, setSearchValue }) {
         <ul className="p-0 m-0 container-fluid">
           {pokemons
             .filter((pokemon) =>
-              pokemon.name.toLowerCase().includes(searchValue)
+            pokemon.pokemonName.toLowerCase().includes(searchValue)
             )
             .map((pokemon) => {
               return (
-                <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                <Link to={`/AllProducts/${pokemon.id}`}>
                   <button
                     id="pokebiz-searchBar-value"
                     type="button"
                     className=" pokebiz-searchBar-output text-white list-unstyled bg-transparent border m-2 w-25"
                     onClick={() => goToOneProduct(pokemon)}
                   >
-                    {pokemon.name}
+                    {pokemon.pokemonName}
                   </button>
                 </Link>
               );

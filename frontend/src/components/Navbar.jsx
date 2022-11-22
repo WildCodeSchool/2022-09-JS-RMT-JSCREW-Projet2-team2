@@ -1,22 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "./navbar.css";
 
-function Navbar({ setPage, pokemons }) {
+function Navbar() {
   const [displaySearchBar, setDisplaySearchBar] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const goToOneProduct = (pokemonInput) => {
-    setPage({ path: "OneProduct", id: pokemonInput.pokedex_index - 1 });
+  const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/pokeBiz`)
+      .then((res) => res.json())
+      .then((json) => setPokemons(json))
+      .catch((err) => console.error(err));
+  }, []);
+
+  const goToOneProduct = () => {
     setDisplaySearchBar(!displaySearchBar);
   };
+
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
       <div className={displaySearchBar ? "d-none" : "d-block"}>
         <SearchBar
           pokemons={pokemons}
-          setPage={setPage}
           goToOneProduct={goToOneProduct}
           searchValue={searchValue}
           setSearchValue={setSearchValue}
@@ -141,18 +149,18 @@ function Navbar({ setPage, pokemons }) {
                     }
                   >
                     {pokemons
-                      .filter((pokemon) =>
-                        pokemon.name.toLowerCase().includes(searchValue)
+                      .filter((pokemon) => 
+                        pokemon.pokemonName.toLowerCase().includes(searchValue)
                       )
                       .map((pokemon) => {
                         return (
-                          <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                          <Link to={`/AllProducts/${pokemon.id}`}>
                             <button
                               type="button"
                               className="pokebiz-searchBar-output text-white bg-transparent fs-5"
                               onClick={() => goToOneProduct(pokemon)}
                             >
-                              {pokemon.name}
+                              {pokemon.pokemonName}
                             </button>
                           </Link>
                         );

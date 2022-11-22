@@ -20,7 +20,7 @@ function OneProduct() {
       .then((res) => res.json())
       .then((json) => setPokemon(json))
       .catch((err) => console.error(err));
-  }, []);
+  }, [id]);
 
   return (
     <div>
