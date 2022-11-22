@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import AddQuantity from "@components/AddQuantity";
 import AddToCartButton from "@components/AddToCartButton";
@@ -24,6 +25,14 @@ function OneProduct() {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{pokemon.pokemonName}</title>
+        <meta
+          name="description"
+          content={`Find all the details of ${pokemon.pokemonName} `}
+        />
+      </Helmet>
       {/* ONE PRODUCT MOBILE VERSION */}
       <div className="oneProductPage d-lg-none container-fluid d-flex flex-column align-items-center justify-content-around text-dark pt-5 bg-container">
         <h1 className="text-white pb-2 text-capitalize">
