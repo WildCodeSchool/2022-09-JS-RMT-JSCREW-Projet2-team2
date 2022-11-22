@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "./navbar.css";
@@ -10,10 +10,20 @@ function Navbar({ setPage, pokemons }) {
     setPage({ path: "OneProduct", id: pokemonInput.pokedex_index - 1 });
     setDisplaySearchBar(!displaySearchBar);
   };
+  const handleDisplaySearchDesktop = () => {
+    if (searchValue.length > 0) {
+      setSearchValue("");
+      setDisplaySearchBar(false);
+    }
+  };
+  // useEffect permet de gérer le d-none de la modale quand on clique à côté.
+  useEffect(() => {
+    document.body.addEventListener("click", handleDisplaySearchDesktop);
+  }, []);
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
-      <div className={displaySearchBar ? "d-none" : "d-block"}>
+      <div className={!displaySearchBar ? "d-none" : "d-block"}>
         <SearchBar
           pokemons={pokemons}
           setPage={setPage}
@@ -43,6 +53,7 @@ function Navbar({ setPage, pokemons }) {
               {/* ALL PRODUCT BUTTON */}
               <Link to="/AllProducts">
                 <button
+                  onClick={() => setDisplaySearchBar(false)}
                   className="border border-0 bg-transparent"
                   type="button"
                 >
@@ -65,6 +76,7 @@ function Navbar({ setPage, pokemons }) {
                   alt="search-icon"
                 />
               </button>
+
               {/* BASKET BUTTON */}
               <button className="border border-0 bg-transparent" type="button">
                 <img
@@ -120,9 +132,11 @@ function Navbar({ setPage, pokemons }) {
                       onChange={(e) => setSearchValue(e.target.value)}
                       className="pokebiz-seachBar-Desktop text-white"
                       type="text"
+                      value={searchValue}
                       placeholder="Find your Pokemon"
                     />
                     <button
+                      onClick={handleDisplaySearchDesktop}
                       className="border border-0 bg-transparent"
                       type="button"
                     >
@@ -133,31 +147,27 @@ function Navbar({ setPage, pokemons }) {
                       />
                     </button>
                   </label>
-                  <div
-                    className={
-                      !searchValue
-                        ? "d-none"
-                        : "pokebiz-searchBar-output-container d-flex flex-column align-items-start container-fluid h-50 mt-3 position-absolute overflow-auto"
-                    }
-                  >
-                    {pokemons
-                      .filter((pokemon) =>
-                        pokemon.name.toLowerCase().includes(searchValue)
-                      )
-                      .map((pokemon) => {
-                        return (
-                          <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
-                            <button
-                              type="button"
-                              className="pokebiz-searchBar-output text-white bg-transparent fs-5"
-                              onClick={() => goToOneProduct(pokemon)}
-                            >
-                              {pokemon.name}
-                            </button>
-                          </Link>
-                        );
-                      })}
-                  </div>
+                  {searchValue.length > 0 && (
+                    <div className="pokebiz-searchBar-output-container d-flex flex-column align-items-start container-fluid h-50 mt-3 position-absolute overflow-auto">
+                      {pokemons
+                        .filter((pokemon) =>
+                          pokemon.name.toLowerCase().startsWith(searchValue)
+                        )
+                        .map((pokemon) => {
+                          return (
+                            <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                              <button
+                                type="button"
+                                className="pokebiz-searchBar-output text-white bg-transparent fs-5"
+                                onClick={() => goToOneProduct(pokemon)}
+                              >
+                                {pokemon.name}
+                              </button>
+                            </Link>
+                          );
+                        })}
+                    </div>
+                  )}
                 </form>
                 {/* BASKET BUTTON */}
                 <button
