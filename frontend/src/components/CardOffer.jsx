@@ -19,11 +19,16 @@ const carrouselInfo = [
   },
 ];
 
-export default function CardOffer() {
+export default function CardOffer(basket, addBasket, handleQuantity) {
   return (
     <div className="cards position-relative mb-2 text">
       {carrouselInfo.map((carrouselprops) => (
-        <CardOfferCard carrouselprops={carrouselprops} />
+        <CardOfferCard
+          carrouselprops={carrouselprops}
+          basket={basket}
+          addBasket={addBasket}
+          handleQuantity={handleQuantity}
+        />
       ))}
     </div>
   );

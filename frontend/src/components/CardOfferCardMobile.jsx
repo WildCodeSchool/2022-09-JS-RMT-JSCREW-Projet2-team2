@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import TemplateCard from "./TemplateCard";
+import AddToCartButton from "./AddToCartButton";
+import AddQuantity from "./AddQuantity";
 
-export default function CardOfferCard() {
+export default function CardOfferCard({ addBasket, handleQuantity }) {
   const n = Math.floor(Math.random() * 51);
 
   const [pokemon, setPokemon] = useState();
@@ -24,16 +26,26 @@ export default function CardOfferCard() {
             <div className="priceOffer d-flex justify-content-around">
               <div>
                 <h3 className="oldPrice text-decoration-line-through">
-                  {pokemon.price}£
+                  {pokemon.pokemonPrice}£
                 </h3>
               </div>
               <div>
-                <h3 className="text-white">{pokemon.price / 2}£</h3>
+                <h3 className="text-white">{pokemon.pokemonPrice / 2}£</h3>
               </div>
               <div>
-                <button className="btn btn-sm btn-warning" type="button">
-                  Add Card
-                </button>
+                {pokemon ? (
+                  <div className="addToCartButton">
+                    <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
+                  </div>
+                ) : (
+                  <div className="addQuantityButton">
+                    {/* Envoie du state dans le composant */}
+                    <AddQuantity
+                      pokemon={pokemon.find((el) => el.id === pokemon.id)}
+                      handleQuantity={handleQuantity}
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </form>

@@ -9,7 +9,7 @@ import LogoWhyUs from "@components/LogoWhyUS";
 import CardOffer from "@components/CardOffer";
 import CardOfferCardMobile from "@components/CardOfferCardMobile";
 
-export default function Home() {
+export default function Home({ basket, addBasket, handleQuantity }) {
   return (
     <div className="accueilBackground bg-gradient">
       <Helmet>
@@ -66,7 +66,11 @@ export default function Home() {
             id="item-3"
             checked
           />
-          <CardOffer />
+          <CardOffer
+            basket={basket}
+            addBasket={addBasket}
+            handleQuantity={handleQuantity}
+          />
         </div>
       </div>
       {/* fin carrousel version tablette + desktop */}
@@ -80,13 +84,25 @@ export default function Home() {
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <CardOfferCardMobile />
+              <CardOfferCardMobile
+                basket={basket}
+                addBasket={addBasket}
+                handleQuantity={handleQuantity}
+              />
             </div>
             <div className="carousel-item">
-              <CardOfferCardMobile />
+              <CardOfferCardMobile
+                basket={basket}
+                addBasket={addBasket}
+                handleQuantity={handleQuantity}
+              />
             </div>
             <div className="carousel-item">
-              <CardOfferCardMobile />
+              <CardOfferCardMobile
+                basket={basket}
+                addBasket={addBasket}
+                handleQuantity={handleQuantity}
+              />
             </div>
           </div>
           <button

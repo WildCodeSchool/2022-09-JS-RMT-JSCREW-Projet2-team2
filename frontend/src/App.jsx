@@ -40,7 +40,16 @@ function App() {
         <Navbar pokemons={pokemons} />
         <Routes>
           {/* Si la valeur de page = Home alors on est sur la home */}
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                basket={basket}
+                addBasket={addBasket}
+                handleQuantity={handleQuantity}
+              />
+            }
+          />
           {/* Si la valeur de page = AllProduct alors on est sur la page de vente */}
           <Route
             path="/AllProducts"
