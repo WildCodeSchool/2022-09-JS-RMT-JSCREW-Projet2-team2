@@ -50,21 +50,21 @@ export default function Home() {
             type="radio"
             name="slider"
             id="item-1"
-            checked
+            defaultChecked
           />
           <input
             className="d-none"
             type="radio"
             name="slider"
             id="item-2"
-            checked
+            defaultChecked
           />
           <input
             className="d-none"
             type="radio"
             name="slider"
             id="item-3"
-            checked
+            defaultChecked
           />
           <CardOffer />
         </div>
