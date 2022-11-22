@@ -24,32 +24,29 @@ function ContactForm() {
     e.preventDefault();
     if (email.includes("@")) {
       toast.success("Message received", toastifyConfig);
+      emailjs
+        .sendForm(
+          "service_26119ou",
+          "template_q9npjae",
+          form.current,
+
+          "cykCirvge0R3E4Prx"
+        )
+        .then(
+          (result) => {
+            console.warn(result.text);
+          },
+          (error) => {
+            console.warn(error.text);
+          }
+        );
     } else {
       toast.error("invalid email", toastifyConfig);
     }
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-  };
-  emailjs
-    .sendForm(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
-      form.current,
-      "YOUR_PUBLIC_KEY"
-    )
-    .then(
-      (result) => {
-        console.warn(result.text);
-      },
-      (error) => {
-        console.warn(error.text);
-      }
-    );
-
   return (
-    <form ref={form} onSubmit={sendEmail} className="footer-form">
+    <form ref={form} onSubmit={submitContactForm} className="footer-form">
       <div className="mb-2 mt-1 p-2">
         <input
           value={username}
@@ -58,6 +55,7 @@ function ContactForm() {
           type="text"
           name="user_name"
           placeholder="Name"
+          required
         />
       </div>
 
@@ -69,6 +67,7 @@ function ContactForm() {
           type="email"
           name="user_email"
           placeholder="Adress email"
+          required
         />
       </div>
 
@@ -79,15 +78,12 @@ function ContactForm() {
           className="textarea w-100 p-2"
           name="message"
           placeholder="Enter your message"
+          required
         />
       </div>
 
       <div className="mb-2">
-        <button
-          className="button w-50 fs-5"
-          type="submit"
-          onClick={(e) => submitContactForm(e)}
-        >
+        <button className="button w-50 fs-5" type="submit">
           submit
         </button>
       </div>
