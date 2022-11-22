@@ -52,9 +52,9 @@ function TemplateCard({ pokemon }) {
           <div className="bottom-of-card align-items-center container-fluid mt-3 bg-light">
             <ul className="d-flex list-unstyled mb-0">
               <li className="m-auto">Def:{pokemon.defense}</li>
-              <li className="m-auto">S.Def:{pokemon.special_defence}</li>
+              <li className="m-auto">S.Def:{pokemon.specialDefense}</li>
               <li className="m-auto">Att:{pokemon.attack}</li>
-              <li className="m-auto">S.Att:{pokemon.special_attack}</li>
+              <li className="m-auto">S.Att:{pokemon.specialAttack}</li>
               <li className="m-auto">Speed:{pokemon.speed}</li>
               <li className="m-auto">Exp:{pokemon.experience}</li>
             </ul>
