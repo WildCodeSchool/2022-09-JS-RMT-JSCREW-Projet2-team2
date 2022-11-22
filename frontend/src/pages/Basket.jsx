@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import TemplateCard from "@components/TemplateCard";
+import AddQuantity from "@components/AddQuantity";
 
-export default function Basket({ basket }) {
+export default function Basket({ basket, handleQuantity }) {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
@@ -38,7 +39,10 @@ export default function Basket({ basket }) {
               <h3 className="priceStyle">{pokemon.pokemonPrice} £</h3>
               <div className="addQuantityButton">
                 {/* Envoie du state dans le composant */}
-                {/* <AddQuantity /> */}
+                <AddQuantity
+                  pokemon={basket.find((el) => el.id === pokemon.id)}
+                  handleQuantity={handleQuantity}
+                />
               </div>
               <button
                 className="btn btn-sm btn-warning d-flex align-items-center"
