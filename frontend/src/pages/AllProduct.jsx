@@ -6,6 +6,7 @@ import ShowMoreCard from "@components/ShowMoreCard";
 import TemplateFilter from "@components/TemplateFilter";
 import AddFavorite from "@components/AddFavorite";
 import AddToCartButton from "@components/AddToCartButton";
+import AddQuantity from "@components/AddQuantity";
 
 import "./allProducts.css";
 
@@ -22,7 +23,7 @@ const types = [
   { name: "fairy", checked: false },
 ];
 
-function AllProduct({ setPage }) {
+function AllProduct({ basket, addBasket, handleQuantity }) {
   const [numberOfCard, setNumberOfCard] = useState(0);
   const [filterTypes, setFilterTypes] = useState(types);
 
@@ -69,12 +70,7 @@ function AllProduct({ setPage }) {
               <div>
                 <Link to={`/AllProducts/${pokemon.id}`}>
                   <button
-                    onClick={() =>
-                      setPage({
-                        path: "OneProduct",
-                        id: pokemon.id - 1,
-                      })
-                    }
+                    onClick=""
                     className="bg-transparent allproduct-card-container"
                     type="button"
                   >
@@ -86,7 +82,22 @@ function AllProduct({ setPage }) {
                     {/* Mettre le prix en dynamique avec les props reçues */}
                     <h3 className="priceStyle">{pokemon.pokemonPrice} £</h3>
                   </div>
-                  <AddToCartButton />
+                  {!basket.some((el) => el.id === pokemon.id) ? (
+                    <div className="addToCartButton">
+                      <AddToCartButton
+                        addBasket={addBasket}
+                        pokemon={pokemon}
+                      />
+                    </div>
+                  ) : (
+                    <div className="addQuantityButton">
+                      {/* Envoie du state dans le composant */}
+                      <AddQuantity
+                        pokemon={basket.find((el) => el.id === pokemon.id)}
+                        handleQuantity={handleQuantity}
+                      />
+                    </div>
+                  )}
                   <AddFavorite />
                 </div>
               </div>

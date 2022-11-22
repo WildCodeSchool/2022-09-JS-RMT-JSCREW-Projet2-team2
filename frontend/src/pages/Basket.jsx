@@ -7,14 +7,16 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `http://localhost:5000/Basket${
-        basket[0] ? `?idList=${basket.map((el) => el.id).join("|")}` : ""
-      }`
-    )
-      .then((res) => res.json())
-      .then((data) => setPokemons(data))
-      .catch((err) => console.error(err));
+    if (basket[0]) {
+      fetch(
+        `http://localhost:5000/Basket${
+          basket[0] ? `?idList=${basket.map((el) => el.id).join("|")}` : ""
+        }`
+      )
+        .then((res) => res.json())
+        .then((data) => setPokemons(data))
+        .catch((err) => console.error(err));
+    }
   }, [basket]);
 
   return (
@@ -25,9 +27,10 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
         </button>
         <h3 className="text-white d-flex justify-content-around">
           Total :{" "}
-          {parseFloat(
-            pokemons.reduce((total, prix) => total + prix.pokemonPrice, 0)
-          )}
+          {pokemons[0] &&
+            parseFloat(
+              pokemons.reduce((total, prix) => total + prix.pokemonPrice, 0)
+            )}
           £{/* permet l'ajout du prix de chaque carte au total */}
         </h3>
       </div>
