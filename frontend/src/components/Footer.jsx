@@ -6,7 +6,7 @@ import "./footer.css";
 function Footer() {
   return (
     <footer>
-      <div className="footer-contact container-fluid align-items-center justify-content-around mb-md-0">
+      <div className="footer-contact container-fluid align-items-center justify-content-around mb-md-0 py-5">
         <div className="row ">
           <ul className="footer-list-button d-none d-md-block list-unstyled col-md-3 my-auto">
             <li>
