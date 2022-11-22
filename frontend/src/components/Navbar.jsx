@@ -30,7 +30,6 @@ function Navbar() {
   useEffect(() => {
     document.body.addEventListener("click", handleDisplaySearchDesktop);
   }, []);
-
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
