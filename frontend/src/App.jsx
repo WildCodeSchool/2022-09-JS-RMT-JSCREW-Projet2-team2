@@ -20,15 +20,23 @@ function App() {
     { id: 3, quantity: 4 },
   ]);
 
+  const deleteFromBasket = (pokemon) => {
+    setBasket(basket.filter((el) => el.id !== pokemon.id));
+  };
+
   const handleBasket = () => {
     setBasket(pokemons);
   };
 
   const handleQuantity = (pokemon, value) => {
-    const index = basket.indexOf(pokemon);
-    const newBasket = [...basket];
-    newBasket[index].quantity = value;
-    setBasket(newBasket);
+    if (!value || value <= 0) {
+      deleteFromBasket(pokemon);
+    } else {
+      const index = basket.indexOf(pokemon);
+      const newBasket = [...basket];
+      newBasket[index].quantity = value;
+      setBasket(newBasket);
+    }
   };
 
   return (
@@ -59,7 +67,13 @@ function App() {
           {/* On accède à la page panier */}
           <Route
             path="/Basket"
-            element={<Basket basket={basket} handleQuantity={handleQuantity} />}
+            element={
+              <Basket
+                basket={basket}
+                handleQuantity={handleQuantity}
+                deleteFromBasket={deleteFromBasket}
+              />
+            }
           />
         </Routes>
         <Footer setPage={setPage} />

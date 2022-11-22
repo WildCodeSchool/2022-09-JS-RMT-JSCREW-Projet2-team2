@@ -24,7 +24,7 @@ function AddQuantity({ pokemon, handleQuantity }) {
         onChange={(e) => handleQuantity(pokemon, e.target.value)}
         type="text"
         className="bg-transparent text-white text-center w-100"
-        value={pokemon.quantity}
+        value={pokemon?.quantity}
       />
       <button
         onClick={() => handleQuantityOnClick("plus")}

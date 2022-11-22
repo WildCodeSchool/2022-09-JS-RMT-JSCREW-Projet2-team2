@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import TemplateCard from "@components/TemplateCard";
 import AddQuantity from "@components/AddQuantity";
 
-export default function Basket({ basket, handleQuantity }) {
+export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Basket({ basket, handleQuantity }) {
       .then((res) => res.json())
       .then((data) => setPokemons(data))
       .catch((err) => console.error(err));
-  }, []);
+  }, [basket]);
 
   return (
     <div>
@@ -46,7 +46,9 @@ export default function Basket({ basket, handleQuantity }) {
               </div>
               <button
                 className="btn btn-sm btn-warning d-flex align-items-center"
-                onClick=""
+                onClick={() =>
+                  deleteFromBasket(basket.find((el) => el.id === pokemon.id))
+                }
                 type="button"
               >
                 <img
