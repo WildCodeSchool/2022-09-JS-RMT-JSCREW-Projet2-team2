@@ -15,8 +15,8 @@ import "./App.css";
 function App() {
   const [page, setPage] = useState({ path: "", id: null });
   const [basket, setBasket] = useState([
-    { id: 1, quantity: 1 },
     { id: 4, quantity: 1 },
+    { id: 3, quantity: 1 },
   ]);
 
   return (
