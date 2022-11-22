@@ -35,7 +35,7 @@ function Navbar({ setPage, pokemons }) {
                 >
                   <img
                     className="navbar-icon"
-                    src="./src/assets/navbar-icons/logo-black.png"
+                    src="../src/assets/navbar-icons/logo-black.png"
                     alt="logo-icon"
                   />
                 </button>
@@ -48,7 +48,7 @@ function Navbar({ setPage, pokemons }) {
                 >
                   <img
                     className="navbar-icon"
-                    src="./src/assets/navbar-icons/cards.png"
+                    src="../src/assets/navbar-icons/cards.png"
                     alt="store-icon"
                   />
                 </button>
@@ -61,7 +61,7 @@ function Navbar({ setPage, pokemons }) {
               >
                 <img
                   className="navbar-icon"
-                  src="./src/assets/navbar-icons/search-black.png"
+                  src="../src/assets/navbar-icons/search-black.png"
                   alt="search-icon"
                 />
               </button>
@@ -69,7 +69,7 @@ function Navbar({ setPage, pokemons }) {
               <button className="border border-0 bg-transparent" type="button">
                 <img
                   className="navbar-icon"
-                  src="./src/assets/navbar-icons/basket-black.png"
+                  src="../src/assets/navbar-icons/basket-black.png"
                   alt="basket-icon"
                 />
               </button>
@@ -89,7 +89,7 @@ function Navbar({ setPage, pokemons }) {
                   <div className="d-flex">
                     <img
                       className="navbar-icon"
-                      src="./src/assets/navbar-icons/logo.png"
+                      src="../src/assets/navbar-icons/logo.png"
                       alt="logo-icon"
                     />
                     <h2 className="ms-2">Pokebiz</h2>
@@ -105,7 +105,7 @@ function Navbar({ setPage, pokemons }) {
                   <div className="navbar-desktop-store-icon d-flex align-items-center">
                     <img
                       className="navbar-icon"
-                      src="./src/assets/navbar-icons/cards-orange.png"
+                      src="../src/assets/navbar-icons/cards-orange.png"
                       alt="store-icon"
                     />
                     <p className="m-0 ms-2 fs-6">Our cards</p>
@@ -128,7 +128,7 @@ function Navbar({ setPage, pokemons }) {
                     >
                       <img
                         className="navbar-icon"
-                        src="./src/assets/navbar-icons/search-orange.png"
+                        src="../src/assets/navbar-icons/search-orange.png"
                         alt="search-icon"
                       />
                     </button>
@@ -166,7 +166,7 @@ function Navbar({ setPage, pokemons }) {
                 >
                   <img
                     className="navbar-icon ms-4"
-                    src="./src/assets/navbar-icons/basket-orange.png"
+                    src="../src/assets/navbar-icons/basket-orange.png"
                     alt="basket-icon"
                   />
                 </button>
