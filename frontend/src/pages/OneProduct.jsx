@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-// import AddQuantity from "@components/AddQuantity";
+import AddQuantity from "@components/AddQuantity";
 import AddToCartButton from "@components/AddToCartButton";
 import ProgressBar from "@components/ProgressBar";
 import AddFavorite from "@components/AddFavorite";
@@ -10,7 +10,7 @@ import TemplateCard from "@components/TemplateCard";
 
 import "./oneProduct.css";
 
-function OneProduct({ basket, addBasket }) {
+function OneProduct({ basket, addBasket, handleQuantity }) {
   // Création du state pour enregistrer la quantité souaihtée.
   const [pokemon, setPokemon] = useState({});
   const { id } = useParams();
@@ -51,13 +51,17 @@ function OneProduct({ basket, addBasket }) {
             {/* Mettre le prix en dynamique avec les props reçues */}
             <h3 className="priceStyle">{pokemon.pokemonPrice} £</h3>
           </div>
-          <div className="addQuantityButton">
-            {/* Envoie du state dans le composant */}
-            {/* <AddQuantity /> */}
-          </div>
-          {!basket.some((el) => el.id === pokemon.id) && (
+          {!basket.some((el) => el.id === pokemon.id) ? (
             <div className="addToCartButton">
               <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
+            </div>
+          ) : (
+            <div className="addQuantityButton">
+              {/* Envoie du state dans le composant */}
+              <AddQuantity
+                pokemon={basket.find((el) => el.id === pokemon.id)}
+                handleQuantity={handleQuantity}
+              />
             </div>
           )}
         </div>
@@ -79,13 +83,17 @@ function OneProduct({ basket, addBasket }) {
                 {/* Mettre le prix en dynamique avec les props reçues */}
                 <h3 className="priceStyle">{pokemon.pokemonPrice} £</h3>
               </div>
-              <div className="addQuantityButton">
-                {/* Envoie du state dans le composant */}
-                {/* <AddQuantity quantity={quantity} setQuantity={setQuantity} /> */}
-              </div>
-              {!basket.some((el) => el.id === pokemon.id) && (
+              {!basket.some((el) => el.id === pokemon.id) ? (
                 <div className="addToCartButton">
                   <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
+                </div>
+              ) : (
+                <div className="addQuantityButton">
+                  {/* Envoie du state dans le composant */}
+                  <AddQuantity
+                    pokemon={basket.find((el) => el.id === pokemon.id)}
+                    handleQuantity={handleQuantity}
+                  />
                 </div>
               )}
             </div>

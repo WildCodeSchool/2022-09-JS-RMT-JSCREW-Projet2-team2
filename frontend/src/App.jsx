@@ -13,7 +13,6 @@ import pokemons from "@services/data";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState({ path: "", id: null });
   const [basket, setBasket] = useState([
     {},
     { id: 4, quantity: 1 },
@@ -44,17 +43,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar setPage={setPage} pokemons={pokemons} />
+        <Navbar pokemons={pokemons} />
         <Routes>
           {/* Si la valeur de page = Home alors on est sur la home */}
-          <Route
-            path="/"
-            element={<Home setPage={setPage} pokemons={pokemons} />}
-          />
+          <Route path="/" element={<Home pokemons={pokemons} />} />
           {/* Si la valeur de page = AllProduct alors on est sur la page de vente */}
           <Route
             path="/AllProducts"
-            element={<AllProduct setPage={setPage} pokemons={pokemons} />}
+            element={<AllProduct pokemons={pokemons} />}
           />
           {/* On filtre les pokemons, et quand la valeur de page = ID d'un pokemon on se trouve sur la page correspondante */}
           <Route
@@ -62,8 +58,8 @@ function App() {
             element={
               <OneProduct
                 basket={basket}
-                pokemon={pokemons[page.id]}
                 addBasket={addBasket}
+                handleQuantity={handleQuantity}
               />
             }
           />
@@ -79,7 +75,7 @@ function App() {
             }
           />
         </Routes>
-        <Footer setPage={setPage} />
+        <Footer />
       </div>
     </Router>
   );
