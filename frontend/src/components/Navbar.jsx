@@ -88,13 +88,18 @@ function Navbar() {
               </button>
 
               {/* BASKET BUTTON */}
-              <button className="border border-0 bg-transparent" type="button">
-                <img
-                  className="navbar-icon"
-                  src="../src/assets/navbar-icons/basket-black.png"
-                  alt="basket-icon"
-                />
-              </button>
+              <Link to="/Basket">
+                <button
+                  className="border border-0 bg-transparent"
+                  type="button"
+                >
+                  <img
+                    className="navbar-icon"
+                    src="./src/assets/navbar-icons/basket-black.png"
+                    alt="basket-icon"
+                  />
+                </button>
+              </Link>
             </ul>
           </nav>
         </div>
@@ -182,16 +187,18 @@ function Navbar() {
                   )}
                 </form>
                 {/* BASKET BUTTON */}
-                <button
-                  className="border border-0 bg-transparent"
-                  type="button"
-                >
-                  <img
-                    className="navbar-icon ms-4"
-                    src="../src/assets/navbar-icons/basket-orange.png"
-                    alt="basket-icon"
-                  />
-                </button>
+                <Link to="/Basket">
+                  <button
+                    className="border border-0 bg-transparent"
+                    type="button"
+                  >
+                    <img
+                      className="navbar-icon ms-4"
+                      src="./src/assets/navbar-icons/basket-orange.png"
+                      alt="basket-icon"
+                    />
+                  </button>
+                </Link>
               </div>
             </ul>
           </nav>

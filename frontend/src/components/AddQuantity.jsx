@@ -1,14 +1,14 @@
 import React from "react";
 import "./addQuantity.css";
 
-function AddQuantity({ quantity, setQuantity }) {
+function AddQuantity({ pokemon, handleQuantity }) {
   // Création d'un fonction pour gérer la quantité souhaitée au clic sur "plus" ou "moins".
   // La fonction a besoin d'un "opérateur" en argument au moment de l'appel, pour identifier le bouton cliqué.
   const handleQuantityOnClick = (operator) => {
     if (operator === "plus") {
-      setQuantity(quantity + 1);
-    } else if (operator === "minus" && quantity > 1) {
-      setQuantity(quantity - 1);
+      handleQuantity(pokemon, pokemon.quantity + 1);
+    } else if (operator === "minus") {
+      handleQuantity(pokemon, pokemon.quantity - 1);
     }
   };
   return (
@@ -21,10 +21,10 @@ function AddQuantity({ quantity, setQuantity }) {
         -
       </button>
       <input
-        onChange={(e) => setQuantity(e.target.value)}
+        onChange={(e) => handleQuantity(pokemon, e.target.value)}
         type="text"
         className="bg-transparent text-white text-center w-100"
-        value={quantity}
+        value={pokemon?.quantity}
       />
       <button
         onClick={() => handleQuantityOnClick("plus")}

@@ -29,4 +29,18 @@ router.get("/pokeBiz/:id", (req, res) => {
     });
 });
 
+router.get("/Basket", (req, res) => {
+  connection
+    .query("SELECT * FROM pokemon WHERE id IN (?)", [
+      req.query.idList.split("|"),
+    ])
+    .then(([response]) => {
+      res.status(200).send(response);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;

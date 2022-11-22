@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "@pages/Home";
 import OneProduct from "@pages/OneProduct";
 import AllProduct from "@pages/AllProduct";
+import Basket from "@pages/Basket";
 
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
@@ -13,6 +14,26 @@ import "./App.css";
 
 function App() {
   const [page, setPage] = useState({ path: "", id: null });
+  const [basket, setBasket] = useState([
+    { id: 4, quantity: 1 },
+    { id: 3, quantity: 4 },
+  ]);
+
+  const deleteFromBasket = (pokemon) => {
+    setBasket(basket.filter((el) => el.id !== pokemon.id));
+  };
+
+  const handleQuantity = (pokemon, value) => {
+    if (!value || value <= 0) {
+      deleteFromBasket(pokemon);
+    } else {
+      const index = basket.indexOf(pokemon);
+      const newBasket = [...basket];
+      newBasket[index].quantity = value;
+      setBasket(newBasket);
+    }
+  };
+
   return (
     <Router>
       <div className="App">
@@ -32,6 +53,17 @@ function App() {
           <Route
             path="/AllProducts/:id"
             element={<OneProduct pokemon={pokemons[page.id]} />}
+          />
+          {/* On accède à la page panier */}
+          <Route
+            path="/Basket"
+            element={
+              <Basket
+                basket={basket}
+                handleQuantity={handleQuantity}
+                deleteFromBasket={deleteFromBasket}
+              />
+            }
           />
         </Routes>
         <Footer setPage={setPage} />
