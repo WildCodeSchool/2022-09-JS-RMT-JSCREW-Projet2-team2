@@ -149,7 +149,7 @@ function Navbar() {
                     }
                   >
                     {pokemons
-                      .filter((pokemon) => 
+                      .filter((pokemon) =>
                         pokemon.pokemonName.toLowerCase().includes(searchValue)
                       )
                       .map((pokemon) => {
