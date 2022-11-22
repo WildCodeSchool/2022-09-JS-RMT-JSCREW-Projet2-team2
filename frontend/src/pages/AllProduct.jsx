@@ -4,6 +4,7 @@ import TemplateCard from "@components/TemplateCard";
 import ShowMoreCard from "@components/ShowMoreCard";
 import TemplateFilter from "@components/TemplateFilter";
 
+
 import "./allProducts.css";
 
 import pokemons from "@services/data";
@@ -11,16 +12,16 @@ import AddToCartButton from "@components/AddToCartButton";
 import AddFavorite from "@components/AddFavorite";
 
 const types = [
-  { name: "fire", checked: true },
+  { name: "fire", checked: false },
   { name: "normal", checked: false },
   { name: "flying", checked: false },
   { name: "water", checked: false },
-  { name: "grass", checked: true },
+  { name: "grass", checked: false },
   { name: "poison", checked: false },
   { name: "bug", checked: false },
   { name: "electric", checked: false },
   { name: "ground", checked: false },
-  { name: "fairy", checked: true },
+  { name: "fairy", checked: false },
 ];
 
 function AllProduct({ setPage }) {
@@ -50,7 +51,7 @@ function AllProduct({ setPage }) {
       <TemplateFilter handleCheck={handleCheck} filterTypes={filterTypes} />
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap py-3">
         {getSelected(pokemons)
-          .slice(0, numberOfCard + 8)
+          .slice(0, numberOfCard + 6)
           .map((pokemon) => {
             return (
               <div>
