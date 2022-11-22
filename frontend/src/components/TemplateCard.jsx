@@ -1,33 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./TemplateCard.css";
 
-const bgColorCards = [
-  { type: "fire", color: "fire-color" },
-  { type: "normal", color: "normal-color" },
-  { type: "flying", color: "flying-color" },
-  { type: "water", color: "water-color" },
-  { type: "grass", color: "grass-color" },
-  { type: "poison", color: "poison-color" },
-  { type: "bug", color: "bug-color" },
-  { type: "electric", color: "electric-color" },
-  { type: "ground", color: "ground-color" },
-  { type: "fairy", color: "fairy-color" },
-];
 function TemplateCard({ pokemon }) {
-  const [cardBgColor, setCardBgColor] = useState();
-  useEffect(() => {
-    bgColorCards.find(
-      (bgColorCard) =>
-        bgColorCard.type === pokemon.type.primary_type &&
-        setCardBgColor(bgColorCard.color)
-    );
-  }, [cardBgColor]);
-
   return (
     <div>
       <div className="card-info rounded-3 p-2 mx-2">
         <div
-          className={`${cardBgColor} align-items-center w-100 h-100 p-3 rounded-3`}
+          className={`${`${pokemon.type.primary_type}-color`} align-items-center w-100 h-100 p-3 rounded-3`}
         >
           <div className="container-card d-grid w-100">
             <div className="top-of-card d-flex justify-content-between align-items-center fw-bold">
