@@ -72,41 +72,43 @@ export default function Home() {
       {/* fin carrousel version tablette + desktop */}
       <br />
       {/* carrousel version mobile */}
-      <div className="d-md-none d-sm-block">
-        <div
-          id="carouselExampleControls"
-          className="carousel slide"
-          data-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <CardOfferCardMobile />
+      <div className="d-flex justify-content-center">
+        <div className="allproduct-card-container d-md-none d-sm-block">
+          <div
+            id="carouselExampleControls"
+            className="carousel slide"
+            data-ride="carousel"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <CardOfferCardMobile />
+              </div>
+              <div className="carousel-item">
+                <CardOfferCardMobile />
+              </div>
+              <div className="carousel-item">
+                <CardOfferCardMobile />
+              </div>
             </div>
-            <div className="carousel-item">
-              <CardOfferCardMobile />
-            </div>
-            <div className="carousel-item">
-              <CardOfferCardMobile />
-            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span className="carousel-control-prev-icon" aria-hidden="true" />
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span className="carousel-control-next-icon" aria-hidden="true" />
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-          >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="next"
-          >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
       {/* fin carrousel version mobile */}

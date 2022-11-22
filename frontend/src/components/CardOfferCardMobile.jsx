@@ -24,11 +24,11 @@ export default function CardOfferCard() {
             <div className="priceOffer d-flex justify-content-around">
               <div>
                 <h3 className="oldPrice text-decoration-line-through">
-                  {pokemon.price}£
+                  {pokemon.pokemonPrice}£
                 </h3>
               </div>
               <div>
-                <h3 className="text-white">{pokemon.price / 2}£</h3>
+                <h3 className="text-white">{pokemon.pokemonPrice / 2}£</h3>
               </div>
               <div>
                 <button className="btn btn-sm btn-warning" type="button">
