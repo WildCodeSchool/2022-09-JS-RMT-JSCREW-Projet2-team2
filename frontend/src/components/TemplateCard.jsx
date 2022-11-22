@@ -6,7 +6,7 @@ function TemplateCard({ pokemon }) {
     <div>
       <div className="card-info rounded-3 p-2 mx-2">
         <div
-          className={`${`${pokemon.type.primary_type}-color`} align-items-center w-100 h-100 p-3 rounded-3`}
+          className={`${`${pokemon.primaryType}-color`} align-items-center w-100 h-100 p-3 rounded-3`}
         >
           <div className="container-card d-grid w-100">
             <div className="top-of-card d-flex justify-content-between align-items-center fw-bold">
