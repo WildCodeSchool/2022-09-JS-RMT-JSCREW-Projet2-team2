@@ -26,7 +26,7 @@ function TemplateFilter({ handleCheck, filterTypes }) {
             </h2>
             <div
               id="collapseOne"
-              className="accordion-collapse collapse show color-accordion text-white"
+              className="accordion-collapse collapse color-accordion text-white"
               aria-labelledby="headingOne"
               data-bs-parent="#accordionExample"
             >
