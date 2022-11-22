@@ -1,15 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom";
 import SearchBar from "@components/SearchBar";
 import "./navbar.css";
 
-function Navbar({ setPage, pokemons }) {
+function Navbar() {
   const [displaySearchBar, setDisplaySearchBar] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const goToOneProduct = (pokemonInput) => {
-    setPage({ path: "OneProduct", id: pokemonInput.pokedex_index - 1 });
+  const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/pokeBiz`)
+      .then((res) => res.json())
+      .then((json) => setPokemons(json))
+      .catch((err) => console.error(err));
+  }, []);
+
+  const goToOneProduct = () => {
     setDisplaySearchBar(!displaySearchBar);
   };
+
   const handleDisplaySearchDesktop = () => {
     if (searchValue.length > 0) {
       setSearchValue("");
@@ -20,13 +30,13 @@ function Navbar({ setPage, pokemons }) {
   useEffect(() => {
     document.body.addEventListener("click", handleDisplaySearchDesktop);
   }, []);
+  
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
       <div className={!displaySearchBar ? "d-none" : "d-block"}>
         <SearchBar
           pokemons={pokemons}
-          setPage={setPage}
           goToOneProduct={goToOneProduct}
           searchValue={searchValue}
           setSearchValue={setSearchValue}
@@ -45,7 +55,7 @@ function Navbar({ setPage, pokemons }) {
                 >
                   <img
                     className="navbar-icon"
-                    src="./src/assets/navbar-icons/logo-black.png"
+                    src="../src/assets/navbar-icons/logo-black.png"
                     alt="logo-icon"
                   />
                 </button>
@@ -59,7 +69,7 @@ function Navbar({ setPage, pokemons }) {
                 >
                   <img
                     className="navbar-icon"
-                    src="./src/assets/navbar-icons/cards.png"
+                    src="../src/assets/navbar-icons/cards.png"
                     alt="store-icon"
                   />
                 </button>
@@ -72,7 +82,7 @@ function Navbar({ setPage, pokemons }) {
               >
                 <img
                   className="navbar-icon"
-                  src="./src/assets/navbar-icons/search-black.png"
+                  src="../src/assets/navbar-icons/search-black.png"
                   alt="search-icon"
                 />
               </button>
@@ -106,7 +116,7 @@ function Navbar({ setPage, pokemons }) {
                   <div className="d-flex">
                     <img
                       className="navbar-icon"
-                      src="./src/assets/navbar-icons/logo.png"
+                      src="../src/assets/navbar-icons/logo.png"
                       alt="logo-icon"
                     />
                     <h2 className="ms-2">Pokebiz</h2>
@@ -122,7 +132,7 @@ function Navbar({ setPage, pokemons }) {
                   <div className="navbar-desktop-store-icon d-flex align-items-center">
                     <img
                       className="navbar-icon"
-                      src="./src/assets/navbar-icons/cards-orange.png"
+                      src="../src/assets/navbar-icons/cards-orange.png"
                       alt="store-icon"
                     />
                     <p className="m-0 ms-2 fs-6">Our cards</p>
@@ -147,7 +157,7 @@ function Navbar({ setPage, pokemons }) {
                     >
                       <img
                         className="navbar-icon"
-                        src="./src/assets/navbar-icons/search-orange.png"
+                        src="../src/assets/navbar-icons/search-orange.png"
                         alt="search-icon"
                       />
                     </button>
@@ -156,17 +166,17 @@ function Navbar({ setPage, pokemons }) {
                     <div className="pokebiz-searchBar-output-container d-flex flex-column align-items-start container-fluid h-50 mt-3 position-absolute overflow-auto">
                       {pokemons
                         .filter((pokemon) =>
-                          pokemon.name.toLowerCase().startsWith(searchValue)
+                          pokemon.pokemonName.toLowerCase().startsWith(searchValue)
                         )
                         .map((pokemon) => {
                           return (
-                            <Link to={`/AllProducts/${pokemon.pokedex_index}`}>
+                            <Link to={`/AllProducts/${pokemon.id}`}>
                               <button
                                 type="button"
                                 className="pokebiz-searchBar-output text-white bg-transparent fs-5"
                                 onClick={() => goToOneProduct(pokemon)}
                               >
-                                {pokemon.name}
+                                {pokemon.pokemonName}
                               </button>
                             </Link>
                           );
