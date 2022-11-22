@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import TemplateCard from "@components/TemplateCard";
 import ShowMoreCard from "@components/ShowMoreCard";
@@ -50,6 +51,14 @@ function AllProduct({ setPage }) {
   };
   return (
     <section className="pokebiz-allProduct-container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Our Cards</title>
+        <meta
+          name="description"
+          content="Find all our premium pokemons cards!"
+        />
+      </Helmet>
       <h1 className="py-3 m-0 text-white">Our cards</h1>
       <TemplateFilter handleCheck={handleCheck} filterTypes={filterTypes} />
       <div className="container-fluid d-flex justify-content-center flex-wrap py-3">
