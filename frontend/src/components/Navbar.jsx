@@ -171,7 +171,10 @@ function Navbar() {
                         )
                         .map((pokemon) => {
                           return (
-                            <Link to={`/AllProducts/${pokemon.id}`}>
+                            <Link
+                              to={`/AllProducts/${pokemon.id}`}
+                              key={pokemon.id}
+                            >
                               <button
                                 type="button"
                                 className="pokebiz-searchBar-output text-white bg-transparent fs-5"

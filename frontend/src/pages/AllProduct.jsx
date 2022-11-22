@@ -66,7 +66,7 @@ function AllProduct({ setPage }) {
           .slice(0, numberOfCard + 6)
           .map((pokemon) => {
             return (
-              <div>
+              <div key={pokemon.id}>
                 <Link to={`/AllProducts/${pokemon.id}`}>
                   <button
                     onClick={() =>

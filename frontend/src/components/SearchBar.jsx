@@ -29,7 +29,7 @@ function SearchBar({ pokemons, goToOneProduct, searchValue, setSearchValue }) {
             )
             .map((pokemon) => {
               return (
-                <Link to={`/AllProducts/${pokemon.id}`}>
+                <Link to={`/AllProducts/${pokemon.id}`} key={pokemon.id}>
                   <button
                     id="pokebiz-searchBar-value"
                     type="button"
