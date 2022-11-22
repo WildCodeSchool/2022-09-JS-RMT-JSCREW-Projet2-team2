@@ -60,7 +60,11 @@ function App() {
           <Route
             path="/AllProducts/:id"
             element={
-              <OneProduct pokemon={pokemons[page.id]} addBasket={addBasket} />
+              <OneProduct
+                basket={basket}
+                pokemon={pokemons[page.id]}
+                addBasket={addBasket}
+              />
             }
           />
           {/* On accède à la page panier */}

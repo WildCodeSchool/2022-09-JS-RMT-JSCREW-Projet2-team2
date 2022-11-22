@@ -10,7 +10,7 @@ import TemplateCard from "@components/TemplateCard";
 
 import "./oneProduct.css";
 
-function OneProduct({ addBasket }) {
+function OneProduct({ basket, addBasket }) {
   // Création du state pour enregistrer la quantité souaihtée.
   const [pokemon, setPokemon] = useState({});
   const { id } = useParams();
@@ -55,9 +55,11 @@ function OneProduct({ addBasket }) {
             {/* Envoie du state dans le composant */}
             {/* <AddQuantity /> */}
           </div>
-          <div className="addToCartButton">
-            <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
-          </div>
+          {!basket.some((el) => el.id === pokemon.id) && (
+            <div className="addToCartButton">
+              <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
+            </div>
+          )}
         </div>
       </div>
       {/* ONE PRODUCT DESKTOP VERSION */}
@@ -81,9 +83,11 @@ function OneProduct({ addBasket }) {
                 {/* Envoie du state dans le composant */}
                 {/* <AddQuantity quantity={quantity} setQuantity={setQuantity} /> */}
               </div>
-              <div className="addToCartButton">
-                <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
-              </div>
+              {!basket.some((el) => el.id === pokemon.id) && (
+                <div className="addToCartButton">
+                  <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
+                </div>
+              )}
             </div>
             <div>
               <ProgressBar pokemon={pokemon} />
