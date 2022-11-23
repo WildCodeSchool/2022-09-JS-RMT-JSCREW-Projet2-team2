@@ -50,7 +50,6 @@ function TemplateFilter({ handleCheck, filterTypes }) {
                   return (
                     <div className="form-check mb-1 mt-2" key={type.name}>
                       <input
-                        // onClick={() =>setFilter(type)}
                         className="form-check-input"
                         type="checkbox"
                         checked={type.checked}
