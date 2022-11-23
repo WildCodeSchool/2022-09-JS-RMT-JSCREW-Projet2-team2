@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 
 import TemplateCard from "@components/TemplateCard";
 import AddQuantity from "@components/AddQuantity";
+import "./basket.css";
 
 export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
   const [pokemons, setPokemons] = useState([]);
@@ -84,9 +85,13 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
         ))}
       </div>
       {!basket[1] && (
-        <div className="bg-container vh-100 text-white">
-          {" "}
-          NOTHING IN THE BASKET{" "}
+        <div className="bg-container vh-100 text-white d-flex-column justify-content-center align-items-center">
+          <img
+            className="pikachuSad p-5"
+            src="./src/assets/sad-pikachu.png"
+            alt="Sad Pikachu"
+          />
+          <h3>NOTHING IN THE BASKET</h3>
         </div>
       )}
     </div>
