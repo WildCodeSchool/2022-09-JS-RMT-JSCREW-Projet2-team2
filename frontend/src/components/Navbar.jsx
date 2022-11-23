@@ -30,7 +30,6 @@ function Navbar() {
   useEffect(() => {
     document.body.addEventListener("click", handleDisplaySearchDesktop);
   }, []);
-
   return (
     <div>
       {/* SEARCH BAR MOBILE */}
@@ -95,7 +94,7 @@ function Navbar() {
                 >
                   <img
                     className="navbar-icon"
-                    src="./src/assets/navbar-icons/basket-black.png"
+                    src="../src/assets/navbar-icons/basket-black.png"
                     alt="basket-icon"
                   />
                 </button>
@@ -172,7 +171,10 @@ function Navbar() {
                         )
                         .map((pokemon) => {
                           return (
-                            <Link to={`/AllProducts/${pokemon.id}`}>
+                            <Link
+                              to={`/AllProducts/${pokemon.id}`}
+                              key={pokemon.id}
+                            >
                               <button
                                 type="button"
                                 className="pokebiz-searchBar-output text-white bg-transparent fs-5"
@@ -194,7 +196,7 @@ function Navbar() {
                   >
                     <img
                       className="navbar-icon ms-4"
-                      src="./src/assets/navbar-icons/basket-orange.png"
+                      src="../src/assets/navbar-icons/basket-orange.png"
                       alt="basket-icon"
                     />
                   </button>

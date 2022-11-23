@@ -1,7 +1,14 @@
 /*GENERAL*/
 
 .accueilBackground {
-  background-color: black;
+  background:linear-gradient(
+    135deg,
+    #191919 0%,
+    #070707 25%,
+    #191919 50%,
+    #070707 75%,
+    #191919 100%
+  );
 }
 
 /*IMAGE ACCUEIL*/

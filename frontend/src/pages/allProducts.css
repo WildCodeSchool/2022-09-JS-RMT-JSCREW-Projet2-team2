@@ -4,6 +4,14 @@
 
 .pokebiz-allProduct-container {
   margin-top: 52px;
+  background: linear-gradient(
+    135deg,
+    #313131 0%,
+    #070707 25%,
+    #313131 50%,
+    #070707 75%,
+    #313131 100%
+  );
 }
 
 @media only screen and (min-width: 768px) {

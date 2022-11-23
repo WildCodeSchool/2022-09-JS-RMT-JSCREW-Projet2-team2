@@ -28,6 +28,7 @@ export default function CardOffer(basket, addBasket, handleQuantity) {
           basket={basket}
           addBasket={addBasket}
           handleQuantity={handleQuantity}
+          key={carrouselprops.id}
         />
       ))}
     </div>

@@ -11,7 +11,7 @@ import CardOfferCardMobile from "@components/CardOfferCardMobile";
 
 export default function Home({ basket, addBasket, handleQuantity }) {
   return (
-    <div className="accueilBackground bg-gradient">
+    <div className="accueilBackground">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Home Page</title>
@@ -50,21 +50,21 @@ export default function Home({ basket, addBasket, handleQuantity }) {
             type="radio"
             name="slider"
             id="item-1"
-            checked
+            defaultChecked
           />
           <input
             className="d-none"
             type="radio"
             name="slider"
             id="item-2"
-            checked
+            defaultChecked
           />
           <input
             className="d-none"
             type="radio"
             name="slider"
             id="item-3"
-            checked
+            defaultChecked
           />
           <CardOffer
             basket={basket}
@@ -76,53 +76,43 @@ export default function Home({ basket, addBasket, handleQuantity }) {
       {/* fin carrousel version tablette + desktop */}
       <br />
       {/* carrousel version mobile */}
-      <div className="d-md-none d-sm-block">
-        <div
-          id="carouselExampleControls"
-          className="carousel slide"
-          data-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <CardOfferCardMobile
-                basket={basket}
-                addBasket={addBasket}
-                handleQuantity={handleQuantity}
-              />
+      <div className="d-flex justify-content-center">
+        <div className="allproduct-card-container d-md-none d-sm-block">
+          <div
+            id="carouselExampleControls"
+            className="carousel slide"
+            data-ride="carousel"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <CardOfferCardMobile />
+              </div>
+              <div className="carousel-item">
+                <CardOfferCardMobile />
+              </div>
+              <div className="carousel-item">
+                <CardOfferCardMobile />
+              </div>
             </div>
-            <div className="carousel-item">
-              <CardOfferCardMobile
-                basket={basket}
-                addBasket={addBasket}
-                handleQuantity={handleQuantity}
-              />
-            </div>
-            <div className="carousel-item">
-              <CardOfferCardMobile
-                basket={basket}
-                addBasket={addBasket}
-                handleQuantity={handleQuantity}
-              />
-            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span className="carousel-control-prev-icon" aria-hidden="true" />
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span className="carousel-control-next-icon" aria-hidden="true" />
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-          >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="next"
-          >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
       {/* fin carrousel version mobile */}

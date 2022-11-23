@@ -26,7 +26,7 @@ function TemplateFilter({ handleCheck, filterTypes }) {
             </h2>
             <div
               id="collapseOne"
-              className="accordion-collapse collapse show color-accordion text-white"
+              className="accordion-collapse collapse color-accordion text-white"
               aria-labelledby="headingOne"
               data-bs-parent="#accordionExample"
             >
@@ -36,7 +36,6 @@ function TemplateFilter({ handleCheck, filterTypes }) {
                     onClick={() => "favoris"}
                     className="form-check-input"
                     type="checkbox"
-                    checked={false}
                     id="flexCheckDefault"
                   />
                   <label
@@ -51,7 +50,6 @@ function TemplateFilter({ handleCheck, filterTypes }) {
                   return (
                     <div className="form-check mb-1 mt-2" key={type.name}>
                       <input
-                        // onClick={() =>setFilter(type)}
                         className="form-check-input"
                         type="checkbox"
                         checked={type.checked}
@@ -61,7 +59,6 @@ function TemplateFilter({ handleCheck, filterTypes }) {
                       <label className="form-check-label" htmlFor="checkbox">
                         {type.name}
                       </label>
-                      {/* <div>{checked ? "Checked" : "Not checked"}</div> */}
                     </div>
                   );
                 })}
