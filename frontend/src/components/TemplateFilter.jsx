@@ -36,7 +36,6 @@ function TemplateFilter({ handleCheck, filterTypes }) {
                     onClick={() => "favoris"}
                     className="form-check-input"
                     type="checkbox"
-                    // checked={false}
                     id="flexCheckDefault"
                   />
                   <label
