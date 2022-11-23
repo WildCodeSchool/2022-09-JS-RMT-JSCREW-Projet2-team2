@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 import TemplateCard from "@components/TemplateCard";
 import AddQuantity from "@components/AddQuantity";
@@ -21,6 +22,11 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Basket</title>
+        <meta name="description" content="Basket for buy epic pokemon card" />
+      </Helmet>
       <div className="oneProductPage container-fluid d-flex align-items-center justify-content-around text-dark pt-5 bg-container">
         <button className="btn btn-sm btn-warning" type="button">
           Order Now
