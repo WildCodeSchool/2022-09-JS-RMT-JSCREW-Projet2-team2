@@ -11,7 +11,7 @@ import CardOfferCardMobile from "@components/CardOfferCardMobile";
 
 export default function Home() {
   return (
-    <div className="accueilBackground bg-gradient">
+    <div className="accueilBackground">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Home Page</title>
