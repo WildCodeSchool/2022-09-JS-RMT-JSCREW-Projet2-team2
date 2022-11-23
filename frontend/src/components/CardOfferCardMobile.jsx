@@ -30,11 +30,6 @@ export default function CardOfferCard() {
               <div>
                 <h3 className="text-white">{pokemon.pokemonPrice / 2}£</h3>
               </div>
-              <div>
-                <button className="btn btn-sm btn-warning" type="button">
-                  Add Card
-                </button>
-              </div>
             </div>
           </form>
         </div>

@@ -10,9 +10,8 @@ import TemplateCard from "@components/TemplateCard";
 
 import "./oneProduct.css";
 
-function OneProduct() {
+function OneProduct({ basket, addBasket, handleQuantity }) {
   // Création du state pour enregistrer la quantité souaihtée.
-  const [quantity, setQuantity] = useState(1);
   const [pokemon, setPokemon] = useState({});
   const { id } = useParams();
 
@@ -52,13 +51,19 @@ function OneProduct() {
             {/* Mettre le prix en dynamique avec les props reçues */}
             <h3 className="priceStyle">{pokemon.pokemonPrice} £</h3>
           </div>
-          <div className="addQuantityButton">
-            {/* Envoie du state dans le composant */}
-            <AddQuantity quantity={quantity} setQuantity={setQuantity} />
-          </div>
-          <div className="addToCartButton">
-            <AddToCartButton />
-          </div>
+          {!basket.some((el) => el.id === pokemon.id) ? (
+            <div className="addToCartButton">
+              <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
+            </div>
+          ) : (
+            <div className="addQuantityButton">
+              {/* Envoie du state dans le composant */}
+              <AddQuantity
+                pokemon={basket.find((el) => el.id === pokemon.id)}
+                handleQuantity={handleQuantity}
+              />
+            </div>
+          )}
         </div>
       </div>
       {/* ONE PRODUCT DESKTOP VERSION */}
@@ -78,13 +83,19 @@ function OneProduct() {
                 {/* Mettre le prix en dynamique avec les props reçues */}
                 <h3 className="priceStyle">{pokemon.pokemonPrice} £</h3>
               </div>
-              <div className="addQuantityButton">
-                {/* Envoie du state dans le composant */}
-                <AddQuantity quantity={quantity} setQuantity={setQuantity} />
-              </div>
-              <div className="addToCartButton">
-                <AddToCartButton />
-              </div>
+              {!basket.some((el) => el.id === pokemon.id) ? (
+                <div className="addToCartButton">
+                  <AddToCartButton addBasket={addBasket} pokemon={pokemon} />
+                </div>
+              ) : (
+                <div className="addQuantityButton">
+                  {/* Envoie du state dans le composant */}
+                  <AddQuantity
+                    pokemon={basket.find((el) => el.id === pokemon.id)}
+                    handleQuantity={handleQuantity}
+                  />
+                </div>
+              )}
             </div>
             <div>
               <ProgressBar pokemon={pokemon} />

@@ -1,3 +1,5 @@
+/* eslint no-unsafe-optional-chaining: 0 */
+
 import React from "react";
 import "./addQuantity.css";
 
@@ -6,9 +8,9 @@ function AddQuantity({ pokemon, handleQuantity }) {
   // La fonction a besoin d'un "opérateur" en argument au moment de l'appel, pour identifier le bouton cliqué.
   const handleQuantityOnClick = (operator) => {
     if (operator === "plus") {
-      handleQuantity(pokemon, pokemon.quantity + 1);
+      handleQuantity(pokemon, pokemon?.quantity + 1);
     } else if (operator === "minus") {
-      handleQuantity(pokemon, pokemon.quantity - 1);
+      handleQuantity(pokemon, pokemon?.quantity - 1);
     }
   };
   return (

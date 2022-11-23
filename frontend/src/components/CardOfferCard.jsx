@@ -7,7 +7,7 @@ export default function CardOfferCard({ carrouselprops }) {
   const [pokemon, setPokemon] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/pokeBiz/${n}`)
+    fetch(`http://localhost:5000/pokeBiz`)
       .then((res) => res.json())
       .then((json) => setPokemon(json))
       .catch((err) => console.error(err));
@@ -21,23 +21,18 @@ export default function CardOfferCard({ carrouselprops }) {
           htmlFor={carrouselprops.htmlFor}
           id={carrouselprops.id}
         >
-          <TemplateCard pokemon={pokemon} />
+          <TemplateCard pokemon={pokemon[n]} />
           <br />
           <br />
           <form action="">
             <div className="priceOffer d-flex justify-content-around">
               <div>
                 <h3 className="oldPrice text-decoration-line-through">
-                  {pokemon.pokemonPrice}£
+                  {pokemon[n].pokemonPrice}£
                 </h3>
               </div>
               <div>
-                <h3 className="text-white">{pokemon.pokemonPrice / 2}£</h3>
-              </div>
-              <div>
-                <button className="btn btn-sm btn-warning" type="button">
-                  Add Card
-                </button>
+                <h3 className="priceStyle">{pokemon[n].pokemonPrice / 2}£</h3>
               </div>
             </div>
           </form>
