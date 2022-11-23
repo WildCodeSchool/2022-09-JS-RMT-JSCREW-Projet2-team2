@@ -59,7 +59,6 @@ function TemplateFilter({ handleCheck, filterTypes }) {
                       <label className="form-check-label" htmlFor="checkbox">
                         {type.name}
                       </label>
-                      {/* <div>{checked ? "Checked" : "Not checked"}</div> */}
                     </div>
                   );
                 })}
