@@ -74,11 +74,11 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
                 type="button"
               >
                 <img
-                  className="logoSocialMedia"
+                  className="trashBin"
                   src="./src/assets/iconsBasket/supprimer.png"
                   alt="Trash icon"
                 />
-                <h3>Delete</h3>
+                <h3 className="mb-0">Delete</h3>
               </button>
             </div>
           </div>
