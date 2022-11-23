@@ -23,7 +23,10 @@ export default function CardOffer() {
   return (
     <div className="cards position-relative mb-2 text">
       {carrouselInfo.map((carrouselprops) => (
-        <CardOfferCard carrouselprops={carrouselprops} />
+        <CardOfferCard
+          carrouselprops={carrouselprops}
+          key={carrouselprops.id}
+        />
       ))}
     </div>
   );

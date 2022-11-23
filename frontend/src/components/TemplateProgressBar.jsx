@@ -10,7 +10,7 @@ function TemplateProgressBar({ stats, statName }) {
         <div className="progress" style={{ width: 100 * 2.8 }}>
           <div
             className="progress-bar progress-bar-striped progress-bar-animated"
-            style={{ width: stats * 2.8 }}
+            style={stats && { width: stats * 2.8 }}
           />
         </div>
         <h4 className="mb-0 text-white fs-5">{stats}</h4>
