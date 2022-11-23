@@ -70,7 +70,6 @@ function AllProduct({ basket, addBasket, handleQuantity }) {
               <div key={pokemon.id}>
                 <Link to={`/AllProducts/${pokemon.id}`}>
                   <button
-                    onClick=""
                     className="bg-transparent allproduct-card-container"
                     type="button"
                   >

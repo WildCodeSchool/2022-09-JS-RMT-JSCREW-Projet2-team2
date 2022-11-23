@@ -52,7 +52,7 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
       </div>
       <div className="container-fluid bg-container d-flex justify-content-center flex-wrap">
         {pokemons.map((pokemon) => (
-          <div className="allproduct-card-container">
+          <div className="allproduct-card-container" key={pokemon.id}>
             <TemplateCard key={pokemon.id} pokemon={pokemon} />
             <div className="oneProduct-postCard-element my-5 d-flex align-items-center justify-content-around">
               <h3 className="priceStyle">
