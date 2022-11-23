@@ -34,8 +34,15 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
         <h3 className="text-white d-flex justify-content-around">
           Total :{" "}
           {pokemons[0] &&
+            basket[1] &&
             parseFloat(
-              pokemons.reduce((total, prix) => total + prix.pokemonPrice, 0)
+              pokemons.reduce(
+                (total, pokemon) =>
+                  total +
+                  basket.find((el) => el.id === pokemon.id).quantity *
+                    pokemon.pokemonPrice,
+                0
+              )
             )}
           £{/* permet l'ajout du prix de chaque carte au total */}
         </h3>
@@ -45,7 +52,12 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
           <div className="allproduct-card-container">
             <TemplateCard key={pokemon.id} pokemon={pokemon} />
             <div className="oneProduct-postCard-element my-5 d-flex align-items-center justify-content-around">
-              <h3 className="priceStyle">{pokemon.pokemonPrice} £</h3>
+              <h3 className="priceStyle">
+                {basket[1] &&
+                  basket.find((el) => el.id === pokemon.id).quantity *
+                    pokemon.pokemonPrice}{" "}
+                £
+              </h3>
               <div className="addQuantityButton">
                 {/* Envoie du state dans le composant */}
                 <AddQuantity
@@ -63,7 +75,7 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
                 <img
                   className="logoSocialMedia"
                   src="./src/assets/iconsBasket/supprimer.png"
-                  alt="Icone poubelle"
+                  alt="Trash icon"
                 />
                 <h3>Delete</h3>
               </button>
@@ -71,6 +83,12 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
           </div>
         ))}
       </div>
+      {!basket[1] && (
+        <div className="bg-container vh-100 text-white">
+          {" "}
+          NOTHING IN THE BASKET{" "}
+        </div>
+      )}
     </div>
   );
 }
