@@ -1,3 +1,5 @@
+/* eslint no-unsafe-optional-chaining: 0 */
+
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
@@ -40,7 +42,7 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
               pokemons.reduce(
                 (total, pokemon) =>
                   total +
-                  basket.find((el) => el.id === pokemon.id).quantity *
+                  basket.find((el) => el.id === pokemon.id)?.quantity *
                     pokemon.pokemonPrice,
                 0
               )
@@ -55,7 +57,7 @@ export default function Basket({ basket, handleQuantity, deleteFromBasket }) {
             <div className="oneProduct-postCard-element my-5 d-flex align-items-center justify-content-around">
               <h3 className="priceStyle">
                 {basket[1] &&
-                  basket.find((el) => el.id === pokemon.id).quantity *
+                  basket.find((el) => el.id === pokemon.id)?.quantity *
                     pokemon.pokemonPrice}{" "}
                 £
               </h3>
